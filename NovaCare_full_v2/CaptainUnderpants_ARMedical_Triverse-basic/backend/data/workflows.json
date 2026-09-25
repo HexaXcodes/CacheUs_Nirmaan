@@ -1,0 +1,236 @@
+{
+  "inhaler_technique": {
+    "id": "inhaler_technique",
+    "phase": 1,
+    "category": "respiratory",
+    "name": "Inhaler Technique",
+    "description": "Guides correct use of a prescribed inhaler. Different inhaler types use different techniques, so this workflow is device-specific.",
+    "supported": true,
+    "requiresML": true,
+    "requiresAR": true,
+    "medicalBoundary": "NovaCare verifies technique only. It does not diagnose respiratory conditions or alter the prescribed device/dose.",
+    "deviceTypes": ["pmdi_no_spacer", "mdi", "dpi", "soft_mist"],
+    "deviceVariants": {
+      "pmdi_no_spacer": {
+        "label": "Metered-Dose Inhaler — ML-verified (no spacer)",
+        "steps": [
+          { "id": "identify_device", "title": "Identify device", "instruction": { "en": "Hold up your metered-dose inhaler (without a spacer) so it is visible to the camera.", "hi": "अपने मीटर्ड-डोज़ इनहेलर (बिना स्पेसर के) को कैमरे के सामने पकड़ें।", "kn": "ನಿಮ್ಮ ಮೀಟರ್ಡ್-ಡೋಸ್ ಇನ್ಹೇಲರ್ ಅನ್ನು (ಸ್ಪೇಸರ್ ಇಲ್ಲದೆ) ಕ್ಯಾಮೆರಾಗೆ ಕಾಣುವಂತೆ ಹಿಡಿಯಿರಿ." }, "expectedSignals": ["inhaler_detected"], "verificationMode": "manual", "nextStep": "remove_cap" },
+          { "id": "remove_cap", "title": "Remove the cap", "instruction": { "en": "Remove the mouthpiece cap.", "hi": "मुखपत्र का ढक्कन हटाएं।", "kn": "ಮೌತ್‌ಪೀಸ್ ಕ್ಯಾಪ್ ತೆಗೆಯಿರಿ." }, "expectedSignals": ["inhaler_detected"], "verificationMode": "ml", "nextStep": "shake_inhaler" },
+          { "id": "shake_inhaler", "title": "Shake the inhaler", "instruction": { "en": "Shake the inhaler well for about 5 seconds.", "hi": "इनहेलर को लगभग 5 सेकंड तक अच्छी तरह हिलाएं।", "kn": "ಇನ್ಹೇಲರ್ ಅನ್ನು ಸುಮಾರು 5 ಸೆಕೆಂಡ್ ಚೆನ್ನಾಗಿ ಅಲುಗಿಸಿ." }, "expectedSignals": ["inhaler_detected"], "verificationMode": "ml", "nextStep": "exhale_away" },
+          { "id": "exhale_away", "title": "Exhale away", "instruction": { "en": "Breathe out fully, away from the mouthpiece.", "hi": "मुखपत्र से दूर पूरी तरह सांस छोड़ें।", "kn": "ಮೌತ್‌ಪೀಸ್‌ನಿಂದ ದೂರ ಸಂಪೂರ್ಣವಾಗಿ ಉಸಿರು ಬಿಡಿ." }, "expectedSignals": ["face_detected"], "verificationMode": "ml", "nextStep": "position_mouthpiece" },
+          { "id": "position_mouthpiece", "title": "Position mouthpiece", "instruction": { "en": "Place the mouthpiece between your teeth and close your lips around it to form a seal.", "hi": "मुखपत्र को दांतों के बीच रखें और होठों से सील बनाएं।", "kn": "ಮೌತ್‌ಪೀಸ್ ಅನ್ನು ಹಲ್ಲುಗಳ ನಡುವೆ ಇರಿಸಿ ಮತ್ತು ತುಟಿಗಳಿಂದ ಸೀಲ್ ಮಾಡಿ." }, "expectedSignals": ["inhaler_detected", "face_detected", "mouth_position"], "verificationMode": "ml", "nextStep": "begin_slow_inhalation" },
+          { "id": "begin_slow_inhalation", "title": "Begin slow inhalation", "instruction": { "en": "Start breathing in slowly and deeply.", "hi": "धीरे-धीरे और गहरी सांस लेना शुरू करें।", "kn": "ನಿಧಾನವಾಗಿ ಮತ್ತು ಆಳವಾಗಿ ಉಸಿರಾಡಲು ಪ್ರಾರಂಭಿಸಿ." }, "expectedSignals": ["mouth_position"], "verificationMode": "ml", "nextStep": "actuate_during_inhalation" },
+          { "id": "actuate_during_inhalation", "title": "Actuate while inhaling", "instruction": { "en": "Press down on the canister once while continuing to breathe in slowly.", "hi": "धीरे-धीरे सांस लेते हुए कनस्तर को एक बार दबाएं।", "kn": "ನಿಧಾನವಾಗಿ ಉಸಿರಾಡುತ್ತಿರುವಾಗ ಕ್ಯಾನಿಸ್ಟರ್ ಅನ್ನು ಒಮ್ಮೆ ಒತ್ತಿ." }, "expectedSignals": ["mouth_position", "actuation_event"], "verificationMode": "ml", "nextStep": "continue_inhalation" },
+          { "id": "continue_inhalation", "title": "Continue inhaling", "instruction": { "en": "Keep breathing in slowly until your lungs feel full.", "hi": "जब तक फेफड़े भरे हुए महसूस न हों तब तक धीरे-धीरे सांस लेते रहें।", "kn": "ಶ್ವಾಸಕೋಶಗಳು ತುಂಬಿದಂತೆ ಅನಿಸುವವರೆಗೆ ನಿಧಾನವಾಗಿ ಉಸಿರಾಡುತ್ತಿರಿ." }, "expectedSignals": ["mouth_position"], "verificationMode": "ml", "nextStep": "breath_hold" },
+          { "id": "breath_hold", "title": "Hold your breath", "instruction": { "en": "Remove the inhaler and hold your breath for about 10 seconds if you can.", "hi": "इनहेलर हटाएं और यदि संभव हो तो लगभग 10 सेकंड तक सांस रोकें।", "kn": "ಇನ್ಹೇಲರ್ ತೆಗೆದು ಸಾಧ್ಯವಾದರೆ ಸುಮಾರು 10 ಸೆಕೆಂಡ್ ಉಸಿರು ಹಿಡಿಯಿರಿ." }, "expectedSignals": ["face_detected"], "verificationMode": "ml", "nextStep": "finish" },
+          { "id": "finish", "title": "Finish", "instruction": { "en": "Breathe out normally. If a second dose is prescribed, wait about 30 seconds and repeat.", "hi": "सामान्य रूप से सांस छोड़ें। यदि दूसरी खुराक निर्धारित है, तो लगभग 30 सेकंड प्रतीक्षा कर दोहराएं।", "kn": "ಸಾಮಾನ್ಯವಾಗಿ ಉಸಿರು ಬಿಡಿ. ಎರಡನೇ ಡೋಸ್ ಸೂಚಿಸಿದ್ದರೆ, ಸುಮಾರು 30 ಸೆಕೆಂಡ್ ಕಾದು ಪುನರಾವರ್ತಿಸಿ." }, "expectedSignals": [], "verificationMode": "manual", "nextStep": null }
+        ]
+      },
+      "mdi": {
+        "label": "Metered-Dose Inhaler (MDI)",
+        "steps": [
+          { "id": "identify_device", "title": "Identify device", "instruction": { "en": "Hold up your metered-dose inhaler so it is visible to the camera.", "hi": "अपने मीटर्ड-डोज़ इनहेलर को कैमरे के सामने पकड़ें।", "kn": "ನಿಮ್ಮ ಮೀಟರ್ಡ್-ಡೋಸ್ ಇನ್ಹೇಲರ್ ಅನ್ನು ಕ್ಯಾಮೆರಾಗೆ ಕಾಣುವಂತೆ ಹಿಡಿಯಿರಿ." }, "expectedSignals": ["inhaler_detected"], "verificationMode": "ml", "nextStep": "prepare_device" },
+          { "id": "prepare_device", "title": "Prepare device", "instruction": { "en": "Remove the cap and shake the inhaler well for 5 seconds.", "hi": "ढक्कन हटाएं और इनहेलर को 5 सेकंड तक अच्छी तरह हिलाएं।", "kn": "ಕ್ಯಾಪ್ ತೆಗೆದು ಇನ್ಹೇಲರ್ ಅನ್ನು 5 ಸೆಕೆಂಡ್ ಚೆನ್ನಾಗಿ ಅಲುಗಿಸಿ." }, "expectedSignals": ["inhaler_detected", "cap_removed"], "verificationMode": "ml", "nextStep": "prime_if_needed" },
+          { "id": "prime_if_needed", "title": "Prime if applicable", "instruction": { "en": "If this is a new or unused-for-a-while inhaler, prime it by spraying once into the air, away from your face.", "hi": "यदि यह नया या लंबे समय से अप्रयुक्त इनहेलर है, तो चेहरे से दूर हवा में एक बार स्प्रे करें।", "kn": "ಇದು ಹೊಸ ಅಥವಾ ಬಹಳ ದಿನ ಬಳಸದ ಇನ್ಹೇಲರ್ ಆಗಿದ್ದರೆ, ಮುಖದಿಂದ ದೂರ ಗಾಳಿಯಲ್ಲಿ ಒಮ್ಮೆ ಸ್ಪ್ರೇ ಮಾಡಿ ಪ್ರೈಮ್ ಮಾಡಿ." }, "expectedSignals": ["inhaler_detected"], "verificationMode": "ml", "nextStep": "exhale" },
+          { "id": "exhale", "title": "Exhale fully", "instruction": { "en": "Breathe out fully, away from the mouthpiece.", "hi": "मुखपत्र से दूर पूरी तरह सांस छोड़ें।", "kn": "ಮೌತ್‌ಪೀಸ್‌ನಿಂದ ದೂರ ಸಂಪೂರ್ಣವಾಗಿ ಉಸಿರು ಬಿಡಿ." }, "expectedSignals": ["face_detected"], "verificationMode": "ml", "nextStep": "position_mouthpiece" },
+          { "id": "position_mouthpiece", "title": "Position mouthpiece", "instruction": { "en": "Place the mouthpiece between your teeth and close your lips around it to form a seal.", "hi": "मुखपत्र को दांतों के बीच रखें और होठों से सील बनाएं।", "kn": "ಮೌತ್‌ಪೀಸ್ ಅನ್ನು ಹಲ್ಲುಗಳ ನಡುವೆ ಇರಿಸಿ ಮತ್ತು ತುಟಿಗಳಿಂದ ಸೀಲ್ ಮಾಡಿ." }, "expectedSignals": ["inhaler_detected", "face_detected", "mouth_position"], "verificationMode": "ml", "nextStep": "coordinate_actuation" },
+          { "id": "coordinate_actuation", "title": "Coordinate inhalation and actuation", "instruction": { "en": "Start breathing in slowly and deeply, and press down on the canister at the same time.", "hi": "धीरे-धीरे गहरी सांस लेना शुरू करें और साथ ही कनस्तर दबाएं।", "kn": "ನಿಧಾನವಾಗಿ ಆಳವಾಗಿ ಉಸಿರಾಡಲು ಪ್ರಾರಂಭಿಸಿ ಮತ್ತು ಅದೇ ಸಮಯದಲ್ಲಿ ಕ್ಯಾನಿಸ್ಟರ್ ಒತ್ತಿ." }, "expectedSignals": ["inhaler_detected", "mouth_position", "actuation_event"], "verificationMode": "ml", "nextStep": "complete_inhalation" },
+          { "id": "complete_inhalation", "title": "Complete the inhalation", "instruction": { "en": "Continue breathing in slowly until your lungs feel full.", "hi": "जब तक फेफड़े भरे हुए महसूस न हों तब तक धीरे-धीरे सांस लेते रहें।", "kn": "ಶ್ವಾಸಕೋಶಗಳು ತುಂಬಿದಂತೆ ಅನಿಸುವವರೆಗೆ ನಿಧಾನವಾಗಿ ಉಸಿರಾಡುತ್ತಿರಿ." }, "expectedSignals": ["face_detected"], "verificationMode": "ml", "nextStep": "breath_hold" },
+          { "id": "breath_hold", "title": "Hold your breath", "instruction": { "en": "Remove the inhaler and hold your breath for about 10 seconds if you can.", "hi": "इनहेलर हटाएं और यदि संभव हो तो लगभग 10 सेकंड तक सांस रोकें।", "kn": "ಇನ್ಹೇಲರ್ ತೆಗೆದು ಸಾಧ್ಯವಾದರೆ ಸುಮಾರು 10 ಸೆಕೆಂಡ್ ಉಸಿರು ಹಿಡಿಯಿರಿ." }, "expectedSignals": ["face_detected"], "verificationMode": "ml", "nextStep": "finish" },
+          { "id": "finish", "title": "Finish", "instruction": { "en": "Breathe out normally. If a second dose is prescribed, wait about 30 seconds and repeat.", "hi": "सामान्य रूप से सांस छोड़ें। यदि दूसरी खुराक निर्धारित है, तो लगभग 30 सेकंड प्रतीक्षा कर दोहराएं।", "kn": "ಸಾಮಾನ್ಯವಾಗಿ ಉಸಿರು ಬಿಡಿ. ಎರಡನೇ ಡೋಸ್ ಸೂಚಿಸಿದ್ದರೆ, ಸುಮಾರು 30 ಸೆಕೆಂಡ್ ಕಾದು ಪುನರಾವರ್ತಿಸಿ." }, "expectedSignals": [], "verificationMode": "ml", "nextStep": null }
+        ]
+      },
+      "dpi": {
+        "label": "Dry-Powder Inhaler (DPI)",
+        "steps": [
+          { "id": "identify_device", "title": "Identify device", "instruction": { "en": "Hold up your dry-powder inhaler so it is visible to the camera.", "hi": "अपने ड्राई-पाउडर इनहेलर को कैमरे के सामने पकड़ें।", "kn": "ನಿಮ್ಮ ಡ್ರೈ-ಪೌಡರ್ ಇನ್ಹೇಲರ್ ಅನ್ನು ಕ್ಯಾಮೆರಾಗೆ ಕಾಣುವಂತೆ ಹಿಡಿಯಿರಿ." }, "expectedSignals": ["inhaler_detected"], "verificationMode": "ml", "nextStep": "load_dose" },
+          { "id": "load_dose", "title": "Load the dose", "instruction": { "en": "Load a dose following your device's loading mechanism (twist, click, or lever) without shaking it.", "hi": "अपने डिवाइस की लोडिंग प्रक्रिया (मोड़ें, क्लिक या लीवर) से खुराक लोड करें, इसे हिलाएं नहीं।", "kn": "ಸಾಧನದ ಲೋಡಿಂಗ್ ವಿಧಾನದ (ತಿರುಗಿಸಿ, ಕ್ಲಿಕ್ ಅಥವಾ ಲಿವರ್) ಪ್ರಕಾರ ಡೋಸ್ ಲೋಡ್ ಮಾಡಿ, ಅಲುಗಾಡಿಸಬೇಡಿ." }, "expectedSignals": ["inhaler_detected"], "verificationMode": "ml", "nextStep": "exhale_away" },
+          { "id": "exhale_away", "title": "Exhale away from device", "instruction": { "en": "Breathe out fully, away from the mouthpiece, so you don't blow powder out.", "hi": "मुखपत्र से दूर पूरी तरह सांस छोड़ें ताकि पाउडर न उड़े।", "kn": "ಪೌಡರ್ ಹಾರದಂತೆ ಮೌತ್‌ಪೀಸ್‌ನಿಂದ ದೂರ ಸಂಪೂರ್ಣ ಉಸಿರು ಬಿಡಿ." }, "expectedSignals": ["face_detected"], "verificationMode": "ml", "nextStep": "seal_and_inhale" },
+          { "id": "seal_and_inhale", "title": "Seal and inhale forcefully", "instruction": { "en": "Close your lips tightly around the mouthpiece and breathe in quickly and deeply, unlike an MDI.", "hi": "मुखपत्र के चारों ओर होठों को कसकर बंद करें और MDI के विपरीत तेज़ और गहरी सांस लें।", "kn": "ಮೌತ್‌ಪೀಸ್ ಸುತ್ತ ತುಟಿಗಳನ್ನು ಬಿಗಿಯಾಗಿ ಮುಚ್ಚಿ, MDI ಗಿಂತ ಭಿನ್ನವಾಗಿ ವೇಗವಾಗಿ, ಆಳವಾಗಿ ಉಸಿರಾಡಿ." }, "expectedSignals": ["inhaler_detected", "mouth_position"], "verificationMode": "ml", "nextStep": "breath_hold" },
+          { "id": "breath_hold", "title": "Hold your breath", "instruction": { "en": "Remove the device and hold your breath for about 10 seconds.", "hi": "डिवाइस हटाएं और लगभग 10 सेकंड तक सांस रोकें।", "kn": "ಸಾಧನ ತೆಗೆದು ಸುಮಾರು 10 ಸೆಕೆಂಡ್ ಉಸಿರು ಹಿಡಿಯಿರಿ." }, "expectedSignals": ["face_detected"], "verificationMode": "ml", "nextStep": "finish" },
+          { "id": "finish", "title": "Finish", "instruction": { "en": "Breathe out normally.", "hi": "सामान्य रूप से सांस छोड़ें।", "kn": "ಸಾಮಾನ್ಯವಾಗಿ ಉಸಿರು ಬಿಡಿ." }, "expectedSignals": [], "verificationMode": "ml", "nextStep": null }
+        ]
+      },
+      "soft_mist": {
+        "label": "Soft Mist Inhaler",
+        "steps": [
+          { "id": "identify_device", "title": "Identify device", "instruction": { "en": "Hold up your soft mist inhaler so it is visible to the camera.", "hi": "अपने सॉफ्ट मिस्ट इनहेलर को कैमरे के सामने पकड़ें।", "kn": "ನಿಮ್ಮ ಸಾಫ್ಟ್ ಮಿಸ್ಟ್ ಇನ್ಹೇಲರ್ ಅನ್ನು ಕ್ಯಾಮೆರಾಗೆ ಕಾಣುವಂತೆ ಹಿಡಿಯಿರಿ." }, "expectedSignals": ["inhaler_detected"], "verificationMode": "ml", "nextStep": "prepare_cartridge" },
+          { "id": "prepare_cartridge", "title": "Prepare device", "instruction": { "en": "If this is the first use, follow the cartridge-insertion and priming instructions provided with your device.", "hi": "यदि यह पहला उपयोग है, तो डिवाइस के साथ दी गई कार्ट्रिज-सम्मिलन और प्राइमिंग निर्देशों का पालन करें।", "kn": "ಇದು ಮೊದಲ ಬಳಕೆಯಾಗಿದ್ದರೆ, ಸಾಧನದೊಂದಿಗೆ ನೀಡಿದ ಕಾರ್ಟ್ರಿಡ್ಜ್ ಅಳವಡಿಕೆ ಮತ್ತು ಪ್ರೈಮಿಂಗ್ ಸೂಚನೆಗಳನ್ನು ಅನುಸರಿಸಿ." }, "expectedSignals": ["inhaler_detected"], "verificationMode": "ml", "nextStep": "exhale" },
+          { "id": "exhale", "title": "Exhale fully", "instruction": { "en": "Breathe out fully, away from the mouthpiece.", "hi": "मुखपत्र से दूर पूरी तरह सांस छोड़ें।", "kn": "ಮೌತ್‌ಪೀಸ್‌ನಿಂದ ದೂರ ಸಂಪೂರ್ಣ ಉಸಿರು ಬಿಡಿ." }, "expectedSignals": ["face_detected"], "verificationMode": "ml", "nextStep": "seal_and_actuate" },
+          { "id": "seal_and_actuate", "title": "Seal and actuate slowly", "instruction": { "en": "Close your lips around the mouthpiece. Press the dose-release button while breathing in slowly.", "hi": "मुखपत्र के चारों ओर होठों को बंद करें। धीरे-धीरे सांस लेते हुए डोज़-रिलीज़ बटन दबाएं।", "kn": "ಮೌತ್‌ಪೀಸ್ ಸುತ್ತ ತುಟಿಗಳನ್ನು ಮುಚ್ಚಿ. ನಿಧಾನವಾಗಿ ಉಸಿರಾಡುತ್ತಾ ಡೋಸ್-ರಿಲೀಸ್ ಬಟನ್ ಒತ್ತಿ." }, "expectedSignals": ["inhaler_detected", "mouth_position", "actuation_event"], "verificationMode": "ml", "nextStep": "breath_hold" },
+          { "id": "breath_hold", "title": "Hold your breath", "instruction": { "en": "Remove the device and hold your breath for about 10 seconds.", "hi": "डिवाइस हटाएं और लगभग 10 सेकंड तक सांस रोकें।", "kn": "ಸಾಧನ ತೆಗೆದು ಸುಮಾರು 10 ಸೆಕೆಂಡ್ ಉಸಿರು ಹಿಡಿಯಿರಿ." }, "expectedSignals": ["face_detected"], "verificationMode": "ml", "nextStep": "finish" },
+          { "id": "finish", "title": "Finish", "instruction": { "en": "Breathe out normally.", "hi": "सामान्य रूप से सांस छोड़ें।", "kn": "ಸಾಮಾನ್ಯವಾಗಿ ಉಸಿರು ಬಿಡಿ." }, "expectedSignals": [], "verificationMode": "ml", "nextStep": null }
+        ]
+      }
+    }
+  },
+
+  "bp_measurement": {
+    "id": "bp_measurement",
+    "phase": 2,
+    "category": "cardiovascular",
+    "name": "Blood Pressure Measurement",
+    "description": "Verifies correct home blood-pressure measurement technique with a standard cuff device.",
+    "supported": true,
+    "requiresML": true,
+    "requiresAR": true,
+    "medicalBoundary": "NovaCare does not estimate blood pressure from the camera. It verifies technique only; the reading itself comes from the patient's BP monitor.",
+    "steps": [
+      { "id": "rest_prep", "title": "Rest before measuring", "instruction": { "en": "Sit quietly and rest for 5 minutes before starting. Avoid caffeine, exercise, or smoking beforehand.", "hi": "शुरू करने से पहले 5 मिनट शांति से बैठें। इससे पहले कैफीन, व्यायाम या धूम्रपान से बचें।", "kn": "ಪ್ರಾರಂಭಿಸುವ ಮೊದಲು 5 ನಿಮಿಷ ಶಾಂತವಾಗಿ ಕುಳಿತುಕೊಳ್ಳಿ. ಮೊದಲು ಕೆಫೀನ್, ವ್ಯಾಯಾಮ ಅಥವಾ ಧೂಮಪಾನ ತಪ್ಪಿಸಿ." }, "expectedSignals": ["person_detected"], "verificationMode": "ml", "nextStep": "seated_position" },
+      { "id": "seated_position", "title": "Correct seated position", "instruction": { "en": "Sit upright in a chair with your back supported.", "hi": "पीठ को सहारा देते हुए कुर्सी पर सीधे बैठें।", "kn": "ಬೆನ್ನಿಗೆ ಆಧಾರ ಇರುವಂತೆ ಕುರ್ಚಿಯಲ್ಲಿ ನೇರವಾಗಿ ಕುಳಿತುಕೊಳ್ಳಿ." }, "expectedSignals": ["person_detected", "posture"], "verificationMode": "ml", "nextStep": "feet_position" },
+      { "id": "feet_position", "title": "Feet flat, legs uncrossed", "instruction": { "en": "Keep both feet flat on the floor. Do not cross your legs.", "hi": "दोनों पैर फर्श पर सपाट रखें। पैर क्रॉस न करें।", "kn": "ಎರಡೂ ಪಾದಗಳನ್ನು ನೆಲದ ಮೇಲೆ ಸಮತಟ್ಟಾಗಿ ಇರಿಸಿ. ಕಾಲುಗಳನ್ನು ದಾಟಿಸಬೇಡಿ." }, "expectedSignals": ["person_detected", "posture"], "verificationMode": "ml", "nextStep": "arm_position" },
+      { "id": "arm_position", "title": "Arm position", "instruction": { "en": "Rest your bare arm on a table so the cuff will sit at roughly heart height.", "hi": "अपनी नंगी बांह को मेज़ पर रखें ताकि कफ हृदय की ऊंचाई पर हो।", "kn": "ಕಫ್ ಹೃದಯದ ಎತ್ತರದಲ್ಲಿ ಇರುವಂತೆ ಬರಿ ಕೈಯನ್ನು ಮೇಜಿನ ಮೇಲೆ ಇರಿಸಿ." }, "expectedSignals": ["person_detected", "arm_position"], "verificationMode": "ml", "nextStep": "cuff_position" },
+      { "id": "cuff_position", "title": "Cuff position", "instruction": { "en": "Place the cuff snugly on your bare upper arm, about one inch above the elbow crease.", "hi": "कफ को नंगी ऊपरी बांह पर, कोहनी की सिलवट से लगभग एक इंच ऊपर, कसकर लगाएं।", "kn": "ಕಫ್ ಅನ್ನು ಬರಿ ಮೇಲ್ತೋಳಿನ ಮೇಲೆ, ಮೊಣಕೈ ಮಡಿಕೆಗಿಂತ ಸುಮಾರು ಒಂದು ಇಂಚು ಮೇಲೆ, ಬಿಗಿಯಾಗಿ ಜೋಡಿಸಿ." }, "expectedSignals": ["cuff_detected", "arm_position"], "verificationMode": "ml", "nextStep": "stay_still" },
+      { "id": "stay_still", "title": "Remain still and silent", "instruction": { "en": "Stay still, keep your legs uncrossed, and avoid talking during the measurement.", "hi": "स्थिर रहें, पैर क्रॉस न करें और माप के दौरान बात न करें।", "kn": "ಸ್ಥಿರವಾಗಿರಿ, ಕಾಲುಗಳನ್ನು ದಾಟಿಸಬೇಡಿ ಮತ್ತು ಮಾಪನದ ಸಮಯದಲ್ಲಿ ಮಾತನಾಡಬೇಡಿ." }, "expectedSignals": ["person_detected", "posture"], "verificationMode": "ml", "nextStep": "start_measurement" },
+      { "id": "start_measurement", "title": "Start measurement", "instruction": { "en": "Press start on your BP monitor and keep your arm relaxed.", "hi": "अपने बीपी मॉनिटर पर स्टार्ट दबाएं और बांह को शिथिल रखें।", "kn": "ನಿಮ್ಮ ಬಿಪಿ ಮಾನಿಟರ್‌ನಲ್ಲಿ ಸ್ಟಾರ್ಟ್ ಒತ್ತಿ ಮತ್ತು ತೋಳನ್ನು ಸಡಿಲವಾಗಿ ಇರಿಸಿ." }, "expectedSignals": ["cuff_detected", "device_detected"], "verificationMode": "ml", "nextStep": "complete_measurement" },
+      { "id": "complete_measurement", "title": "Complete measurement", "instruction": { "en": "Wait for the cuff to fully deflate and the reading to appear.", "hi": "कफ के पूरी तरह ढीले होने और रीडिंग आने की प्रतीक्षा करें।", "kn": "ಕಫ್ ಸಂಪೂರ್ಣ ಇಳಿಯುವವರೆಗೆ ಮತ್ತು ರೀಡಿಂಗ್ ಕಾಣಿಸುವವರೆಗೆ ಕಾಯಿರಿ." }, "expectedSignals": ["device_detected"], "verificationMode": "ml", "nextStep": "record_reading" },
+      { "id": "record_reading", "title": "Record the reading", "instruction": { "en": "Note down the systolic/diastolic values and pulse shown on the monitor.", "hi": "मॉनिटर पर दिखाए गए सिस्टोलिक/डायस्टोलिक मान और पल्स नोट करें।", "kn": "ಮಾನಿಟರ್‌ನಲ್ಲಿ ತೋರಿಸಿದ ಸಿಸ್ಟೋಲಿಕ್/ಡಯಾಸ್ಟೋಲಿಕ್ ಮೌಲ್ಯಗಳು ಮತ್ತು ಪಲ್ಸ್ ದಾಖಲಿಸಿ." }, "expectedSignals": ["device_detected"], "verificationMode": "manual", "nextStep": null }
+    ]
+  },
+
+  "insulin_injection": {
+    "id": "insulin_injection",
+    "phase": 3,
+    "category": "diabetes",
+    "name": "Insulin Injection Technique",
+    "description": "Guides correct technique for an already-prescribed insulin injection.",
+    "supported": true,
+    "requiresML": true,
+    "requiresAR": true,
+    "medicalBoundary": "NovaCare NEVER generates, changes, calculates, or recommends insulin dosage. The dose always comes from the patient's existing prescription.",
+    "steps": [
+      { "id": "prepare_device", "title": "Prepare device", "instruction": { "en": "Wash your hands and gather your insulin pen or syringe, a new needle, and an alcohol swab.", "hi": "हाथ धोएं और अपनी इंसुलिन पेन या सिरिंज, नई सुई और एल्कोहल स्वैब तैयार करें।", "kn": "ಕೈಗಳನ್ನು ತೊಳೆದು ಇನ್ಸುಲಿನ್ ಪೆನ್ ಅಥವಾ ಸಿರಿಂಜ್, ಹೊಸ ಸೂಜಿ ಮತ್ತು ಆಲ್ಕೋಹಾಲ್ ಸ್ವ್ಯಾಬ್ ಸಿದ್ಧಪಡಿಸಿ." }, "expectedSignals": ["device_detected"], "verificationMode": "ml", "nextStep": "attach_needle" },
+      { "id": "attach_needle", "title": "Attach a new needle", "instruction": { "en": "Attach a fresh needle to the pen and remove the outer and inner caps.", "hi": "पेन में नई सुई लगाएं और बाहरी व भीतरी ढक्कन हटाएं।", "kn": "ಪೆನ್‌ಗೆ ಹೊಸ ಸೂಜಿ ಜೋಡಿಸಿ ಮತ್ತು ಹೊರ ಮತ್ತು ಒಳ ಕ್ಯಾಪ್‌ಗಳನ್ನು ತೆಗೆಯಿರಿ." }, "expectedSignals": ["device_detected", "needle_detected"], "verificationMode": "ml", "nextStep": "prime_if_needed" },
+      { "id": "prime_if_needed", "title": "Prime/safety-test the pen", "instruction": { "en": "Dial 2 units and press the injection button, holding the pen upright, until a drop appears at the needle tip.", "hi": "2 यूनिट डायल करें और पेन को सीधा पकड़कर बटन दबाएं, जब तक सुई की नोक पर बूंद न दिखे।", "kn": "2 ಯುನಿಟ್ ಡಯಲ್ ಮಾಡಿ, ಪೆನ್ ಅನ್ನು ನೇರವಾಗಿ ಹಿಡಿದು, ಸೂಜಿಯ ತುದಿಯಲ್ಲಿ ಹನಿ ಕಾಣಿಸುವವರೆಗೆ ಬಟನ್ ಒತ್ತಿ." }, "expectedSignals": ["device_detected"], "verificationMode": "ml", "nextStep": "confirm_dose" },
+      { "id": "confirm_dose", "title": "Confirm prescribed dose", "instruction": { "en": "Dial to the exact dose written on your prescription. Double-check the number on the dial before injecting.", "hi": "अपने पर्चे पर लिखी सटीक खुराक डायल करें। इंजेक्ट करने से पहले डायल की संख्या दोबारा जांचें।", "kn": "ನಿಮ್ಮ ಪ್ರಿಸ್ಕ್ರಿಪ್ಷನ್‌ನಲ್ಲಿ ಬರೆದ ನಿಖರ ಡೋಸ್ ಡಯಲ್ ಮಾಡಿ. ಇಂಜೆಕ್ಟ್ ಮಾಡುವ ಮೊದಲು ಡಯಲ್ ಸಂಖ್ಯೆ ಪುನಃ ಪರಿಶೀಲಿಸಿ." }, "expectedSignals": ["device_detected"], "verificationMode": "manual", "nextStep": "site_position" },
+      { "id": "site_position", "title": "Position at injection site", "instruction": { "en": "Clean a rotated injection site (abdomen, thigh, or upper arm) with the alcohol swab and let it dry.", "hi": "एक बदले हुए इंजेक्शन स्थल (पेट, जांघ या ऊपरी बांह) को एल्कोहल स्वैब से साफ करें और सूखने दें।", "kn": "ಬದಲಾದ ಇಂಜೆಕ್ಷನ್ ಸ್ಥಳವನ್ನು (ಹೊಟ್ಟೆ, ತೊಡೆ ಅಥವಾ ಮೇಲ್ತೋಳು) ಆಲ್ಕೋಹಾಲ್ ಸ್ವ್ಯಾಬ್‌ನಿಂದ ಸ್ವಚ್ಛಗೊಳಿಸಿ ಒಣಗಲು ಬಿಡಿ." }, "expectedSignals": ["body_landmark", "injection_site"], "verificationMode": "ml", "nextStep": "inject" },
+      { "id": "inject", "title": "Inject", "instruction": { "en": "Pinch the skin if advised, insert the needle at the angle your clinician taught you, and press the button fully.", "hi": "यदि सलाह दी गई हो तो त्वचा को चुटकी में लें, अपने चिकित्सक द्वारा बताए गए कोण पर सुई डालें, और बटन पूरी तरह दबाएं।", "kn": "ಸಲಹೆ ನೀಡಿದ್ದರೆ ಚರ್ಮವನ್ನು ಹಿಡಿದು, ವೈದ್ಯರು ಕಲಿಸಿದ ಕೋನದಲ್ಲಿ ಸೂಜಿ ಸೇರಿಸಿ, ಬಟನ್ ಸಂಪೂರ್ಣ ಒತ್ತಿ." }, "expectedSignals": ["needle_detected", "injection_site"], "verificationMode": "ml", "nextStep": "hold" },
+      { "id": "hold", "title": "Hold in place", "instruction": { "en": "Keep the needle in place for about 10 seconds after the button is fully pressed.", "hi": "बटन पूरी तरह दबाने के बाद सुई को लगभग 10 सेकंड तक स्थान पर रखें।", "kn": "ಬಟನ್ ಸಂಪೂರ್ಣ ಒತ್ತಿದ ನಂತರ ಸೂಜಿಯನ್ನು ಸುಮಾರು 10 ಸೆಕೆಂಡ್ ಸ್ಥಳದಲ್ಲಿ ಇರಿಸಿ." }, "expectedSignals": ["needle_detected", "injection_site"], "verificationMode": "ml", "nextStep": "remove" },
+      { "id": "remove", "title": "Remove the needle", "instruction": { "en": "Withdraw the needle straight out and apply light pressure if needed. Do not rub the site.", "hi": "सुई को सीधे बाहर निकालें और यदि आवश्यक हो तो हल्का दबाव डालें। स्थान को न रगड़ें।", "kn": "ಸೂಜಿಯನ್ನು ನೇರವಾಗಿ ಹೊರ ತೆಗೆಯಿರಿ ಮತ್ತು ಅಗತ್ಯವಿದ್ದರೆ ಹಗುರ ಒತ್ತಡ ನೀಡಿ. ಸ್ಥಳವನ್ನು ಉಜ್ಜಬೇಡಿ." }, "expectedSignals": ["needle_detected", "injection_site"], "verificationMode": "ml", "nextStep": "dispose" },
+      { "id": "dispose", "title": "Dispose safely", "instruction": { "en": "Unscrew the needle and place it directly into a sharps container. Never recap a used needle by hand.", "hi": "सुई को खोलें और सीधे शार्प्स कंटेनर में डालें। इस्तेमाल की गई सुई को हाथ से कभी न ढकें।", "kn": "ಸೂಜಿಯನ್ನು ಬಿಚ್ಚಿ ನೇರವಾಗಿ ಶಾರ್ಪ್ಸ್ ಕಂಟೇನರ್‌ಗೆ ಹಾಕಿ. ಬಳಸಿದ ಸೂಜಿಯನ್ನು ಕೈಯಿಂದ ಎಂದಿಗೂ ಮುಚ್ಚಬೇಡಿ." }, "expectedSignals": ["sharps_container_detected"], "verificationMode": "ml", "nextStep": null }
+    ]
+  },
+
+  "glucose_measurement": {
+    "id": "glucose_measurement",
+    "phase": 4,
+    "category": "diabetes_monitoring",
+    "name": "Glucose Measurement",
+    "description": "Guides correct use of a glucometer to take a blood glucose reading.",
+    "supported": true,
+    "requiresML": true,
+    "requiresAR": true,
+    "medicalBoundary": "NovaCare does not diagnose diabetes or interpret the glucose value clinically. It verifies measurement technique only.",
+    "steps": [
+      { "id": "prepare_glucometer", "title": "Prepare glucometer", "instruction": { "en": "Wash and dry your hands, then turn on the glucometer.", "hi": "हाथ धोकर सुखाएं, फिर ग्लूकोमीटर चालू करें।", "kn": "ಕೈಗಳನ್ನು ತೊಳೆದು ಒಣಗಿಸಿ, ನಂತರ ಗ್ಲುಕೋಮೀಟರ್ ಆನ್ ಮಾಡಿ." }, "expectedSignals": ["device_detected"], "verificationMode": "ml", "nextStep": "insert_strip" },
+      { "id": "insert_strip", "title": "Insert test strip", "instruction": { "en": "Insert a new test strip into the glucometer until it clicks or the screen confirms it's ready.", "hi": "नई टेस्ट स्ट्रिप को ग्लूकोमीटर में तब तक डालें जब तक क्लिक न हो या स्क्रीन तैयार न दिखाए।", "kn": "ಕ್ಲಿಕ್ ಆಗುವವರೆಗೆ ಅಥವಾ ಸ್ಕ್ರೀನ್ ಸಿದ್ಧ ಎಂದು ಖಚಿತಪಡಿಸುವವರೆಗೆ ಹೊಸ ಟೆಸ್ಟ್ ಸ್ಟ್ರಿಪ್ ಅನ್ನು ಗ್ಲುಕೋಮೀಟರ್‌ಗೆ ಸೇರಿಸಿ." }, "expectedSignals": ["device_detected", "strip_detected"], "verificationMode": "ml", "nextStep": "prepare_lancet" },
+      { "id": "prepare_lancet", "title": "Prepare lancing device", "instruction": { "en": "Load a fresh lancet into the lancing device and set the depth as advised.", "hi": "लैंसिंग डिवाइस में नया लैंसेट लगाएं और सलाह अनुसार गहराई सेट करें।", "kn": "ಲ್ಯಾನ್ಸಿಂಗ್ ಸಾಧನದಲ್ಲಿ ಹೊಸ ಲ್ಯಾನ್ಸೆಟ್ ಅಳವಡಿಸಿ ಸಲಹೆ ಪ್ರಕಾರ ಆಳ ಸೆಟ್ ಮಾಡಿ." }, "expectedSignals": ["lancet_device_detected"], "verificationMode": "ml", "nextStep": "obtain_sample" },
+      { "id": "obtain_sample", "title": "Obtain sample", "instruction": { "en": "Prick the side of a clean fingertip and gently massage to form a small drop of blood.", "hi": "साफ उंगली की नोक के किनारे को चुभोएं और धीरे से मालिश कर एक छोटी बूंद बनाएं।", "kn": "ಸ್ವಚ್ಛ ಬೆರಳಿನ ತುದಿಯ ಬದಿಯನ್ನು ಚುಚ್ಚಿ, ಸಣ್ಣ ರಕ್ತದ ಹನಿ ಬರುವಂತೆ ನಿಧಾನವಾಗಿ ಒತ್ತಿ." }, "expectedSignals": ["hand_detected", "finger_landmark"], "verificationMode": "ml", "nextStep": "apply_sample" },
+      { "id": "apply_sample", "title": "Apply sample to strip", "instruction": { "en": "Touch the edge of the test strip to the drop of blood until the glucometer confirms enough sample.", "hi": "टेस्ट स्ट्रिप के किनारे को रक्त की बूंद से तब तक छुएं जब तक ग्लूकोमीटर पर्याप्त सैंपल की पुष्टि न करे।", "kn": "ಗ್ಲುಕೋಮೀಟರ್ ಸಾಕಷ್ಟು ಮಾದರಿ ಎಂದು ಖಚಿತಪಡಿಸುವವರೆಗೆ ಟೆಸ್ಟ್ ಸ್ಟ್ರಿಪ್‌ನ ಅಂಚನ್ನು ರಕ್ತದ ಹನಿಗೆ ಸ್ಪರ್ಶಿಸಿ." }, "expectedSignals": ["device_detected", "finger_landmark"], "verificationMode": "ml", "nextStep": "wait_reading" },
+      { "id": "wait_reading", "title": "Wait for reading", "instruction": { "en": "Hold still and wait for the countdown to finish.", "hi": "स्थिर रहें और उलटी गिनती पूरी होने तक प्रतीक्षा करें।", "kn": "ಸ್ಥಿರವಾಗಿರಿ ಮತ್ತು ಕೌಂಟ್‌ಡೌನ್ ಮುಗಿಯುವವರೆಗೆ ಕಾಯಿರಿ." }, "expectedSignals": ["device_detected"], "verificationMode": "ml", "nextStep": "complete_measurement" },
+      { "id": "complete_measurement", "title": "Complete measurement", "instruction": { "en": "Remove the used strip and dispose of the lancet safely in a sharps container.", "hi": "इस्तेमाल की गई स्ट्रिप हटाएं और लैंसेट को शार्प्स कंटेनर में सुरक्षित रूप से फेंकें।", "kn": "ಬಳಸಿದ ಸ್ಟ್ರಿಪ್ ತೆಗೆದು ಲ್ಯಾನ್ಸೆಟ್ ಅನ್ನು ಶಾರ್ಪ್ಸ್ ಕಂಟೇನರ್‌ಗೆ ಸುರಕ್ಷಿತವಾಗಿ ಹಾಕಿ." }, "expectedSignals": ["sharps_container_detected"], "verificationMode": "ml", "nextStep": "log_result" },
+      { "id": "log_result", "title": "Log the result", "instruction": { "en": "Record the reading shown on the glucometer screen.", "hi": "ग्लूकोमीटर स्क्रीन पर दिखाई गई रीडिंग दर्ज करें।", "kn": "ಗ್ಲುಕೋಮೀಟರ್ ಪರದೆಯಲ್ಲಿ ತೋರಿಸಿದ ರೀಡಿಂಗ್ ದಾಖಲಿಸಿ." }, "expectedSignals": [], "verificationMode": "manual", "nextStep": null }
+    ]
+  },
+
+  "eye_drops": {
+    "id": "eye_drops",
+    "phase": 5,
+    "category": "medication_delivery",
+    "name": "Eye Drop Administration",
+    "description": "Guides correct self-administration of prescribed eye drops.",
+    "supported": true,
+    "requiresML": true,
+    "requiresAR": true,
+    "medicalBoundary": "NovaCare verifies administration technique only, using the patient's existing prescribed drops.",
+    "steps": [
+      { "id": "prepare", "title": "Prepare", "instruction": { "en": "Wash your hands and shake the bottle if the label instructs.", "hi": "हाथ धोएं और यदि लेबल पर लिखा हो तो बोतल हिलाएं।", "kn": "ಕೈಗಳನ್ನು ತೊಳೆಯಿರಿ, ಲೇಬಲ್‌ನಲ್ಲಿ ಸೂಚಿಸಿದ್ದರೆ ಬಾಟಲಿ ಅಲುಗಿಸಿ." }, "expectedSignals": ["bottle_detected"], "verificationMode": "ml", "nextStep": "head_position" },
+      { "id": "head_position", "title": "Head position", "instruction": { "en": "Tilt your head back, looking up at the ceiling.", "hi": "सिर को पीछे झुकाएं और छत की ओर देखें।", "kn": "ತಲೆಯನ್ನು ಹಿಂದೆ ಬಾಗಿಸಿ ಚಾವಣಿಯನ್ನು ನೋಡಿ." }, "expectedSignals": ["face_detected", "head_pose"], "verificationMode": "ml", "nextStep": "eyelid_position" },
+      { "id": "eyelid_position", "title": "Eyelid position", "instruction": { "en": "Gently pull down your lower eyelid with a clean finger to form a small pocket.", "hi": "साफ उंगली से निचली पलक को धीरे से नीचे खींचकर एक छोटी थैली बनाएं।", "kn": "ಸ್ವಚ್ಛ ಬೆರಳಿನಿಂದ ಕೆಳ ಕಣ್ಣುರೆಪ್ಪೆಯನ್ನು ನಿಧಾನವಾಗಿ ಕೆಳಗೆ ಎಳೆದು ಸಣ್ಣ ಚೀಲ ಮಾಡಿ." }, "expectedSignals": ["face_detected", "eye_landmark"], "verificationMode": "ml", "nextStep": "bottle_position" },
+      { "id": "bottle_position", "title": "Bottle position", "instruction": { "en": "Hold the bottle tip close to, but not touching, your eye or lashes.", "hi": "बोतल की नोक को आंख या पलकों के पास रखें, लेकिन छुएं नहीं।", "kn": "ಬಾಟಲಿಯ ತುದಿಯನ್ನು ಕಣ್ಣಿಗೆ ಅಥವಾ ರೆಪ್ಪೆಗಳಿಗೆ ಸ್ಪರ್ಶಿಸದೆ ಹತ್ತಿರ ಹಿಡಿಯಿರಿ." }, "expectedSignals": ["bottle_detected", "eye_landmark"], "verificationMode": "ml", "nextStep": "administer" },
+      { "id": "administer", "title": "Administer the drop", "instruction": { "en": "Squeeze gently to release one drop into the pocket of your lower eyelid.", "hi": "निचली पलक की थैली में एक बूंद डालने के लिए धीरे से दबाएं।", "kn": "ಕೆಳ ಕಣ್ಣುರೆಪ್ಪೆಯ ಚೀಲಕ್ಕೆ ಒಂದು ಹನಿ ಬಿಡಲು ನಿಧಾನವಾಗಿ ಒತ್ತಿ." }, "expectedSignals": ["bottle_detected", "eye_landmark"], "verificationMode": "ml", "nextStep": "avoid_contact" },
+      { "id": "avoid_contact", "title": "Avoid contamination", "instruction": { "en": "Close your eye gently for 1-2 minutes without blinking hard. Avoid touching the dropper tip to any surface.", "hi": "आंख को धीरे से 1-2 मिनट बंद रखें, जोर से न झपकाएं। ड्रॉपर की नोक को किसी सतह से न छुएं।", "kn": "ಕಣ್ಣನ್ನು ನಿಧಾನವಾಗಿ 1-2 ನಿಮಿಷ ಮುಚ್ಚಿ, ಜೋರಾಗಿ ಮಿಟುಕಿಸಬೇಡಿ. ಡ್ರಾಪರ್ ತುದಿಯನ್ನು ಯಾವುದೇ ಮೇಲ್ಮೈಗೆ ಸ್ಪರ್ಶಿಸಬೇಡಿ." }, "expectedSignals": ["face_detected"], "verificationMode": "ml", "nextStep": "finish" },
+      { "id": "finish", "title": "Finish", "instruction": { "en": "Wipe away any excess with a clean tissue and recap the bottle.", "hi": "साफ टिश्यू से अतिरिक्त पोंछें और बोतल का ढक्कन बंद करें।", "kn": "ಸ್ವಚ್ಛ ಟಿಶ್ಯೂ ಬಳಸಿ ಹೆಚ್ಚುವರಿಯನ್ನು ಒರೆಸಿ ಬಾಟಲಿ ಮುಚ್ಚಿ." }, "expectedSignals": ["bottle_detected"], "verificationMode": "ml", "nextStep": null }
+    ]
+  },
+
+  "nasal_spray": {
+    "id": "nasal_spray",
+    "phase": 5,
+    "category": "medication_delivery",
+    "name": "Nasal Spray Administration",
+    "description": "Guides correct self-administration of a prescribed nasal spray.",
+    "supported": true,
+    "requiresML": true,
+    "requiresAR": true,
+    "medicalBoundary": "NovaCare verifies administration technique only, using the patient's existing prescribed spray.",
+    "steps": [
+      { "id": "prepare", "title": "Prepare", "instruction": { "en": "Blow your nose gently and shake the bottle if instructed.", "hi": "धीरे से नाक साफ करें और यदि निर्देशित हो तो बोतल हिलाएं।", "kn": "ನಿಧಾನವಾಗಿ ಮೂಗು ಶುಚಿಗೊಳಿಸಿ, ಸೂಚಿಸಿದ್ದರೆ ಬಾಟಲಿ ಅಲುಗಿಸಿ." }, "expectedSignals": ["bottle_detected"], "verificationMode": "ml", "nextStep": "head_position" },
+      { "id": "head_position", "title": "Head position", "instruction": { "en": "Tilt your head slightly forward, keeping it upright — not fully back.", "hi": "सिर को थोड़ा आगे झुकाएं, पूरी तरह पीछे नहीं।", "kn": "ತಲೆಯನ್ನು ಸ್ವಲ್ಪ ಮುಂದಕ್ಕೆ ಬಾಗಿಸಿ, ಪೂರ್ಣ ಹಿಂದೆ ಅಲ್ಲ." }, "expectedSignals": ["face_detected", "head_pose"], "verificationMode": "ml", "nextStep": "nostril_position" },
+      { "id": "nostril_position", "title": "Nostril position", "instruction": { "en": "Close one nostril with a finger and insert the nozzle into the other nostril.", "hi": "एक नथुने को उंगली से बंद करें और नोज़ल को दूसरे नथुने में डालें।", "kn": "ಒಂದು ಮೂಗಿನ ಹೊಳ್ಳೆಯನ್ನು ಬೆರಳಿನಿಂದ ಮುಚ್ಚಿ ಇನ್ನೊಂದರಲ್ಲಿ ನಾಜಲ್ ಸೇರಿಸಿ." }, "expectedSignals": ["bottle_detected", "nose_landmark"], "verificationMode": "ml", "nextStep": "spray_angle" },
+      { "id": "spray_angle", "title": "Correct spray angle", "instruction": { "en": "Angle the nozzle slightly away from the center of your nose, toward your ear on that side.", "hi": "नोज़ल को नाक के केंद्र से थोड़ा दूर, उस तरफ के कान की ओर झुकाएं।", "kn": "ನಾಜಲ್ ಅನ್ನು ಮೂಗಿನ ಮಧ್ಯಭಾಗದಿಂದ ಸ್ವಲ್ಪ ದೂರಕ್ಕೆ, ಆ ಬದಿಯ ಕಿವಿಯ ಕಡೆಗೆ ಓರೆಗೊಳಿಸಿ." }, "expectedSignals": ["bottle_detected", "nose_landmark"], "verificationMode": "ml", "nextStep": "actuation" },
+      { "id": "actuation", "title": "Actuate", "instruction": { "en": "Press the pump once while gently breathing in through your nose.", "hi": "नाक से धीरे-धीरे सांस लेते हुए पंप एक बार दबाएं।", "kn": "ಮೂಗಿನಿಂದ ನಿಧಾನವಾಗಿ ಉಸಿರಾಡುತ್ತಾ ಪಂಪ್ ಅನ್ನು ಒಮ್ಮೆ ಒತ್ತಿ." }, "expectedSignals": ["bottle_detected", "actuation_event"], "verificationMode": "ml", "nextStep": "inhale_gently" },
+      { "id": "inhale_gently", "title": "Inhale gently", "instruction": { "en": "Breathe in gently — do not sniff hard, so the medicine stays in your nose rather than draining down your throat.", "hi": "धीरे से सांस लें, जोर से न सूंघें, ताकि दवा गले में जाने के बजाय नाक में रहे।", "kn": "ನಿಧಾನವಾಗಿ ಉಸಿರಾಡಿ, ಜೋರಾಗಿ ಸೀನಬೇಡಿ, ಇದರಿಂದ ಔಷಧಿ ಗಂಟಲಿಗೆ ಇಳಿಯದೆ ಮೂಗಿನಲ್ಲಿ ಉಳಿಯುತ್ತದೆ." }, "expectedSignals": ["face_detected"], "verificationMode": "ml", "nextStep": "finish" },
+      { "id": "finish", "title": "Finish", "instruction": { "en": "Repeat in the other nostril if prescribed, then wipe the nozzle and recap.", "hi": "यदि निर्धारित हो तो दूसरे नथुने में दोहराएं, फिर नोज़ल पोंछें और ढक्कन लगाएं।", "kn": "ಸೂಚಿಸಿದ್ದರೆ ಇನ್ನೊಂದು ಮೂಗಿನ ಹೊಳ್ಳೆಯಲ್ಲಿ ಪುನರಾವರ್ತಿಸಿ, ನಂತರ ನಾಜಲ್ ಒರೆಸಿ ಮುಚ್ಚಿ." }, "expectedSignals": ["bottle_detected"], "verificationMode": "ml", "nextStep": null }
+    ]
+  },
+
+  "nebulizer": {
+    "id": "nebulizer",
+    "phase": 5,
+    "category": "medication_delivery",
+    "name": "Nebulizer Session",
+    "description": "Guides correct setup and use of a home nebulizer for a prescribed medication.",
+    "supported": true,
+    "requiresML": true,
+    "requiresAR": true,
+    "medicalBoundary": "NovaCare verifies setup and technique only, using the patient's existing prescribed nebulizer solution.",
+    "steps": [
+      { "id": "assemble", "title": "Assemble the nebulizer", "instruction": { "en": "Wash your hands and assemble the medicine cup, tubing, and mask/mouthpiece.", "hi": "हाथ धोएं और दवा कप, ट्यूबिंग और मास्क/मुखपत्र को जोड़ें।", "kn": "ಕೈಗಳನ್ನು ತೊಳೆದು ಔಷಧಿ ಕಪ್, ಟ್ಯೂಬಿಂಗ್, ಮಾಸ್ಕ್/ಮೌತ್‌ಪೀಸ್ ಜೋಡಿಸಿ." }, "expectedSignals": ["device_detected"], "verificationMode": "ml", "nextStep": "add_medication" },
+      { "id": "add_medication", "title": "Add prescribed medication", "instruction": { "en": "Pour your prescribed dose into the medicine cup as instructed by your clinician.", "hi": "अपने चिकित्सक के निर्देशानुसार निर्धारित खुराक दवा कप में डालें।", "kn": "ವೈದ್ಯರ ಸೂಚನೆಯಂತೆ ನಿಗದಿತ ಡೋಸ್ ಅನ್ನು ಔಷಧಿ ಕಪ್‌ಗೆ ಸುರಿಯಿರಿ." }, "expectedSignals": ["device_detected"], "verificationMode": "manual", "nextStep": "connect" },
+      { "id": "connect", "title": "Connect to compressor", "instruction": { "en": "Connect the tubing to the compressor and to the medicine cup securely.", "hi": "ट्यूबिंग को कंप्रेसर और दवा कप से सुरक्षित रूप से जोड़ें।", "kn": "ಟ್ಯೂಬಿಂಗ್ ಅನ್ನು ಕಂಪ್ರೆಸರ್ ಮತ್ತು ಔಷಧಿ ಕಪ್‌ಗೆ ಸುರಕ್ಷಿತವಾಗಿ ಜೋಡಿಸಿ." }, "expectedSignals": ["device_detected"], "verificationMode": "ml", "nextStep": "position_mask" },
+      { "id": "position_mask", "title": "Position mask or mouthpiece", "instruction": { "en": "Sit upright and place the mask over your nose and mouth, or the mouthpiece between your lips.", "hi": "सीधे बैठें और मास्क को नाक-मुंह पर रखें, या मुखपत्र को होठों के बीच रखें।", "kn": "ನೇರವಾಗಿ ಕುಳಿತು ಮಾಸ್ಕ್ ಅನ್ನು ಮೂಗು-ಬಾಯಿಯ ಮೇಲೆ ಇರಿಸಿ, ಅಥವಾ ಮೌತ್‌ಪೀಸ್ ಅನ್ನು ತುಟಿಗಳ ನಡುವೆ ಇರಿಸಿ." }, "expectedSignals": ["face_detected", "device_detected"], "verificationMode": "ml", "nextStep": "establish_seal" },
+      { "id": "establish_seal", "title": "Establish a seal", "instruction": { "en": "Make sure the mask fits snugly with no major gaps around your face.", "hi": "सुनिश्चित करें कि मास्क चेहरे के चारों ओर बिना बड़े गैप के फिट हो।", "kn": "ಮಾಸ್ಕ್ ಮುಖದ ಸುತ್ತ ದೊಡ್ಡ ಅಂತರವಿಲ್ಲದೆ ಸರಿಯಾಗಿ ಹೊಂದಿಕೊಳ್ಳುತ್ತದೆಯೆ ಎಂದು ಖಚಿತಪಡಿಸಿ." }, "expectedSignals": ["face_detected", "device_detected"], "verificationMode": "ml", "nextStep": "perform_session" },
+      { "id": "perform_session", "title": "Perform the session", "instruction": { "en": "Turn on the compressor and breathe normally through your mouth until the medication cup is empty or misting stops.", "hi": "कंप्रेसर चालू करें और तब तक मुंह से सामान्य रूप से सांस लें जब तक दवा कप खाली न हो जाए या धुंध रुक न जाए।", "kn": "ಕಂಪ್ರೆಸರ್ ಆನ್ ಮಾಡಿ ಔಷಧಿ ಕಪ್ ಖಾಲಿಯಾಗುವವರೆಗೆ ಅಥವಾ ಮಿಸ್ಟ್ ನಿಲ್ಲುವವರೆಗೆ ಬಾಯಿಂದ ಸಾಮಾನ್ಯವಾಗಿ ಉಸಿರಾಡಿ." }, "expectedSignals": ["face_detected", "device_detected"], "verificationMode": "ml", "nextStep": "finish" },
+      { "id": "finish", "title": "Finish and clean", "instruction": { "en": "Turn off the compressor, rinse the medicine cup and mask with water, and let them air dry.", "hi": "कंप्रेसर बंद करें, दवा कप और मास्क को पानी से धोएं और हवा में सूखने दें।", "kn": "ಕಂಪ್ರೆಸರ್ ಆಫ್ ಮಾಡಿ, ಔಷಧಿ ಕಪ್ ಮತ್ತು ಮಾಸ್ಕ್ ಅನ್ನು ನೀರಿನಿಂದ ತೊಳೆದು ಗಾಳಿಯಲ್ಲಿ ಒಣಗಿಸಿ." }, "expectedSignals": ["device_detected"], "verificationMode": "ml", "nextStep": null }
+    ]
+  },
+
+  "wound_dressing": {
+    "id": "wound_dressing",
+    "phase": 6,
+    "category": "home_procedure",
+    "name": "Minor Wound Dressing",
+    "description": "Guides basic dressing/bandaging technique for a minor, already-assessed wound (small cuts and abrasions only).",
+    "supported": true,
+    "requiresML": true,
+    "requiresAR": true,
+    "medicalBoundary": "NovaCare does not diagnose wounds, assess infection, or determine severity. It supports minor, previously-assessed home dressing only. Anything beyond a small cut or abrasion should be evaluated by a healthcare professional.",
+    "steps": [
+      { "id": "wash_hands", "title": "Wash your hands", "instruction": { "en": "Wash your hands thoroughly with soap and water before touching the wound or dressing.", "hi": "घाव या पट्टी को छूने से पहले साबुन और पानी से हाथ अच्छी तरह धोएं।", "kn": "ಗಾಯ ಅಥವಾ ಡ್ರೆಸ್ಸಿಂಗ್ ಮುಟ್ಟುವ ಮೊದಲು ಸಾಬೂನಿನಿಂದ ಕೈಗಳನ್ನು ಚೆನ್ನಾಗಿ ತೊಳೆಯಿರಿ." }, "expectedSignals": ["hand_detected"], "verificationMode": "ml", "nextStep": "clean_wound" },
+      { "id": "clean_wound", "title": "Clean the wound", "instruction": { "en": "Rinse the wound gently under clean running water.", "hi": "घाव को साफ बहते पानी के नीचे धीरे से धोएं।", "kn": "ಗಾಯವನ್ನು ಸ್ವಚ್ಛ ಹರಿಯುವ ನೀರಿನ ಕೆಳಗೆ ನಿಧಾನವಾಗಿ ತೊಳೆಯಿರಿ." }, "expectedSignals": ["wound_area_detected"], "verificationMode": "ml", "nextStep": "apply_dressing" },
+      { "id": "apply_dressing", "title": "Apply the dressing", "instruction": { "en": "Place a sterile gauze or bandage fully over the wound.", "hi": "घाव पर पूरी तरह से एक जीवाणुरहित गॉज़ या पट्टी रखें।", "kn": "ಗಾಯದ ಮೇಲೆ ಸಂಪೂರ್ಣವಾಗಿ ಬರಡಾದ ಗಾಜ್ ಅಥವಾ ಪಟ್ಟಿ ಇರಿಸಿ." }, "expectedSignals": ["wound_area_detected", "dressing_detected"], "verificationMode": "ml", "nextStep": "secure_dressing" },
+      { "id": "secure_dressing", "title": "Secure the dressing", "instruction": { "en": "Secure the edges with medical tape or a bandage wrap, snug but not tight.", "hi": "मेडिकल टेप या पट्टी से किनारों को सुरक्षित करें, कसा हुआ पर ज़्यादा तंग नहीं।", "kn": "ಮೆಡಿಕಲ್ ಟೇಪ್ ಅಥವಾ ಬ್ಯಾಂಡೇಜ್‌ನಿಂದ ಅಂಚುಗಳನ್ನು ಸುರಕ್ಷಿತಗೊಳಿಸಿ, ಬಿಗಿಯಾಗಿ ಆದರೆ ಅತಿಯಾಗಿ ಅಲ್ಲ." }, "expectedSignals": ["dressing_detected"], "verificationMode": "ml", "nextStep": "finish" },
+      { "id": "finish", "title": "Finish", "instruction": { "en": "Wash your hands again. If the wound shows redness, swelling, warmth, or pus, consult a healthcare professional.", "hi": "फिर से हाथ धोएं। यदि घाव में लालिमा, सूजन, गर्मी या मवाद दिखे तो चिकित्सक से सलाह लें।", "kn": "ಪುನಃ ಕೈಗಳನ್ನು ತೊಳೆಯಿರಿ. ಗಾಯದಲ್ಲಿ ಕೆಂಪು, ಊತ, ಬಿಸಿ ಅಥವಾ ಕೀವು ಕಂಡುಬಂದರೆ ವೈದ್ಯರನ್ನು ಸಂಪರ್ಕಿಸಿ." }, "expectedSignals": ["hand_detected"], "verificationMode": "ml", "nextStep": null }
+    ]
+  },
+
+  "ors_preparation": {
+    "id": "ors_preparation",
+    "phase": 6,
+    "category": "home_procedure",
+    "name": "ORS Preparation",
+    "description": "Guides correct preparation of oral rehydration solution from a standard ORS sachet.",
+    "supported": true,
+    "requiresML": false,
+    "requiresAR": true,
+    "medicalBoundary": "NovaCare guides correct preparation only. It does not determine whether ORS is medically appropriate for the situation — follow the guidance already given by a healthcare provider.",
+    "steps": [
+      { "id": "wash_hands", "title": "Wash your hands", "instruction": { "en": "Wash your hands with soap and water before preparing the solution.", "hi": "घोल तैयार करने से पहले साबुन और पानी से हाथ धोएं।", "kn": "ದ್ರಾವಣ ತಯಾರಿಸುವ ಮೊದಲು ಸಾಬೂನಿನಿಂದ ಕೈಗಳನ್ನು ತೊಳೆಯಿರಿ." }, "expectedSignals": ["hand_detected"], "verificationMode": "manual", "nextStep": "measure_water" },
+      { "id": "measure_water", "title": "Measure clean water", "instruction": { "en": "Measure exactly 1 litre of clean drinking (or boiled and cooled) water in a clean container.", "hi": "एक साफ बर्तन में ठीक 1 लीटर स्वच्छ पेयजल (या उबालकर ठंडा किया गया पानी) मापें।", "kn": "ಸ್ವಚ್ಛ ಪಾತ್ರೆಯಲ್ಲಿ ನಿಖರವಾಗಿ 1 ಲೀಟರ್ ಶುದ್ಧ ಕುಡಿಯುವ (ಅಥವಾ ಕುದಿಸಿ ತಣ್ಣಗಾದ) ನೀರನ್ನು ಅಳೆಯಿರಿ." }, "expectedSignals": ["container_detected"], "verificationMode": "manual", "nextStep": "add_sachet" },
+      { "id": "add_sachet", "title": "Add the full sachet", "instruction": { "en": "Empty the entire contents of one ORS sachet into the water. Do not use a partial sachet or add extra sachets.", "hi": "एक ORS पाउच की पूरी सामग्री पानी में डालें। आधा पाउच इस्तेमाल न करें और अतिरिक्त पाउच न मिलाएं।", "kn": "ಒಂದು ORS ಪೊಟ್ಟಣದ ಸಂಪೂರ್ಣ ವಿಷಯವನ್ನು ನೀರಿಗೆ ಸೇರಿಸಿ. ಅರ್ಧ ಪೊಟ್ಟಣ ಬಳಸಬೇಡಿ ಅಥವಾ ಹೆಚ್ಚುವರಿ ಪೊಟ್ಟಣ ಸೇರಿಸಬೇಡಿ." }, "expectedSignals": ["sachet_detected", "container_detected"], "verificationMode": "manual", "nextStep": "mix" },
+      { "id": "mix", "title": "Mix thoroughly", "instruction": { "en": "Stir until the powder is completely dissolved.", "hi": "तब तक हिलाएं जब तक पाउडर पूरी तरह घुल न जाए।", "kn": "ಪೌಡರ್ ಸಂಪೂರ್ಣ ಕರಗುವವರೆಗೆ ಬೆರೆಸಿ." }, "expectedSignals": ["container_detected"], "verificationMode": "manual", "nextStep": "finish" },
+      { "id": "finish", "title": "Finish", "instruction": { "en": "Use the prepared solution within 24 hours; discard and prepare fresh after that.", "hi": "तैयार घोल को 24 घंटे के भीतर उपयोग करें; उसके बाद फेंककर नया तैयार करें।", "kn": "ತಯಾರಿಸಿದ ದ್ರಾವಣವನ್ನು 24 ಗಂಟೆಗಳ ಒಳಗೆ ಬಳಸಿ; ನಂತರ ಬಿಸಾಡಿ ಹೊಸದನ್ನು ತಯಾರಿಸಿ." }, "expectedSignals": [], "verificationMode": "manual", "nextStep": null }
+    ]
+  }
+}

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"surface-container-highest":"#dee2f0","secondary":"#3b5e97","surface-container-lowest":"#ffffff","secondary-container":"#9dbffe","tertiary-container":"#0f69dc","on-tertiary-container":"#edf0ff","secondary-fixed":"#d6e3ff","on-primary-fixed":"#00174b","primary":"#004ac6","outline-variant":"#c3c6d7","surface-variant":"#dee2f0","primary-fixed":"#dbe1ff","secondary-fixed-dim":"#aac7ff","on-tertiary-fixed":"#001a42","tertiary-fixed":"#d8e2ff","inverse-surface":"#2b303b","outline":"#737686","error-container":"#ffdad6","on-secondary-fixed":"#001b3e","primary-fixed-dim":"#b4c5ff","on-secondary":"#ffffff","on-surface":"#171c26","on-primary":"#ffffff","inverse-on-surface":"#ecf0ff","on-primary-fixed-variant":"#003ea8","surface-container-high":"#e4e8f6","on-surface-variant":"#434655","surface-container-low":"#f1f3ff","surface-dim":"#d6dae8","error":"#ba1a1a","on-error-container":"#93000a","background":"#f9f9ff","tertiary-fixed-dim":"#adc6ff","on-secondary-container":"#274d84","surface-container":"#e9edfc","on-primary-container":"#eeefff","on-error":"#ffffff","on-secondary-fixed-variant":"#20467e","on-tertiary":"#ffffff","primary-container":"#2563eb","on-background":"#171c26","surface-bright":"#f9f9ff","tertiary":"#0051b1","surface-tint":"#0053db","inverse-primary":"#b4c5ff","on-tertiary-fixed-variant":"#004395","surface":"#f9f9ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-2xl":"3rem","gutter-mobile":"1rem","space-xl":"2rem","space-xs":"0.5rem","space-sm":"0.75rem","gutter":"1.5rem","margin-mobile":"1rem","space-lg":"1.5rem","space-md":"1rem","margin":"2rem","space-xxs":"0.25rem"},"fontFamily":{"display-vital":["Inter"],"body-md":["Inter"],"headline-md":["Inter"],"label-sm":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"display-vital-mobile":["Inter"],"label-md":["Inter"],"headline-lg-mobile":["Inter"],"headline-sm":["Inter"],"headline-lg":["Inter"],"provenance-tag":["Inter"]},"fontSize":{"display-vital":["3.5rem",{"lineHeight":"3.75rem","letterSpacing":"-0.025em","fontWeight":"700"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"600"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"display-vital-mobile":["2.5rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"headline-lg":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.02em","fontWeight":"700"}],"provenance-tag":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.04em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm"><img alt="Brand logo. - Primary color: #2563eb
+- Font: inter
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XIg5Aojol0LvkmUv74pOqfjeQir0qYeaGBlXg0TGzfuWu98YSxBigQjbZYb0NNPNQmrQ-8muhdRmZMz42rJhRG0R3ZyAjjRVMCE06TXz-hwSp5gUJApdbYBlncMJvPlrQuU_UG7Gg30DNgp9MXKRAtzQ1NdIKTv7zjhoyeW-sOvVN9Oppdz79fKq0lvAINL_ny0llLTdyLo1pPAsvNLU1VLSDQAVum_120TiLPuhqNa0BJXJU6Eeh3-Sg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">NovaCare</span><span class="font-provenance-tag text-provenance-tag text-on-surface-variant uppercase tracking-wider mt-1 bg-surface-container-low px-space-xs py-0.5 rounded">Patient Portal</span></div></div><div class="px-space-md mt-space-md"><nav class="flex flex-col gap-space-xxs" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Overview</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-all bg-primary-container text-on-primary font-bold rounded-lg shadow-sm" data-path="health-check" href="#"><span class="material-symbols-outlined text-[20px]">ecg_heart</span><span>Health Check</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="history-and-trends" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span>History &amp; Trends</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="medications" href="#"><span class="material-symbols-outlined text-[20px]">prescriptions</span><span>Medications</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="profile-and-settings" href="#"><span class="material-symbols-outlined text-[20px]">person</span><span>Profile &amp; Settings</span></a></nav></div></div><div class="p-space-md bg-surface-container-low mx-space-md mb-space-md rounded-xl flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">Emergency Help</span><span class="material-symbols-outlined text-[18px] text-error">emergency</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Immediate assistance or urgent clinical triage.</p><a class="mt-space-xxs inline-flex items-center justify-center py-space-xs px-space-sm bg-surface-container-lowest font-label-sm text-label-sm text-error rounded-lg hover:bg-surface-container-highest transition-colors font-semibold" href="tel:108">Call Helpline 108</a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center bg-surface-container-low rounded-lg p-space-xxs"><button class="px-space-xs py-space-xxs text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm rounded hover:bg-surface-container-highest transition-colors" title="Decrease text size" type="button">A-</button><div class="h-3 w-px bg-outline-variant mx-space-xxs"></div><button class="px-space-xs py-space-xxs text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm rounded hover:bg-surface-container-highest transition-colors font-bold" title="Increase text size" type="button">A+</button><div class="h-3 w-px bg-outline-variant mx-space-xxs"></div><button class="px-space-xs py-space-xxs text-on-surface-variant hover:text-on-surface flex items-center rounded hover:bg-surface-container-highest transition-colors" title="High Contrast Mode" type="button"><span class="material-symbols-outlined text-[16px]">contrast</span></button></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center bg-surface-container-low rounded-lg px-space-xs py-space-xxs"><span class="material-symbols-outlined text-[18px] text-on-surface-variant mr-space-xxs">translate</span><select class="bg-transparent font-label-sm text-label-sm text-on-surface font-medium focus:outline-none cursor-pointer pr-space-xs"><option value="en">English</option><option value="hi">हिन्दी</option><option value="te">తెలుగు</option></select></div><button class="flex items-center gap-space-xxs px-space-sm py-space-xs rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" title="Voice Guidance" type="button"><span class="material-symbols-outlined text-[18px] text-primary">volume_up</span><span class="hidden sm:inline font-medium">Voice Guide</span></button><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-sm pl-space-xxs"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface leading-tight">Ramesh Kumar</span><span class="font-provenance-tag text-provenance-tag text-on-surface-variant">ID: #NC-8902</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Xf3edTESmmIq0QXo3NFtUVnsTd7a1128EGDFTO9J_PAaFpGXCWCa88D6x6btMRPuKdr__hnt9Yhm19qUfi29YBjr3Bn4jLMyd9ZOFJIUk8iyP8-Dch2enW9m7q5TTdKw3CxbvUkEEVUvLQecw2zo93TszzVJN2v1oeO5AIrL4231ivXyRpx_Ddirpb1atBtLKLwLHlfkKutDSsJCuanNP8o8GJqDMaB7NMHAlUVYq7TGVMUhsnYkcdn7w"/><button class="p-space-xxs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" title="Role switch or sign out" type="button"><span class="material-symbols-outlined text-[20px]">more_vert</span></button></div></div></header><main class="w-full pt-16 bg-background min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Subtle ambient background glow -->
+<div class="relative w-full max-w-7xl mx-auto space-y-space-xl">
+<!-- Modality Selector & Context Bar -->
+<div class="flex flex-col gap-space-md">
+<!-- Breadcrumb / System Subheader -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-provenance-tag text-provenance-tag text-primary uppercase tracking-widest bg-primary-fixed/40 px-space-xs py-0.5 rounded">Intake Module</span>
+<span class="text-outline text-label-sm font-label-sm">/</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Daily Vitals Logging</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded-full text-secondary">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span class="font-label-sm text-label-sm font-semibold">HIPAA / ABDM Encrypted Session</span>
+</div>
+</div>
+<!-- Modality Dual Switcher (Bento Tabs) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Blood Pressure (Active) -->
+<button class="group relative flex items-center justify-between p-space-lg rounded-xl bg-surface-container-lowest shadow-md text-left transition-all duration-200 ring-2 ring-primary-container" type="button">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-14 h-14 rounded-xl bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform flex-shrink-0">
+<span class="material-symbols-outlined text-[32px]">cardiology</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Blood Pressure</span>
+<span class="inline-flex items-center gap-1 font-provenance-tag text-provenance-tag bg-primary text-on-primary px-space-xs py-0.5 rounded-full">ACTIVE</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Record upper-arm cuff reading or research PPG</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[28px] flex-shrink-0">check_circle</span>
+</button>
+<!-- Blood Glucose (Inactive) -->
+<button class="group relative flex items-center justify-between p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container-highest/60 text-left transition-all duration-200" type="button">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-14 h-14 rounded-xl bg-surface-container-highest flex items-center justify-center text-secondary group-hover:scale-105 transition-transform flex-shrink-0">
+<span class="material-symbols-outlined text-[32px]">water_drop</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface/80 tracking-tight">Blood Glucose</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Step-by-step guidance for glucometer test strips</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[24px] group-hover:text-primary transition-colors flex-shrink-0">chevron_right</span>
+</button>
+</div>
+<!-- Sub-Toggle: Standard Cuff vs Experimental PPG -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm bg-surface-container-low p-space-xs rounded-xl">
+<div class="inline-flex p-1 rounded-lg bg-surface-container-highest/80 gap-1 w-full sm:w-auto">
+<button class="flex-1 sm:flex-initial flex items-center justify-center gap-space-xs px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-surface-container-lowest text-primary shadow-sm font-bold transition-all" id="tab-cuff" onclick="switchMethod('cuff')" type="button">
+<span class="material-symbols-outlined text-[18px]">emergency</span>
+<span>Reference Cuff Reading (Standard)</span>
+</button>
+<button class="flex-1 sm:flex-initial flex items-center justify-center gap-space-xs px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" id="tab-ppg" onclick="switchMethod('ppg')" type="button">
+<span class="material-symbols-outlined text-[18px]">science</span>
+<span>Experimental PPG Research Module</span>
+<span class="text-tertiary bg-tertiary-fixed font-provenance-tag text-provenance-tag px-1.5 py-0.5 rounded font-bold ml-1">BETA</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-secondary">verified</span>
+<span class="font-body-sm text-body-sm">Gold Standard clinical protocol compliant</span>
+</div>
+</div>
+</div>
+<!-- Experimental Notice (Hidden by default, toggleable) -->
+<div class="hidden p-space-md bg-tertiary-fixed/30 rounded-xl flex items-start gap-space-md" id="ppg-notice">
+<span class="material-symbols-outlined text-tertiary text-[24px] mt-0.5">science</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-tertiary-fixed font-bold">Research Mode Active</span>
+<p class="font-body-sm text-body-sm text-on-surface">Experimental pulse photoplethysmography is currently calibrated for clinical validation studies only. Readings gathered via camera sensor will carry the <code class="bg-surface-container px-1 rounded text-primary">Experimental BP Estimate</code> provenance chip and do not replace certified sphygmomanometer triage.</p>
+</div>
+</div>
+<!-- Stepper Indicator Header -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-space-sm pb-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Guided Reference Cuff Entry</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Following American Heart Association (AHA) Seated Measurement Standards</p>
+</div>
+<div class="inline-flex items-center gap-2 bg-surface-container-low px-space-md py-space-xs rounded-full">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Active Session: Ramesh Kumar (ID #NC-8902)</span>
+</div>
+</div>
+<!-- Progressive Track -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-xs">
+<!-- Step 1 Complete -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md text-label-md font-bold shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Step 1</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Patient Preparation</span>
+</div>
+</div>
+<!-- Step 2 Active -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-primary-fixed/40 ring-1 ring-primary/20">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-md text-label-md font-bold shadow-sm">
+            2
+          </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Step 2 (Current)</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Device Reading Entry</span>
+</div>
+</div>
+<!-- Step 3 Pending -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low/50 opacity-70">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-label-md text-label-md font-bold">
+            3
+          </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold tracking-wider">Step 3</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Verification &amp; Record</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content Area: Split Two-Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Left Column: AHA Preparation Protocol Guidance & Timer (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Clinical Protocol Visual Guide -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">health_and_safety</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">AHA Posture Standards</span>
+</div>
+<span class="font-provenance-tag text-provenance-tag text-secondary bg-secondary-fixed/50 px-space-xs py-0.5 rounded font-bold uppercase">Mandatory Protocol</span>
+</div>
+<!-- Protocol Checklist Image Card -->
+<div class="relative w-full h-48 rounded-xl overflow-hidden shadow-inner bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A calm, clinical photograph of a middle-aged South Asian patient seated with straight posture in an ergonomic medical chair, feet flat on floor, left arm supported on table at heart level with an upper arm digital blood pressure cuff. Soft daylight, clean healthcare aesthetic in shades of blue and white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVaVJ_zL9qx2gNodNbcnNvosmDrcy08L2PxvXdDJ3O6Sk1s4XA_rtHpaG2wVNwz6POIuV8OXJGxF6WLg1V18tBlqF65d9_bKAGGgw8sS65BoVrZX3b-6zEGcG-IGLWbsrY5lROsJYf0RanpfIVdKEdZJm3GiaDJgzzX-m0OyAKeqgoBZjY2oykp_-IRjmP5zGceDCHyOE6VRUFZKu6R7G7eiMLpKU2N4FRspTITDUuwyAdamFwSL95PQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex items-end p-space-md">
+<span class="font-label-sm text-label-sm text-inverse-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">info</span>
+                Position arm at equal horizontal level with the sternum
+              </span>
+</div>
+</div>
+<!-- Checklist Items -->
+<div class="flex flex-col gap-space-sm">
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg hover:bg-surface-container-low cursor-pointer transition-colors">
+<input checked="" class="w-5 h-5 rounded text-primary focus:ring-primary mt-0.5 accent-primary cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Feet flat on floor, legs uncrossed</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Prevents hydrostatic pressure skew (+5 to 8 mmHg)</span>
+</div>
+</label>
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg hover:bg-surface-container-low cursor-pointer transition-colors">
+<input checked="" class="w-5 h-5 rounded text-primary focus:ring-primary mt-0.5 accent-primary cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Back and arm fully supported</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Avoid isometric muscle tension in lumbar and shoulder</span>
+</div>
+</label>
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg hover:bg-surface-container-low cursor-pointer transition-colors">
+<input checked="" class="w-5 h-5 rounded text-primary focus:ring-primary mt-0.5 accent-primary cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Silent resting during measurement cycle</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">No mobile calls, conversation, or physical pacing</span>
+</div>
+</label>
+</div>
+<!-- 5-Minute Resting Timer Widget -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">timer</span>
+                Quiet Rest Interval
+              </span>
+<span class="font-provenance-tag text-provenance-tag text-primary bg-primary-fixed px-space-xs py-0.5 rounded font-bold" id="timer-status">READY</span>
+</div>
+<div class="flex items-center justify-between py-space-xs">
+<div class="flex flex-col">
+<span class="font-display-vital text-display-vital text-primary leading-none tracking-tight" id="timer-display">05:00</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Recommended before reading</span>
+</div>
+<div class="flex flex-col gap-2">
+<button class="px-space-md py-space-xs bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow hover:bg-tertiary transition-colors flex items-center gap-1.5 font-bold" id="btn-timer" onclick="toggleTimer()" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>Start 5m</span>
+</button>
+<button class="px-space-xs py-1 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors text-right" onclick="completeTimerEarly()" type="button">
+                  Skip / Completed
+                </button>
+</div>
+</div>
+<!-- Progress bar -->
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-1000" id="timer-bar" style="width: 100%;"></div>
+</div>
+</div>
+</div>
+<!-- Provenance Transparency Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">Clinical Audit Trail</span>
+<span class="inline-flex items-center gap-1 font-provenance-tag text-provenance-tag bg-surface-container text-secondary px-2 py-0.5 rounded-full font-bold">
+<span class="material-symbols-outlined text-[12px]">link</span> FHIR BP v4.0.1
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Every record carries source validation metadata indicating upper-arm cuff specifications, preventing synthetic or corrupted vital confusion.</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Measurement Form & Live Categorization (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Reading Entry Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between border-b border-surface-container pb-space-sm">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Digital Sphygmomanometer Values</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Enter numbers exactly as displayed on the device screen</span>
+</div>
+<!-- Provenance Indicator Chip -->
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-low text-primary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm font-bold">Reference Cuff</span>
+</div>
+</div>
+<!-- Dual Pressure Inputs Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-lg">
+<!-- Systolic Pressure -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-bold flex items-center gap-1" for="systolic">
+                  Systolic (Upper)
+                  <span class="text-error font-bold">*</span>
+</label>
+<span class="font-provenance-tag text-provenance-tag text-on-surface-variant uppercase">SYS (MAX 260)</span>
+</div>
+<div class="relative flex items-center bg-surface-container-lowest rounded-lg shadow-sm focus-within:ring-2 focus-within:ring-primary transition-all">
+<input class="w-full bg-surface-container-low/60 rounded-lg py-space-sm pl-space-md pr-16 font-display-vital-mobile text-display-vital-mobile text-on-surface font-bold focus:outline-none focus:bg-surface-container-lowest transition-colors" id="systolic" max="260" min="50" name="systolic" oninput="calculateCategory()" type="number" value="120"/>
+<span class="absolute right-space-md font-label-md text-label-md text-on-surface-variant pointer-events-none font-bold">mmHg</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Heart contracting phase</span>
+</div>
+<!-- Diastolic Pressure -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-bold flex items-center gap-1" for="diastolic">
+                  Diastolic (Lower)
+                  <span class="text-error font-bold">*</span>
+</label>
+<span class="font-provenance-tag text-provenance-tag text-on-surface-variant uppercase">DIA (MAX 160)</span>
+</div>
+<div class="relative flex items-center bg-surface-container-lowest rounded-lg shadow-sm focus-within:ring-2 focus-within:ring-primary transition-all">
+<input class="w-full bg-surface-container-low/60 rounded-lg py-space-sm pl-space-md pr-16 font-display-vital-mobile text-display-vital-mobile text-on-surface font-bold focus:outline-none focus:bg-surface-container-lowest transition-colors" id="diastolic" max="160" min="30" name="diastolic" oninput="calculateCategory()" type="number" value="80"/>
+<span class="absolute right-space-md font-label-md text-label-md text-on-surface-variant pointer-events-none font-bold">mmHg</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Heart relaxing phase</span>
+</div>
+</div>
+<!-- Real-Time AHA Diagnostic Visualizer Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low transition-all duration-300 flex items-center justify-between" id="category-card">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center flex-shrink-0" id="category-badge-icon">
+<span class="material-symbols-outlined text-[24px]">favorite</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold" id="category-label">Normal Reading</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="category-desc">Systolic below 120 and Diastolic below 80 mmHg. Good cardiovascular stability.</span>
+</div>
+</div>
+<div class="text-right hidden sm:block">
+<span class="font-provenance-tag text-provenance-tag uppercase text-on-surface-variant tracking-wider">AHA Guideline</span>
+<div class="font-label-md text-label-md text-primary font-bold">Stage 0 Range</div>
+</div>
+</div>
+<!-- Secondary Fields: Pulse, Device Model, Timestamp -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md pt-space-xs">
+<!-- Pulse Rate -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1" for="pulse">
+<span class="material-symbols-outlined text-[16px] text-error">ecg_heart</span>
+                Pulse / Heart Rate
+              </label>
+<div class="relative flex items-center bg-surface-container-low rounded-lg focus-within:ring-2 focus-within:ring-primary">
+<input class="w-full bg-transparent py-space-sm pl-space-md pr-12 font-headline-sm text-headline-sm text-on-surface focus:outline-none" id="pulse" name="pulse" placeholder="72" type="number" value="72"/>
+<span class="absolute right-space-sm font-label-sm text-label-sm text-on-surface-variant pointer-events-none font-bold">bpm</span>
+</div>
+</div>
+<!-- Device Model Dropdown -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1" for="device_model">
+<span class="material-symbols-outlined text-[16px] text-primary">devices</span>
+                Device Model
+              </label>
+<div class="relative flex items-center bg-surface-container-low rounded-lg focus-within:ring-2 focus-within:ring-primary">
+<select class="w-full bg-transparent py-space-sm pl-space-md pr-space-md font-body-md text-body-md text-on-surface focus:outline-none cursor-pointer appearance-none" id="device_model" name="device_model">
+<option selected="" value="Omron HEM-7120">Omron HEM-7120</option>
+<option value="Beurer BM28">Beurer BM28</option>
+<option value="Manual Sphygmomanometer">Manual Sphygmomanometer</option>
+<option value="Other">Other Verified Device</option>
+</select>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant absolute right-space-xs pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Measurement Timestamp -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+                Logged Timestamp
+              </label>
+<div class="relative flex items-center bg-surface-container-low rounded-lg px-space-sm py-space-sm justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate" id="timestamp-val">Oct 24, 2024 - 08:30 AM</span>
+<button class="p-1 hover:bg-surface-container-highest rounded text-primary transition-colors flex-shrink-0" onclick="editTimestamp()" title="Edit time" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_calendar</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Notes Textarea -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1" for="notes">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">notes</span>
+                Physiological Notes &amp; Circumstances (Optional)
+              </label>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Max 200 chars</span>
+</div>
+<textarea class="w-full bg-surface-container-low rounded-lg p-space-sm font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary resize-none placeholder:text-on-surface-variant/60" id="notes" name="notes" placeholder="e.g., Felt well-rested, taken before breakfast and morning antihypertensive dose." rows="2">Felt well-rested, taken before breakfast.</textarea>
+</div>
+<!-- Verification Feedback Banner -->
+<div class="bg-surface-container-high/60 rounded-xl p-space-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px] mt-0.5">cloud_done</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">EMR Synchronization Ready</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">Saved data will automatically sync to your patient health record and be visible during your next clinical review.</p>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-surface-container-lowest text-primary shadow-sm font-label-sm text-label-sm font-bold flex-shrink-0" id="save-status">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Ready to save</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row items-center justify-end gap-space-sm pt-space-xs">
+<button class="w-full sm:w-auto px-space-lg py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold transition-colors flex items-center justify-center gap-2" onclick="resetForm()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+<span>Cancel / Discard</span>
+</button>
+<button class="w-full sm:w-auto px-space-xl py-space-sm rounded-lg bg-primary hover:bg-tertiary text-on-primary font-label-md text-label-md font-bold shadow-md transition-all flex items-center justify-center gap-2" id="btn-save" onclick="saveRecord()" type="button">
+<span class="material-symbols-outlined text-[20px]">save</span>
+<span>Save Reference Reading</span>
+</button>
+</div>
+</div>
+<!-- Technical Schema Handoff Banner -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span class="font-provenance-tag text-provenance-tag uppercase text-secondary font-bold tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">terminal</span>
+              Developer &amp; Clinical Informatics Specification
+            </span>
+<span class="font-provenance-tag text-provenance-tag bg-surface-container-highest px-2 py-0.5 rounded text-on-surface">REST v1</span>
+</div>
+<p class="font-body-sm text-body-sm font-mono text-on-surface-variant/90 break-all">
+            POST /measurements/bp/reference { patient_id: "#NC-8902", systolic: 120, diastolic: 80, pulse: 72, device_model: "Omron HEM-7120", timestamp: "2024-10-24T08:30:00Z" } → returns verification status &amp; FHIR Observation resource id.
+          </p>
+</div>
+</div>
+</div>
+<!-- Historical Reference Comparison Sparkline Footer Strip -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">monitoring</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Last 7 Days Cuff Stability</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">6 readings recorded with validated reference devices</span>
+</div>
+</div>
+<!-- Inline Trend Sparkline Vector -->
+<div class="flex items-center gap-space-lg w-full md:w-auto justify-between md:justify-end">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Mean Average</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">122 / 81 <span class="text-body-sm font-normal text-on-surface-variant">mmHg</span></span>
+</div>
+<svg class="w-40 h-10 text-primary" fill="none" viewbox="0 0 160 40">
+<path d="M 0 25 Q 25 15, 50 20 T 100 12 T 130 18 T 160 10" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+<circle class="fill-primary stroke-white stroke-2" cx="160" cy="10" r="4"></circle>
+</svg>
+<a class="font-label-md text-label-md text-primary font-bold hover:underline flex items-center gap-1 flex-shrink-0" href="#">
+<span>View Trends</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<script>
+    // Timer State
+    let timerDuration = 300; // 5 minutes in seconds
+    let timerRunning = false;
+    let timerInterval = null;
+
+    function formatTime(seconds) {
+      const mins = Math.floor(seconds / 60);
+      const secs = seconds % 60;
+      return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    }
+
+    function toggleTimer() {
+      const btn = document.getElementById('btn-timer');
+      const status = document.getElementById('timer-status');
+      const bar = document.getElementById('timer-bar');
+
+      if (!timerRunning) {
+        timerRunning = true;
+        btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">pause</span><span>Pause</span>';
+        status.textContent = 'RESTING';
+        status.className = 'font-provenance-tag text-provenance-tag text-on-primary bg-primary px-space-xs py-0.5 rounded font-bold';
+
+        timerInterval = setInterval(() => {
+          if (timerDuration > 0) {
+            timerDuration--;
+            document.getElementById('timer-display').textContent = formatTime(timerDuration);
+            bar.style.width = ((timerDuration / 300) * 100) + '%';
+          } else {
+            clearInterval(timerInterval);
+            timerRunning = false;
+            status.textContent = 'REST COMPLETED';
+            status.className = 'font-provenance-tag text-provenance-tag text-on-secondary bg-secondary px-space-xs py-0.5 rounded font-bold';
+            btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span><span>Done</span>';
+          }
+        }, 1000);
+      } else {
+        clearInterval(timerInterval);
+        timerRunning = false;
+        btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">play_arrow</span><span>Resume</span>';
+        status.textContent = 'PAUSED';
+      }
+    }
+
+    function completeTimerEarly() {
+      if (timerInterval) clearInterval(timerInterval);
+      timerRunning = false;
+      timerDuration = 0;
+      document.getElementById('timer-display').textContent = '00:00';
+      document.getElementById('timer-bar').style.width = '0%';
+      const status = document.getElementById('timer-status');
+      status.textContent = 'REST CONFIRMED';
+      status.className = 'font-provenance-tag text-provenance-tag text-on-secondary bg-secondary px-space-xs py-0.5 rounded font-bold';
+      const btn = document.getElementById('btn-timer');
+      btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span><span>Done (5:00)</span>';
+    }
+
+    // Dynamic AHA BP Classification
+    function calculateCategory() {
+      const sysInput = document.getElementById('systolic');
+      const diaInput = document.getElementById('diastolic');
+      const sys = parseInt(sysInput.value) || 0;
+      const dia = parseInt(diaInput.value) || 0;
+
+      const card = document.getElementById('category-card');
+      const label = document.getElementById('category-label');
+      const desc = document.getElementById('category-desc');
+      const icon = document.getElementById('category-badge-icon');
+
+      if (sys > 180 || dia > 120) {
+        // Crisis
+        card.className = 'p-space-md rounded-xl bg-error-container text-on-error-container transition-all flex items-center justify-between';
+        label.textContent = 'Hypertensive Crisis Alert';
+        desc.textContent = 'Systolic higher than 180 and/or Diastolic higher than 120. Consult medical emergency team or helpline immediately.';
+        icon.className = 'w-12 h-12 rounded-xl bg-error text-on-error flex items-center justify-center flex-shrink-0';
+        icon.innerHTML = '<span class="material-symbols-outlined text-[24px]">warning</span>';
+      } else if (sys >= 140 || dia >= 90) {
+        // Stage 2
+        card.className = 'p-space-md rounded-xl bg-surface-container-high text-on-surface transition-all flex items-center justify-between';
+        label.textContent = 'Hypertension Stage 2';
+        desc.textContent = 'Systolic 140 or higher, or diastolic 90 or higher. Ongoing physician monitoring advised.';
+        icon.className = 'w-12 h-12 rounded-xl bg-secondary text-on-secondary flex items-center justify-center flex-shrink-0';
+        icon.innerHTML = '<span class="material-symbols-outlined text-[24px]">priority_high</span>';
+      } else if (sys >= 130 || dia >= 80) {
+        // Stage 1
+        card.className = 'p-space-md rounded-xl bg-surface-container-low text-on-surface transition-all flex items-center justify-between';
+        label.textContent = 'Hypertension Stage 1';
+        desc.textContent = 'Systolic 130-139 or diastolic 80-89. Recommend lifestyle adherence & sodium watch.';
+        icon.className = 'w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center flex-shrink-0';
+        icon.innerHTML = '<span class="material-symbols-outlined text-[24px]">info</span>';
+      } else if (sys >= 120 && dia < 80) {
+        // Elevated
+        card.className = 'p-space-md rounded-xl bg-surface-container-low text-on-surface transition-all flex items-center justify-between';
+        label.textContent = 'Elevated Blood Pressure';
+        desc.textContent = 'Systolic 120-129 and diastolic less than 80. Mild deviation from optimal baseline.';
+        icon.className = 'w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0';
+        icon.innerHTML = '<span class="material-symbols-outlined text-[24px]">trending_up</span>';
+      } else {
+        // Normal
+        card.className = 'p-space-md rounded-xl bg-surface-container-low text-on-surface transition-all flex items-center justify-between';
+        label.textContent = 'Normal Reading';
+        desc.textContent = 'Systolic below 120 and Diastolic below 80 mmHg. Good cardiovascular stability.';
+        icon.className = 'w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center flex-shrink-0';
+        icon.innerHTML = '<span class="material-symbols-outlined text-[24px]">favorite</span>';
+      }
+    }
+
+    // Toggle Sub-method
+    function switchMethod(method) {
+      const tabCuff = document.getElementById('tab-cuff');
+      const tabPpg = document.getElementById('tab-ppg');
+      const ppgNotice = document.getElementById('ppg-notice');
+
+      if (method === 'cuff') {
+        tabCuff.className = 'flex-1 sm:flex-initial flex items-center justify-center gap-space-xs px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-surface-container-lowest text-primary shadow-sm font-bold transition-all';
+        tabPpg.className = 'flex-1 sm:flex-initial flex items-center justify-center gap-space-xs px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all';
+        ppgNotice.classList.add('hidden');
+      } else {
+        tabPpg.className = 'flex-1 sm:flex-initial flex items-center justify-center gap-space-xs px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-surface-container-lowest text-tertiary shadow-sm font-bold transition-all';
+        tabCuff.className = 'flex-1 sm:flex-initial flex items-center justify-center gap-space-xs px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all';
+        ppgNotice.classList.remove('hidden');
+      }
+    }
+
+    // Form Interactions
+    function resetForm() {
+      document.getElementById('systolic').value = '120';
+      document.getElementById('diastolic').value = '80';
+      document.getElementById('pulse').value = '72';
+      document.getElementById('notes').value = '';
+      calculateCategory();
+      const statusBadge = document.getElementById('save-status');
+      statusBadge.innerHTML = '<span class="material-symbols-outlined text-[16px]">check_circle</span><span>Ready to save</span>';
+      statusBadge.className = 'inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-surface-container-lowest text-primary shadow-sm font-label-sm text-label-sm font-bold flex-shrink-0';
+    }
+
+    function saveRecord() {
+      const saveBtn = document.getElementById('btn-save');
+      const statusBadge = document.getElementById('save-status');
+
+      saveBtn.disabled = true;
+      saveBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">progress_activity</span><span>Encrypting & Saving...</span>';
+
+      setTimeout(() => {
+        saveBtn.disabled = false;
+        saveBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span><span>Saved to Patient Record</span>';
+        saveBtn.className = 'w-full sm:w-auto px-space-xl py-space-sm rounded-lg bg-surface-container-highest text-on-surface font-label-md text-label-md font-bold transition-all flex items-center justify-center gap-2';
+
+        statusBadge.innerHTML = '<span class="material-symbols-outlined text-[16px]">task_alt</span><span>Save Confirmed &bull; Synced</span>';
+        statusBadge.className = 'inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-surface-container-lowest text-secondary shadow-sm font-label-sm text-label-sm font-bold flex-shrink-0';
+      }, 700);
+    }
+
+    function editTimestamp() {
+      const now = new Date();
+      const formatted = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) + ' - ' + now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+      document.getElementById('timestamp-val').textContent = formatted;
+    }
+  </script>
+</div></main></div></body></html>

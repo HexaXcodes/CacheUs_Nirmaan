@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface-variant":"#434655","surface-container":"#e9edfc","surface-container-high":"#e4e8f6","surface-bright":"#f9f9ff","tertiary-container":"#0f69dc","inverse-surface":"#2b303b","primary-fixed":"#dbe1ff","secondary":"#3b5e97","on-secondary-fixed-variant":"#20467e","error-container":"#ffdad6","background":"#f9f9ff","surface-tint":"#0053db","outline-variant":"#c3c6d7","secondary-fixed":"#d6e3ff","secondary-container":"#9dbffe","on-primary-container":"#eeefff","on-tertiary-fixed":"#001a42","on-primary-fixed-variant":"#003ea8","on-error":"#ffffff","tertiary-fixed":"#d8e2ff","on-primary":"#ffffff","tertiary":"#0051b1","secondary-fixed-dim":"#aac7ff","on-secondary-fixed":"#001b3e","inverse-primary":"#b4c5ff","surface-container-low":"#f1f3ff","primary":"#004ac6","outline":"#737686","surface-variant":"#dee2f0","primary-container":"#2563eb","primary-fixed-dim":"#b4c5ff","on-error-container":"#93000a","surface":"#f9f9ff","on-background":"#171c26","on-secondary":"#ffffff","error":"#ba1a1a","on-tertiary-fixed-variant":"#004395","surface-container-highest":"#dee2f0","on-surface":"#171c26","surface-dim":"#d6dae8","inverse-on-surface":"#ecf0ff","on-secondary-container":"#274d84","tertiary-fixed-dim":"#adc6ff","on-tertiary-container":"#edf0ff","surface-container-lowest":"#ffffff","on-tertiary":"#ffffff","on-primary-fixed":"#00174b"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-mobile":"1rem","space-2xl":"3rem","margin":"2rem","space-xs":"0.5rem","gutter-mobile":"1rem","space-md":"1rem","space-xxs":"0.25rem","space-xl":"2rem","gutter":"1.5rem","space-sm":"0.75rem","space-lg":"1.5rem"},"fontFamily":{"label-md":["Inter"],"headline-lg":["Inter"],"display-vital-mobile":["Inter"],"body-md":["Inter"],"label-sm":["Inter"],"body-lg":["Inter"],"display-vital":["Inter"],"headline-md":["Inter"],"headline-sm":["Inter"],"body-sm":["Inter"],"headline-lg-mobile":["Inter"],"provenance-tag":["Inter"]},"fontSize":{"label-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.02em","fontWeight":"700"}],"display-vital-mobile":["2.5rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"label-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"display-vital":["3.5rem",{"lineHeight":"3.75rem","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.01em","fontWeight":"600"}],"provenance-tag":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.04em","fontWeight":"700"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="Brand logo. - Primary color: #2563eb
+- Font: inter
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XIg5Aojol0LvkmUv74pOqfjeQir0qYeaGBlXg0TGzfuWu98YSxBigQjbZYb0NNPNQmrQ-8muhdRmZMz42rJhRG0R3ZyAjjRVMCE06TXz-hwSp5gUJApdbYBlncMJvPlrQuU_UG7Gg30DNgp9MXKRAtzQ1NdIKTv7zjhoyeW-sOvVN9Oppdz79fKq0lvAINL_ny0llLTdyLo1pPAsvNLU1VLSDQAVum_120TiLPuhqNa0BJXJU6Eeh3-Sg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-tight">NovaCare</span><span class="font-label-sm text-label-sm text-on-surface-variant">Field Kit v2.4</span></div></div><div class="p-space-md"><div class="bg-surface-container-lowest rounded-lg p-space-sm flex items-center gap-space-sm shadow-[0_1px_3px_rgba(20,36,59,0.04)]"><div class="w-2.5 h-2.5 rounded-full bg-tertiary-container animate-pulse"></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface">Field Sync</span><span class="font-provenance-tag text-provenance-tag text-on-surface-variant">Online - Auto-sync Active</span></div></div></div><nav class="flex-1 px-space-md space-y-space-xxs" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="community-overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Community Overview</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="patient-registry-and-search" href="#"><span class="material-symbols-outlined text-[20px]">person_search</span><span>Patient Registry & Search</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="assisted-screening" href="#"><span class="material-symbols-outlined text-[20px]">ecg_heart</span><span>Assisted Screening</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="sync-and-offline-queue" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">cloud_sync</span><span>Sync & Offline Queue</span></div><span class="bg-surface-container font-label-sm text-label-sm text-secondary px-space-xs py-0.5 rounded-full">0</span></a></nav></div><div class="p-space-md space-y-space-sm"><div class="bg-error-container text-on-error-container p-space-sm rounded-lg flex items-center gap-space-sm"><span class="material-symbols-outlined text-[24px] text-error">emergency</span><div class="flex flex-col"><span class="font-label-md text-label-md font-bold">Emergency 108</span><span class="font-provenance-tag text-provenance-tag text-on-error-container">National Ambulance Support</span></div></div><div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-space-sm shadow-[0_1px_3px_rgba(20,36,59,0.04)]"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Xf3edTESmmIq0QXo3NFtUVnsTd7a1128EGDFTO9J_PAaFpGXCWCa88D6x6btMRPuKdr__hnt9Yhm19qUfi29YBjr3Bn4jLMyd9ZOFJIUk8iyP8-Dch2enW9m7q5TTdKw3CxbvUkEEVUvLQecw2zo93TszzVJN2v1oeO5AIrL4231ivXyRpx_Ddirpb1atBtLKLwLHlfkKutDSsJCuanNP8o8GJqDMaB7NMHAlUVYq7TGVMUhsnYkcdn7w"/><div class="flex flex-col overflow-hidden"><span class="font-label-md text-label-md text-on-surface truncate">S. Devi</span><span class="font-provenance-tag text-provenance-tag text-on-surface-variant truncate">#ASHA-BLR-042</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px]">location_on</span><span>ASHA Field Worker - Bengaluru Rural</span></div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" type="button"><span class="material-symbols-outlined text-[18px] text-primary">record_voice_over</span><span>Audio Guide</span></button><div class="flex items-center bg-surface-container-low rounded-lg p-0.5"><button class="px-space-xs py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest text-on-surface shadow-[0_1px_2px_rgba(0,0,0,0.05)]" type="button">EN</button><button class="px-space-xs py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" type="button">हिन्दी</button><button class="px-space-xs py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" type="button">తెలుగు</button></div><div class="flex items-center gap-space-xs pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Xf3edTESmmIq0QXo3NFtUVnsTd7a1128EGDFTO9J_PAaFpGXCWCa88D6x6btMRPuKdr__hnt9Yhm19qUfi29YBjr3Bn4jLMyd9ZOFJIUk8iyP8-Dch2enW9m7q5TTdKw3CxbvUkEEVUvLQecw2zo93TszzVJN2v1oeO5AIrL4231ivXyRpx_Ddirpb1atBtLKLwLHlfkKutDSsJCuanNP8o8GJqDMaB7NMHAlUVYq7TGVMUhsnYkcdn7w"/></div></div></header><main class="w-full pt-16 bg-background px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- Operational Greeting & Geo-Context Ribbon -->
+<section class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-lg shadow-sm">
+<div class="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-primary-fixed opacity-40 blur-3xl pointer-events-none"></div>
+<div class="relative flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xxs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-provenance-tag text-provenance-tag uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+            Active Field Round
+          </span>
+<span class="text-outline font-label-sm text-label-sm">·</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Chronic Vitals Monitoring Week 4</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Namaste, S. Devi <span class="font-headline-sm text-headline-sm text-on-surface-variant font-normal">(#ASHA-BLR-042)</span>
+</h1>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">domain</span>
+            Sub-Center #4 (Hosakote Block, Sector 3)
+          </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+            ABDM Field Protocol v2.4 Compliant
+          </span>
+</div>
+</div>
+<!-- Quick Action Controls -->
+<div class="flex flex-wrap items-center gap-space-xs sm:gap-space-sm pt-space-xs md:pt-0">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm hover:bg-surface-container hover:shadow transition-all" id="btnOpenRegister" type="button">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span>Register New Patient</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-colors" onclick="triggerSyncNotification()" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">cloud_done</span>
+<span>Offline Queue (0 Pending)</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-md hover:bg-tertiary transition-transform active:scale-95" onclick="selectAssistedCheck('General Intake')" type="button">
+<span class="material-symbols-outlined text-[20px]">ecg_heart</span>
+<span>Start Assisted Check</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Community Cohort Metrics Grid -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1: Assigned Households -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wide">Assigned Scope</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">holiday_village</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-vital text-display-vital text-on-surface">142</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Households</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-provenance-tag text-provenance-tag">
+<span>Ward 14, Hosakote Rural</span>
+<span class="text-primary font-bold">100% Mapped</span>
+</div>
+</div>
+<!-- Card 2: Chronic Cohort -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wide">Chronic Care Cohort</span>
+<span class="material-symbols-outlined text-[20px] text-primary">groups</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-vital text-display-vital text-primary">38</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Enrolled</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center gap-space-xs font-provenance-tag text-provenance-tag text-on-surface-variant">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high">HTN: 24</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high">T2D: 19</span>
+<span class="text-outline">(5 Dual)</span>
+</div>
+</div>
+<!-- Card 3: Checked this Month -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wide">Checked This Month</span>
+<span class="material-symbols-outlined text-[20px] text-tertiary">check_circle</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-vital text-display-vital text-on-surface">29</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-normal">/ 38 Visited</span>
+</div>
+<div class="mt-space-sm flex items-center gap-2">
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 76.3%"></div>
+</div>
+<span class="font-provenance-tag text-provenance-tag text-on-surface-variant font-bold">76%</span>
+</div>
+</div>
+<!-- Card 4: Next Routine Due -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wide">Routine Visits Due</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">pending_actions</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-vital text-display-vital text-secondary">09</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Pending</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-provenance-tag text-provenance-tag">
+<span>Target Completion: 3 Days</span>
+<span class="text-secondary font-bold">Priority High</span>
+</div>
+</div>
+</section>
+<!-- Patient Search & Community Registry Main Bento -->
+<section class="flex flex-col gap-space-md bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<!-- Controls Header: Search & Cohort Filter Chips -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Search Box with compound styling -->
+<div class="relative flex-1 max-w-xl">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[20px] text-outline">search</span>
+<input class="w-full h-12 pl-10 pr-4 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none shadow-sm transition-all" id="registrySearch" oninput="filterPatients()" placeholder="Search by Patient Name, Phone (+91), or Patient ID (#NC-...)" type="text"/>
+</div>
+<!-- Cohort Filter Segment Controls -->
+<div class="flex flex-wrap items-center gap-space-xs" id="cohortFilterContainer">
+<button class="cohort-filter-btn px-space-sm py-2 rounded-lg font-label-sm text-label-sm bg-primary-container text-on-primary-container shadow-sm" data-filter="all" onclick="setCohortFilter(this, 'all')" type="button">
+          All Community (38)
+        </button>
+<button class="cohort-filter-btn px-space-sm py-2 rounded-lg font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-filter="htn" onclick="setCohortFilter(this, 'htn')" type="button">
+          Hypertension Cohort (24)
+        </button>
+<button class="cohort-filter-btn px-space-sm py-2 rounded-lg font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-filter="t2d" onclick="setCohortFilter(this, 't2d')" type="button">
+          Diabetes Cohort (19)
+        </button>
+<button class="cohort-filter-btn px-space-sm py-2 rounded-lg font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-filter="due" onclick="setCohortFilter(this, 'due')" type="button">
+          Due for Follow-up (9)
+        </button>
+</div>
+</div>
+<!-- Patient Roster Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<th class="p-space-sm rounded-l-lg font-semibold">Patient Information</th>
+<th class="p-space-sm font-semibold">Registered Cohort</th>
+<th class="p-space-sm font-semibold">Last Recorded Blood Pressure</th>
+<th class="p-space-sm font-semibold">Last Blood Glucose</th>
+<th class="p-space-sm font-semibold">Status / Schedule</th>
+<th class="p-space-sm rounded-r-lg text-right font-semibold">Field Action</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md divide-y-0" id="patientRosterBody">
+<!-- Row 1: Ramesh Kumar -->
+<tr class="patient-row hover:bg-surface-container-low/60 transition-colors" data-cohort="htn" data-due="false" data-keywords="ramesh kumar nc-8902 9845012340 hosakote">
+<td class="p-space-sm align-middle">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-label-md text-label-md text-primary font-bold">
+                  RK
+                </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface">Ramesh Kumar</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-provenance-tag text-provenance-tag text-on-surface-variant">#NC-8902</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">58 Yrs, Male · +91 98450 12340</span>
+</div>
+</div>
+</td>
+<td class="p-space-sm align-middle">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-provenance-tag text-provenance-tag">
+<span class="material-symbols-outlined text-[14px]">cardiology</span>
+                Hypertension
+              </span>
+</td>
+<td class="p-space-sm align-middle">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">122/80</span>
+<span class="font-body-sm text-body-sm text-outline">mmHg</span>
+</div>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="inline-flex items-center gap-0.5 px-1 rounded bg-surface-container-high text-on-surface-variant font-provenance-tag text-provenance-tag">
+<span class="material-symbols-outlined text-[12px] text-tertiary">verified</span>
+                    Ref Cuff
+                  </span>
+<span class="text-outline font-provenance-tag text-provenance-tag">· 2 days ago</span>
+</div>
+</div>
+</td>
+<td class="p-space-sm align-middle">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">98</span>
+<span class="font-body-sm text-body-sm text-outline">mg/dL</span>
+</div>
+<span class="font-provenance-tag text-provenance-tag text-on-surface-variant">Fasting (Venous strip)</span>
+</div>
+</td>
+<td class="p-space-sm align-middle">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Up to date
+              </span>
+</td>
+<td class="p-space-sm align-middle text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" onclick="viewPatientRecord('NC-8902', 'Ramesh Kumar')" title="View Patient Records" type="button">
+                  View Records
+                </button>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-tertiary font-label-sm text-label-sm shadow-sm transition-colors" onclick="selectAssistedCheck('Ramesh Kumar', 'NC-8902')" type="button">
+<span class="material-symbols-outlined text-[16px]">stethoscope</span>
+<span>Check</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Sunita Patel -->
+<tr class="patient-row hover:bg-surface-container-low/60 transition-colors" data-cohort="htn t2d" data-due="true" data-keywords="sunita patel nc-7104 9886024190 doddaballapur">
+<td class="p-space-sm align-middle">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-label-md text-label-md text-secondary font-bold">
+                  SP
+                </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface">Sunita Patel</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-provenance-tag text-provenance-tag text-on-surface-variant">#NC-7104</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">52 Yrs, Female · +91 98860 24190</span>
+</div>
+</div>
+</td>
+<td class="p-space-sm align-middle">
+<div class="flex flex-wrap gap-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-provenance-tag text-provenance-tag">
+                  HTN
+                </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-provenance-tag text-provenance-tag">
+                  T2D
+                </span>
+</div>
+</td>
+<td class="p-space-sm align-middle">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">138/88</span>
+<span class="font-body-sm text-body-sm text-outline">mmHg</span>
+</div>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="inline-flex items-center gap-0.5 px-1 rounded bg-surface-container-high text-on-surface-variant font-provenance-tag text-provenance-tag">
+<span class="material-symbols-outlined text-[12px] text-primary">person</span>
+                    ASHA-Assisted
+                  </span>
+<span class="text-outline font-provenance-tag text-provenance-tag">· 1 wk ago</span>
+</div>
+</div>
+</td>
+<td class="p-space-sm align-middle">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">142</span>
+<span class="font-body-sm text-body-sm text-outline">mg/dL</span>
+</div>
+<span class="font-provenance-tag text-provenance-tag text-on-surface-variant">Post-prandial (Glucometer)</span>
+</div>
+</td>
+<td class="p-space-sm align-middle">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                Follow-up Due
+              </span>
+</td>
+<td class="p-space-sm align-middle text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" onclick="viewPatientRecord('NC-7104', 'Sunita Patel')" type="button">
+                  View
+                </button>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-tertiary font-label-sm text-label-sm shadow-sm transition-colors" onclick="selectAssistedCheck('Sunita Patel', 'NC-7104')" type="button">
+<span class="material-symbols-outlined text-[16px]">stethoscope</span>
+<span>Check</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Anand Rao -->
+<tr class="patient-row hover:bg-surface-container-low/60 transition-colors" data-cohort="htn" data-due="false" data-keywords="anand rao nc-6521 9741155209 hosakote">
+<td class="p-space-sm align-middle">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-label-md text-label-md text-primary font-bold">
+                  AR
+                </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface">Anand Rao</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-provenance-tag text-provenance-tag text-on-surface-variant">#NC-6521</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">64 Yrs, Male · +91 97411 55209</span>
+</div>
+</div>
+</td>
+<td class="p-space-sm align-middle">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-provenance-tag text-provenance-tag">
+<span class="material-symbols-outlined text-[14px]">cardiology</span>
+                Hypertension
+              </span>
+</td>
+<td class="p-space-sm align-middle">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">128/82</span>
+<span class="font-body-sm text-body-sm text-outline">mmHg</span>
+</div>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="inline-flex items-center gap-0.5 px-1 rounded bg-surface-container-high text-on-surface-variant font-provenance-tag text-provenance-tag">
+<span class="material-symbols-outlined text-[12px] text-tertiary">verified</span>
+                    Ref Cuff
+                  </span>
+<span class="text-outline font-provenance-tag text-provenance-tag">· 4 days ago</span>
+</div>
+</div>
+</td>
+<td class="p-space-sm align-middle">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">110</span>
+<span class="font-body-sm text-body-sm text-outline">mg/dL</span>
+</div>
+<span class="font-provenance-tag text-provenance-tag text-on-surface-variant">Fasting (Self-reported)</span>
+</div>
+</td>
+<td class="p-space-sm align-middle">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Up to date
+              </span>
+</td>
+<td class="p-space-sm align-middle text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" onclick="viewPatientRecord('NC-6521', 'Anand Rao')" type="button">
+                  View
+                </button>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-tertiary font-label-sm text-label-sm shadow-sm transition-colors" onclick="selectAssistedCheck('Anand Rao', 'NC-6521')" type="button">
+<span class="material-symbols-outlined text-[16px]">stethoscope</span>
+<span>Check</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Meena Devi -->
+<tr class="patient-row hover:bg-surface-container-low/60 transition-colors" data-cohort="t2d" data-due="true" data-keywords="meena devi nc-9310 9448099812 hosakote">
+<td class="p-space-sm align-middle">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-label-md text-label-md text-secondary font-bold">
+                  MD
+                </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface">Meena Devi</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-provenance-tag text-provenance-tag text-on-surface-variant">#NC-9310</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">49 Yrs, Female · +91 94480 99812</span>
+</div>
+</div>
+</td>
+<td class="p-space-sm align-middle">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-provenance-tag text-provenance-tag">
+<span class="material-symbols-outlined text-[14px]">water_drop</span>
+                Diabetes T2
+              </span>
+</td>
+<td class="p-space-sm align-middle">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">No cuff reading</span>
+<span class="font-provenance-tag text-provenance-tag text-error">Check Overdue</span>
+</div>
+</td>
+<td class="p-space-sm align-middle">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">92</span>
+<span class="font-body-sm text-body-sm text-outline">mg/dL</span>
+</div>
+<span class="font-provenance-tag text-provenance-tag text-on-surface-variant">Random (Glucometer)</span>
+</div>
+</td>
+<td class="p-space-sm align-middle">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                Follow-up Due
+              </span>
+</td>
+<td class="p-space-sm align-middle text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" onclick="viewPatientRecord('NC-9310', 'Meena Devi')" type="button">
+                  View
+                </button>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-tertiary font-label-sm text-label-sm shadow-sm transition-colors" onclick="selectAssistedCheck('Meena Devi', 'NC-9310')" type="button">
+<span class="material-symbols-outlined text-[16px]">stethoscope</span>
+<span>Check</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Empty State helper (hidden initially) -->
+<div class="hidden py-space-xl flex-col items-center justify-center text-center" id="noMatchMessage">
+<span class="material-symbols-outlined text-4xl text-outline mb-2">person_off</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">No matching community members found</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Check the search query or toggle filter chips to see more records.</p>
+</div>
+</section>
+<!-- Bottom Architecture & Provenance Trust Card -->
+<section class="rounded-xl bg-surface-container-low p-space-md shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="p-2 rounded-lg bg-surface-container-lowest text-primary shadow-sm mt-0.5">
+<span class="material-symbols-outlined text-[24px]">wifi_off</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface">Offline First Architecture</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-provenance-tag text-provenance-tag text-on-surface-variant font-bold">Encrypted SQLite Sync</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 max-w-3xl">
+            Screenings completed without cellular signal are encrypted and queued locally on this device, then synced automatically when connectivity returns. Field records adhere strictly to ABDM standards with digital signatures.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 self-end md:self-center font-provenance-tag text-provenance-tag text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>
+<span>FHIR R4 / ABDM M1-M3 Standard</span>
+</div>
+</div>
+</section>
+<!-- Fast Patient Registration Modal (Bespoke Drawer/Modal) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-inverse-surface/40 backdrop-blur-sm hidden" id="registerPatientModal">
+<div class="w-full max-w-xl bg-surface-container-lowest rounded-xl shadow-xl overflow-hidden flex flex-col max-h-[90vh]">
+<!-- Modal Header -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="p-1.5 rounded-lg bg-primary text-on-primary">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Fast Patient Intake</h3>
+<span class="font-provenance-tag text-provenance-tag text-on-surface-variant">Rural Sub-Center #4 Field Registry</span>
+</div>
+</div>
+<button class="p-1 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors" id="btnCloseRegister" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Registration Form Body -->
+<form class="p-space-lg overflow-y-auto flex flex-col gap-space-md" id="newPatientForm" onsubmit="handleRegistrationSubmit(event)">
+<!-- Field: Full Name -->
+<div class="flex flex-col gap-space-xxs">
+<label class="font-label-sm text-label-sm text-on-surface" for="regFullName">Full Name (As per Aadhaar / ABHA) *</label>
+<input class="w-full h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none shadow-sm" id="regFullName" placeholder="e.g. Kamala Bai" required="" type="text"/>
+</div>
+<!-- Row: Age & Gender -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xxs">
+<label class="font-label-sm text-label-sm text-on-surface" for="regAge">Age (Years) *</label>
+<input class="w-full h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none shadow-sm" id="regAge" max="115" min="1" placeholder="54" required="" type="number"/>
+</div>
+<div class="flex flex-col gap-space-xxs">
+<label class="font-label-sm text-label-sm text-on-surface" for="regGender">Gender *</label>
+<select class="w-full h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none shadow-sm" id="regGender" required="">
+<option disabled="" selected="" value="">Select Gender</option>
+<option value="Female">Female</option>
+<option value="Male">Male</option>
+<option value="Other">Other / Non-binary</option>
+</select>
+</div>
+</div>
+<!-- Row: Phone & Sub-locality -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xxs">
+<label class="font-label-sm text-label-sm text-on-surface" for="regPhone">Phone Number *</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-label-md text-label-md text-on-surface-variant">+91</span>
+<input class="w-full h-11 pl-12 pr-space-sm rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none shadow-sm" id="regPhone" pattern="[0-9]{10}" placeholder="98450 00000" required="" type="tel"/>
+</div>
+</div>
+<div class="flex flex-col gap-space-xxs">
+<label class="font-label-sm text-label-sm text-on-surface" for="regVillage">Village / Sector *</label>
+<input class="w-full h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none shadow-sm" id="regVillage" placeholder="Hosakote Sector 3" required="" type="text"/>
+</div>
+</div>
+<!-- Existing Diagnoses / Chronic Tracking Checklist -->
+<div class="flex flex-col gap-space-xs p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface">Active Chronic Care Cohort Enrollment</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-1">
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="w-4 h-4 rounded text-primary focus:ring-0" id="checkHTN" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Hypertension (High BP)</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="w-4 h-4 rounded text-primary focus:ring-0" id="checkT2D" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Type 2 Diabetes (Blood Sugar)</span>
+</label>
+</div>
+</div>
+<!-- Informed Consent Acknowledgment -->
+<div class="flex items-start gap-2 pt-1">
+<input class="w-4 h-4 mt-0.5 rounded text-primary focus:ring-0" id="consentCheck" required="" type="checkbox"/>
+<label class="font-provenance-tag text-provenance-tag text-on-surface-variant leading-tight cursor-pointer" for="consentCheck">
+            Patient provides verbal and informed consent for community health worker vital telemetry recording in compliance with ABHA National Health ID guidelines.
+          </label>
+</div>
+<!-- Modal Action Buttons -->
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high font-label-md text-label-md text-on-surface transition-colors" id="btnCancelRegister" type="button">
+            Cancel
+          </button>
+<button class="px-space-lg py-2.5 rounded-lg bg-primary hover:bg-tertiary text-on-primary font-label-md text-label-md shadow-md transition-colors" type="submit">
+            Register & Save
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Toast Notification element -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none" id="dashboardToast">
+<div class="px-space-md py-space-sm rounded-lg bg-inverse-surface text-inverse-on-surface shadow-xl flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-primary-fixed" id="toastIcon">check_circle</span>
+<span class="font-label-sm text-label-sm" id="toastText">Action Completed</span>
+</div>
+</div>
+</div>
+<script>
+  // Filter and Search logic for Community Registry
+  let currentFilter = 'all';
+
+  function filterPatients() {
+    const query = document.getElementById('registrySearch').value.toLowerCase().trim();
+    const rows = document.querySelectorAll('.patient-row');
+    let visibleCount = 0;
+
+    rows.forEach(row => {
+      const keywords = row.getAttribute('data-keywords') || '';
+      const cohorts = row.getAttribute('data-cohort') || '';
+      const dueStatus = row.getAttribute('data-due') === 'true';
+
+      const matchesSearch = query === '' || keywords.includes(query);
+      
+      let matchesFilter = true;
+      if (currentFilter === 'htn') {
+        matchesFilter = cohorts.includes('htn');
+      } else if (currentFilter === 't2d') {
+        matchesFilter = cohorts.includes('t2d');
+      } else if (currentFilter === 'due') {
+        matchesFilter = dueStatus;
+      }
+
+      if (matchesSearch && matchesFilter) {
+        row.style.display = '';
+        visibleCount++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    const noMatchMsg = document.getElementById('noMatchMessage');
+    if (visibleCount === 0) {
+      noMatchMsg.classList.remove('hidden');
+      noMatchMsg.classList.add('flex');
+    } else {
+      noMatchMsg.classList.add('hidden');
+      noMatchMsg.classList.remove('flex');
+    }
+  }
+
+  function setCohortFilter(btnElement, filterKey) {
+    currentFilter = filterKey;
+    
+    // Update button states
+    const buttons = document.querySelectorAll('.cohort-filter-btn');
+    buttons.forEach(btn => {
+      btn.className = 'cohort-filter-btn px-space-sm py-2 rounded-lg font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors';
+    });
+
+    btnElement.className = 'cohort-filter-btn px-space-sm py-2 rounded-lg font-label-sm text-label-sm bg-primary-container text-on-primary-container shadow-sm';
+    
+    filterPatients();
+  }
+
+  // Assisted check interaction
+  function selectAssistedCheck(patientName, patientId) {
+    if (patientId) {
+      showToast(`Initiating Assisted Check protocol for ${patientName} (${patientId})`, 'ecg_heart');
+    } else {
+      showToast('Opening Assisted Screening triage intake...', 'stethoscope');
+    }
+  }
+
+  // View patient records interaction
+  function viewPatientRecord(patientId, name) {
+    showToast(`Loading longitudinal clinical timeline for ${name} (${patientId})`, 'history_edu');
+  }
+
+  // Offline sync simulation
+  function triggerSyncNotification() {
+    showToast('Local queue verified: 0 readings pending. All local ABDM records synced.', 'cloud_sync');
+  }
+
+  // Modal display logic
+  const modal = document.getElementById('registerPatientModal');
+  const btnOpen = document.getElementById('btnOpenRegister');
+  const btnClose = document.getElementById('btnCloseRegister');
+  const btnCancel = document.getElementById('btnCancelRegister');
+
+  function openRegisterModal() {
+    modal.classList.remove('hidden');
+  }
+
+  function closeRegisterModal() {
+    modal.classList.add('hidden');
+    document.getElementById('newPatientForm').reset();
+  }
+
+  btnOpen.addEventListener('click', openRegisterModal);
+  btnClose.addEventListener('click', closeRegisterModal);
+  btnCancel.addEventListener('click', closeRegisterModal);
+
+  // Form submission handler
+  function handleRegistrationSubmit(e) {
+    e.preventDefault();
+    const name = document.getElementById('regFullName').value;
+    const phone = document.getElementById('regPhone').value;
+    const genId = '#NC-' + Math.floor(1000 + Math.random() * 9000);
+
+    closeRegisterModal();
+    showToast(`Patient registered: ${name} (${genId}) saved to local encrypted cache.`, 'check_circle');
+  }
+
+  // Toast utility
+  function showToast(message, iconName = 'check_circle') {
+    const toast = document.getElementById('dashboardToast');
+    const toastText = document.getElementById('toastText');
+    const toastIcon = document.getElementById('toastIcon');
+
+    toastText.textContent = message;
+    toastIcon.textContent = iconName;
+
+    toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 3800);
+  }
+</script></main></div></body></html>

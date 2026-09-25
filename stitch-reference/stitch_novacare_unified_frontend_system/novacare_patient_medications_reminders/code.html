@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"surface-container-highest":"#dee2f0","secondary":"#3b5e97","surface-container-lowest":"#ffffff","secondary-container":"#9dbffe","tertiary-container":"#0f69dc","on-tertiary-container":"#edf0ff","secondary-fixed":"#d6e3ff","on-primary-fixed":"#00174b","primary":"#004ac6","outline-variant":"#c3c6d7","surface-variant":"#dee2f0","primary-fixed":"#dbe1ff","secondary-fixed-dim":"#aac7ff","on-tertiary-fixed":"#001a42","tertiary-fixed":"#d8e2ff","inverse-surface":"#2b303b","outline":"#737686","error-container":"#ffdad6","on-secondary-fixed":"#001b3e","primary-fixed-dim":"#b4c5ff","on-secondary":"#ffffff","on-surface":"#171c26","on-primary":"#ffffff","inverse-on-surface":"#ecf0ff","on-primary-fixed-variant":"#003ea8","surface-container-high":"#e4e8f6","on-surface-variant":"#434655","surface-container-low":"#f1f3ff","surface-dim":"#d6dae8","error":"#ba1a1a","on-error-container":"#93000a","background":"#f9f9ff","tertiary-fixed-dim":"#adc6ff","on-secondary-container":"#274d84","surface-container":"#e9edfc","on-primary-container":"#eeefff","on-error":"#ffffff","on-secondary-fixed-variant":"#20467e","on-tertiary":"#ffffff","primary-container":"#2563eb","on-background":"#171c26","surface-bright":"#f9f9ff","tertiary":"#0051b1","surface-tint":"#0053db","inverse-primary":"#b4c5ff","on-tertiary-fixed-variant":"#004395","surface":"#f9f9ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-2xl":"3rem","gutter-mobile":"1rem","space-xl":"2rem","space-xs":"0.5rem","space-sm":"0.75rem","gutter":"1.5rem","margin-mobile":"1rem","space-lg":"1.5rem","space-md":"1rem","margin":"2rem","space-xxs":"0.25rem"},"fontFamily":{"display-vital":["Inter"],"body-md":["Inter"],"headline-md":["Inter"],"label-sm":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"display-vital-mobile":["Inter"],"label-md":["Inter"],"headline-lg-mobile":["Inter"],"headline-sm":["Inter"],"headline-lg":["Inter"],"provenance-tag":["Inter"]},"fontSize":{"display-vital":["3.5rem",{"lineHeight":"3.75rem","letterSpacing":"-0.025em","fontWeight":"700"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"600"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"display-vital-mobile":["2.5rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"headline-lg":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.02em","fontWeight":"700"}],"provenance-tag":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.04em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm"><img alt="Brand logo. - Primary color: #2563eb
+- Font: inter
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XIg5Aojol0LvkmUv74pOqfjeQir0qYeaGBlXg0TGzfuWu98YSxBigQjbZYb0NNPNQmrQ-8muhdRmZMz42rJhRG0R3ZyAjjRVMCE06TXz-hwSp5gUJApdbYBlncMJvPlrQuU_UG7Gg30DNgp9MXKRAtzQ1NdIKTv7zjhoyeW-sOvVN9Oppdz79fKq0lvAINL_ny0llLTdyLo1pPAsvNLU1VLSDQAVum_120TiLPuhqNa0BJXJU6Eeh3-Sg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">NovaCare</span><span class="font-provenance-tag text-provenance-tag text-on-surface-variant uppercase tracking-wider mt-1 bg-surface-container-low px-space-xs py-0.5 rounded">Patient Portal</span></div></div><div class="px-space-md mt-space-md"><nav class="flex flex-col gap-space-xxs" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Overview</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="health-check" href="#"><span class="material-symbols-outlined text-[20px]">ecg_heart</span><span>Health Check</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="history-and-trends" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span>History &amp; Trends</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="medications" href="#"><span class="material-symbols-outlined text-[20px]">prescriptions</span><span>Medications</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="profile-and-settings" href="#"><span class="material-symbols-outlined text-[20px]">person</span><span>Profile &amp; Settings</span></a></nav></div></div><div class="p-space-md bg-surface-container-low mx-space-md mb-space-md rounded-xl flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">Emergency Help</span><span class="material-symbols-outlined text-[18px] text-error">emergency</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Immediate assistance or urgent clinical triage.</p><a class="mt-space-xxs inline-flex items-center justify-center py-space-xs px-space-sm bg-surface-container-lowest font-label-sm text-label-sm text-error rounded-lg hover:bg-surface-container-highest transition-colors font-semibold" href="tel:108">Call Helpline 108</a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center bg-surface-container-low rounded-lg p-space-xxs"><button class="px-space-xs py-space-xxs text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm rounded hover:bg-surface-container-highest transition-colors" title="Decrease text size" type="button">A-</button><div class="h-3 w-px bg-outline-variant mx-space-xxs"></div><button class="px-space-xs py-space-xxs text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm rounded hover:bg-surface-container-highest transition-colors font-bold" title="Increase text size" type="button">A+</button><div class="h-3 w-px bg-outline-variant mx-space-xxs"></div><button class="px-space-xs py-space-xxs text-on-surface-variant hover:text-on-surface flex items-center rounded hover:bg-surface-container-highest transition-colors" title="High Contrast Mode" type="button"><span class="material-symbols-outlined text-[16px]">contrast</span></button></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center bg-surface-container-low rounded-lg px-space-xs py-space-xxs"><span class="material-symbols-outlined text-[18px] text-on-surface-variant mr-space-xxs">translate</span><select class="bg-transparent font-label-sm text-label-sm text-on-surface font-medium focus:outline-none cursor-pointer pr-space-xs"><option value="en">English</option><option value="hi">हिन्दी</option><option value="te">తెలుగు</option></select></div><button class="flex items-center gap-space-xxs px-space-sm py-space-xs rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" title="Voice Guidance" type="button"><span class="material-symbols-outlined text-[18px] text-primary">volume_up</span><span class="hidden sm:inline font-medium">Voice Guide</span></button><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-sm pl-space-xxs"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface leading-tight">Ramesh Kumar</span><span class="font-provenance-tag text-provenance-tag text-on-surface-variant">ID: #NC-8902</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Xf3edTESmmIq0QXo3NFtUVnsTd7a1128EGDFTO9J_PAaFpGXCWCa88D6x6btMRPuKdr__hnt9Yhm19qUfi29YBjr3Bn4jLMyd9ZOFJIUk8iyP8-Dch2enW9m7q5TTdKw3CxbvUkEEVUvLQecw2zo93TszzVJN2v1oeO5AIrL4231ivXyRpx_Ddirpb1atBtLKLwLHlfkKutDSsJCuanNP8o8GJqDMaB7NMHAlUVYq7TGVMUhsnYkcdn7w"/><button class="p-space-xxs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" title="Role switch or sign out" type="button"><span class="material-symbols-outlined text-[20px]">more_vert</span></button></div></div></header><main class="w-full pt-16 bg-background min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<div class="max-w-7xl mx-auto w-full flex flex-col gap-space-lg pb-space-2xl">
+<!-- Top Action & Prescription Provenance Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs mb-space-xxs flex-wrap">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-container font-provenance-tag text-provenance-tag text-secondary font-semibold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px] text-primary">verified_user</span>
+            ABDM FHIR R4 Synced
+          </span>
+<span class="text-outline-variant">•</span>
+<span class="font-provenance-tag text-provenance-tag text-on-surface-variant font-medium">
+            Resource: MedReq-Sync-#9102-BLR
+          </span>
+<span class="text-outline-variant">•</span>
+<span class="font-provenance-tag text-provenance-tag text-primary font-semibold">
+            Dr. V. Narayana, MD (Reg #KAR-8831)
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Medication Regimen &amp; Care Reminders</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+          Standardized clinical dosage plan, electronic refilling via Hosakote PHC, and active community field support.
+        </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="h-12 px-space-md rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-space-xs hover:bg-surface-container-high transition-colors" id="syncAbdmBtn" onclick="triggerSync()" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary" id="syncIcon">sync</span>
+<span id="syncText">Sync ABDM</span>
+</button>
+<button class="h-12 px-space-md rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-space-xs hover:bg-surface-container-high transition-colors" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">print</span>
+<span>Print Schedule</span>
+</button>
+<button class="h-12 px-space-md rounded-lg bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-space-xs shadow-sm hover:opacity-95 transition-opacity" onclick="openRefillModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">local_pharmacy</span>
+<span>Request Refill</span>
+</button>
+</div>
+</div>
+<!-- Adherence & Schedule Overview (4-Card Metric Grid) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1: Overall Adherence -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Overall Adherence</span>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-low font-provenance-tag text-provenance-tag text-secondary font-bold">30 DAYS</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-space-xs">
+<span class="font-display-vital text-display-vital text-primary leading-none">96%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">optimal</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            28 of 30 Days Logged
+          </span>
+<span class="font-semibold text-primary">On Track</span>
+</div>
+</div>
+<!-- Metric 2: Active Prescriptions -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Active Regimen</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">prescriptions</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-space-xs">
+<span class="font-display-vital text-display-vital text-on-surface leading-none">2</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">+ 1 PRN Protocol</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="inline-block w-2 h-2 rounded-full bg-primary-container"></span>
+          Amlodipine (OD) &amp; Metformin (OD)
+        </p>
+</div>
+<!-- Metric 3: Next Scheduled Dose -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-3 -top-3 w-16 h-16 rounded-full bg-secondary-fixed/40"></div>
+<div class="flex items-center justify-between relative">
+<span class="font-label-md text-label-md text-on-surface-variant">Next Dose</span>
+<span class="font-provenance-tag text-provenance-tag px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-bold uppercase tracking-wider">Today</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-space-xs relative">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">08:00 PM</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(in 2h 45m)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant relative truncate">
+          Metformin 500mg (ER) • With Dinner
+        </p>
+</div>
+<!-- Metric 4: Refill Status -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Supply Cushion</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">inventory_2</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-space-xs">
+<span class="font-display-vital text-display-vital text-on-surface leading-none">14</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Days Left</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Hosakote Sub-Center</span>
+<span class="font-label-sm text-label-sm font-semibold text-secondary px-space-xs py-0.5 rounded bg-surface-container">Window Open</span>
+</div>
+</div>
+</div>
+<!-- Main Grid: Timeline + Side Support Panels -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Today's Action Timeline (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Timeline Header -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">calendar_today</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Today's Schedule &amp; Dose Actions</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Thursday, 14 Nov 2024 • Ramesh Kumar (ID #NC-8902)</p>
+</div>
+</div>
+<span class="hidden sm:inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary bg-surface-container-low px-space-sm py-1 rounded-full font-medium">
+<span class="material-symbols-outlined text-[14px]">volume_up</span> Audio instructions enabled
+          </span>
+</div>
+<!-- Dose Card 1: Morning (Completed) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-lg flex flex-col sm:flex-row sm:items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<!-- Slot Badge -->
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">wb_sunny</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold mt-1">08:00 AM</span>
+<span class="font-provenance-tag text-provenance-tag text-outline uppercase">Morning</span>
+</div>
+<!-- Details -->
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap mb-1">
+<span class="px-space-xs py-0.5 rounded font-provenance-tag text-provenance-tag bg-surface-container-low text-secondary font-bold uppercase">
+                    Oral Tablet
+                  </span>
+<span class="px-space-xs py-0.5 rounded font-provenance-tag text-provenance-tag bg-secondary-fixed text-on-secondary-fixed font-bold uppercase">
+                    Reference Card
+                  </span>
+<span class="font-provenance-tag text-provenance-tag text-outline-variant">#medreq-9104-aml</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                  Amlodipine 5 mg
+                </h3>
+<p class="font-body-sm text-body-sm text-secondary font-medium">
+                  Indication: Essential Mild Hypertension (Vascular Pressure Stabilization)
+                </p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+                  "Take 1 tablet in the morning after breakfast with a full glass of clean water."
+                </p>
+<!-- Clinical BP correlation tag -->
+<div class="mt-space-sm p-space-xs px-space-sm rounded-lg bg-surface-container-low flex items-center gap-space-xs flex-wrap">
+<span class="material-symbols-outlined text-[18px] text-primary">ecg_heart</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Morning Blood Pressure Check: 122/80 mmHg</span>
+<span class="font-provenance-tag text-provenance-tag text-secondary bg-surface-container-lowest px-1.5 py-0.5 rounded">Normotensive Target</span>
+</div>
+</div>
+</div>
+<!-- Status Indicator -->
+<div class="flex sm:flex-col items-end justify-between sm:justify-start gap-space-xs shrink-0 pt-1">
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-container-low text-secondary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                Taken at 08:05 AM
+              </span>
+<span class="font-provenance-tag text-provenance-tag text-outline">Self-Confirmed</span>
+</div>
+</div>
+</div>
+<!-- Dose Card 2: Evening (Actionable / Due) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest to-surface-container-low">
+<div class="p-space-lg flex flex-col sm:flex-row sm:items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<!-- Slot Badge -->
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[24px]">bedtime</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold mt-1">08:00 PM</span>
+<span class="font-provenance-tag text-provenance-tag text-secondary uppercase font-bold">Evening</span>
+</div>
+<!-- Details -->
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap mb-1">
+<span class="px-space-xs py-0.5 rounded font-provenance-tag text-provenance-tag bg-primary-fixed text-on-primary-fixed font-bold uppercase">
+                    Extended Release
+                  </span>
+<span class="px-space-xs py-0.5 rounded font-provenance-tag text-provenance-tag bg-surface-container-highest text-on-surface-variant font-bold uppercase">
+                    Meal Accompaniment
+                  </span>
+<span class="font-provenance-tag text-provenance-tag text-outline-variant">#medreq-9105-met</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                    Metformin 500 mg (ER)
+                  </h3>
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse" title="Upcoming dose window"></span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary font-medium">
+                  Indication: Glycemic Control (Type 2 Diabetes Mellitus)
+                </p>
+<p class="font-body-md text-body-md text-on-surface mt-space-xs font-medium">
+                  "Take 1 tablet with the evening meal. Swallow whole; do not crush or chew."
+                </p>
+<!-- Voice Instruction Prompt in Indic Dialects -->
+<div class="mt-space-md flex flex-col gap-space-xs">
+<span class="font-provenance-tag text-provenance-tag uppercase text-on-surface-variant font-bold">
+                    Voice Assistance in Dialect
+                  </span>
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="px-space-sm py-space-xxs rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-colors" onclick="playVoiceInstruction('Kannada')" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">play_arrow</span>
+<span>ಕನ್ನಡ (Kannada)</span>
+</button>
+<button class="px-space-sm py-space-xxs rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-colors" onclick="playVoiceInstruction('Telugu')" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">play_arrow</span>
+<span>తెలుగు (Telugu)</span>
+</button>
+<button class="px-space-sm py-space-xxs rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-colors" onclick="playVoiceInstruction('Hindi')" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">play_arrow</span>
+<span>हिन्दी (Hindi)</span>
+</button>
+</div>
+<div class="hidden text-label-sm font-label-sm text-secondary flex items-center gap-1 mt-1" id="voiceFeedback">
+<span class="material-symbols-outlined text-[16px] animate-spin">graphic_eq</span>
+<span id="voiceLang">Playing voice instruction...</span>
+</div>
+</div>
+<!-- Action Confirmation Buttons -->
+<div class="mt-space-lg flex items-center gap-space-sm flex-wrap" id="actionArea">
+<button class="h-12 px-space-lg bg-primary-container text-on-primary font-label-md text-label-md rounded-lg flex items-center gap-space-xs font-semibold shadow hover:opacity-95 transition-opacity" id="markTakenBtn" onclick="confirmDoseTaken()" type="button">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>Mark as Taken</span>
+</button>
+<button class="h-12 px-space-md bg-surface-container text-on-surface font-label-md text-label-md rounded-lg flex items-center gap-space-xs hover:bg-surface-container-high transition-colors" onclick="snoozeDose(15)" type="button">
+<span class="material-symbols-outlined text-[18px]">snooze</span>
+<span>Snooze 15 Min</span>
+</button>
+<span class="hidden font-label-sm text-label-sm text-secondary font-medium" id="snoozeNotice">Snoozed until 08:15 PM</span>
+</div>
+</div>
+</div>
+<!-- Urgency tag -->
+<div class="flex items-center gap-space-xs shrink-0 self-start">
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                Due in 2h 45m
+              </span>
+</div>
+</div>
+</div>
+<!-- Dose Card 3: As-Needed (PRN) / Emergency Protocol -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-lg flex flex-col sm:flex-row sm:items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<!-- Slot Badge -->
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[24px]">emergency</span>
+</div>
+<span class="font-label-sm text-label-sm text-error font-bold mt-1">PRN</span>
+<span class="font-provenance-tag text-provenance-tag text-outline uppercase">As-Needed</span>
+</div>
+<!-- Details -->
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap mb-1">
+<span class="px-space-xs py-0.5 rounded font-provenance-tag text-provenance-tag bg-error-container text-on-error-container font-bold uppercase">
+                    Hypoglycemia &amp; Hydration
+                  </span>
+<span class="font-provenance-tag text-provenance-tag text-outline-variant">Emergency Protocol</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                  Oral Glucose Sachet (15g) / ORS Hydration
+                </h3>
+<p class="font-body-sm text-body-sm text-error font-semibold">
+                  Rule of 15 Protocol: If Blood Sugar &lt; 70 mg/dL or Cold Sweats / Shivering
+                </p>
+<div class="p-space-sm rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm mt-space-xs flex flex-col gap-1">
+<p class="font-medium">1. Dissolve 1 sachet (15g fast-acting sugar or oral glucose) in 150ml water and drink immediately.</p>
+<p class="font-medium">2. Rest seated for 15 minutes, re-check glucose via glucometer.</p>
+<p class="font-medium">3. If symptoms persist or level stays &lt;70 mg/dL, trigger direct call to ASHA worker S. Devi or Helpline 108.</p>
+</div>
+<div class="mt-space-sm flex items-center gap-space-sm flex-wrap">
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm font-bold text-error bg-error-container px-space-sm py-1.5 rounded-lg hover:opacity-90 transition-opacity" href="tel:108">
+<span class="material-symbols-outlined text-[16px]">call</span>
+                    Emergency Helpline (108)
+                  </a>
+<button class="inline-flex items-center gap-1 font-label-sm text-label-sm font-semibold text-secondary bg-surface-container px-space-sm py-1.5 rounded-lg hover:bg-surface-container-high transition-colors" onclick="callAshaWorker()" type="button">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+                    Contact ASHA S. Devi
+                  </button>
+</div>
+</div>
+</div>
+<!-- Stock Count Badge -->
+<div class="shrink-0 self-start">
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px] text-secondary">inventory</span>
+                3 Sachets in Kit
+              </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: ASHA Coordination & Adherence Correlation (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- ASHA Assisted Support & Community Refill Hub -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[22px] text-primary">diversity_1</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Community Care</h2>
+</div>
+<span class="px-space-xs py-0.5 rounded font-provenance-tag text-provenance-tag bg-surface-container text-secondary font-bold uppercase">
+              Assigned Field Team
+            </span>
+</div>
+<!-- ASHA Profile Snippet -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0 font-bold text-headline-sm">
+              SD
+            </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">S. Devi</span>
+<span class="material-symbols-outlined text-[16px] text-primary" title="Certified ASHA Companion">verified</span>
+</div>
+<span class="font-provenance-tag text-provenance-tag text-on-surface-variant">ID: #ASHA-BLR-042 • Hosakote Sector</span>
+<span class="font-body-sm text-body-sm text-secondary font-semibold mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">event</span> Next Visit: Nov 18, 2024
+              </span>
+</div>
+</div>
+<!-- Refill Mode Selection -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Refill Fulfillment Preference</span>
+<div class="flex flex-col gap-space-xs">
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container cursor-pointer hover:bg-surface-container-high transition-colors">
+<input checked="" class="mt-1 text-primary focus:ring-primary h-4 w-4" name="refill_mode" type="radio" value="asha_delivery"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">ASHA Doorstep Delivery</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Worker brings replenished strip during routine Monday visit.</span>
+</div>
+</label>
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input class="mt-1 text-primary focus:ring-primary h-4 w-4" name="refill_mode" type="radio" value="phc_pickup"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Self-Pickup at Hosakote PHC</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ready at Pharmacy Counter #2 with ABDM token.</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Quick Request Refill Action -->
+<button class="w-full h-11 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md font-semibold flex items-center justify-center gap-space-xs hover:bg-on-secondary-container transition-colors" onclick="requestRefillImmediate()" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Request 30-Day Strip Refill</span>
+</button>
+<p class="hidden text-center font-label-sm text-label-sm text-secondary font-bold" id="refillConfirmToast">
+            Refill request queued via Hosakote Sub-Center #4!
+          </p>
+</div>
+<!-- Clinical Safety Guardrail Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[22px]">shield</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Clinical Safety Guardrail</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            NovaCare provides assisted compliance monitoring and does <strong class="text-on-surface">not alter dosages automatically</strong>. Any dose titration or alteration requires a certified digital prescription from Dr. V. Narayana.
+          </p>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-provenance-tag text-provenance-tag uppercase text-secondary font-bold">Interaction Clearance</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">task_alt</span>
+              0 Known Adverse Drug-Drug Interactions
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+              Cross-checked against latest Creatinine &amp; eGFR renal lab panel (Dated 02 Nov 2024).
+            </span>
+</div>
+</div>
+<!-- Longitudinal Correlation Insight Card (Vitals vs. Medication) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Clinical Impact</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">monitoring</span>
+</div>
+<h3 class="font-label-md text-label-md text-on-surface font-bold">
+            Longitudinal Adherence Correlation
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Systolic blood pressure readings have consistently tracked within the normotensive band (<strong class="text-on-surface">120–126 mmHg</strong>) over 30 days of 100% morning Amlodipine logging.
+          </p>
+<!-- Micro Sparkline SVG -->
+<div class="py-space-xs flex flex-col gap-1">
+<div class="flex items-center justify-between text-provenance-tag font-provenance-tag text-outline">
+<span>Day 1 (142 mmHg)</span>
+<span>Day 15 (128 mmHg)</span>
+<span class="text-primary font-bold">Today (122 mmHg)</span>
+</div>
+<div class="w-full h-12 bg-surface-container-low rounded-lg p-1.5 flex items-end">
+<svg class="w-full h-full text-primary" fill="none" viewbox="0 0 240 40">
+<!-- Target Corridor -->
+<rect fill="currentColor" fill-opacity="0.08" height="20" rx="2" width="240" x="0" y="8"></rect>
+<!-- Line trend -->
+<path d="M 0 35 L 30 32 L 60 28 L 90 22 L 120 20 L 150 16 L 180 17 L 210 14 L 240 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<!-- Point indicators -->
+<circle cx="0" cy="35" fill="currentColor" r="3"></circle>
+<circle cx="120" cy="20" fill="currentColor" r="3"></circle>
+<circle class="animate-ping" cx="240" cy="12" fill="currentColor" r="4"></circle>
+<circle cx="240" cy="12" fill="currentColor" r="3"></circle>
+</svg>
+</div>
+<span class="font-provenance-tag text-provenance-tag text-secondary text-right">Target Range: 110-130 mmHg Systolic</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Complete Active Prescription Roster (Full-Width ABDM FHIR Table) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Header & Filter Row -->
+<div class="p-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-md bg-surface-container-lowest">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">ABDM Master Medication Roster</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Validated clinical medication requests under National Digital Health Mission (NDHM) guidelines.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-provenance-tag text-provenance-tag uppercase text-on-surface-variant font-bold">Registry status:</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary bg-surface-container px-space-sm py-1 rounded font-bold">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+            Digitally Signed &amp; Valid
+          </span>
+</div>
+</div>
+<!-- Desktop Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-lg">Medication &amp; Strength</th>
+<th class="py-space-sm px-space-md">Form &amp; Schedule</th>
+<th class="py-space-sm px-space-md">Prescribed By</th>
+<th class="py-space-sm px-space-md">Validity Window</th>
+<th class="py-space-sm px-space-md">Refill Balance</th>
+<th class="py-space-sm px-space-lg text-right">FHIR Identifier</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface">
+<!-- Row 1: Amlodipine -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined text-[20px]">pill</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Amlodipine Besylate 5mg</span>
+<span class="font-provenance-tag text-provenance-tag text-on-surface-variant">Brand equiv: Norvasc / Stamlo</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold">1 Tab • Once Daily (Morning)</span>
+<span class="font-provenance-tag text-provenance-tag text-secondary">Post-breakfast with water</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold">Dr. V. Narayana, MD</span>
+<span class="font-provenance-tag text-provenance-tag text-outline">Hosakote General Hospital</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm">01 Oct 2024 – 31 Mar 2025</span>
+<span class="font-provenance-tag text-provenance-tag text-secondary font-bold">137 Days remaining</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">2 Refills Remaining</span>
+<span class="font-provenance-tag text-provenance-tag text-outline">(Hosakote PHC)</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<span class="font-provenance-tag text-provenance-tag text-secondary font-mono bg-surface-container px-space-xs py-1 rounded">
+                  #medreq-9104-aml
+                </span>
+</td>
+</tr>
+<!-- Row 2: Metformin -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined text-[20px]">medication</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Metformin Hydrochloride 500mg</span>
+<span class="font-provenance-tag text-provenance-tag text-on-surface-variant">Extended Release (ER) • Glyciphage SR</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold">1 Tab • Once Daily (Evening)</span>
+<span class="font-provenance-tag text-provenance-tag text-secondary">With dinner, swallow whole</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold">Dr. V. Narayana, MD</span>
+<span class="font-provenance-tag text-provenance-tag text-outline">Hosakote General Hospital</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm">01 Oct 2024 – 31 Mar 2025</span>
+<span class="font-provenance-tag text-provenance-tag text-secondary font-bold">137 Days remaining</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">2 Refills Remaining</span>
+<span class="font-provenance-tag text-provenance-tag text-outline">(Hosakote PHC)</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<span class="font-provenance-tag text-provenance-tag text-secondary font-mono bg-surface-container px-space-xs py-1 rounded">
+                  #medreq-9105-met
+                </span>
+</td>
+</tr>
+<!-- Row 3: Oral Glucose Sachets (PRN) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-error font-bold">
+<span class="material-symbols-outlined text-[20px]">vaccines</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Oral Glucose / ORS 15g Sachet</span>
+<span class="font-provenance-tag text-provenance-tag text-on-surface-variant">Hypoglycemia Rescue Sachet</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold">PRN (As Needed)</span>
+<span class="font-provenance-tag text-provenance-tag text-error">If BG &lt; 70 or tremors</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold">Dr. V. Narayana, MD</span>
+<span class="font-provenance-tag text-provenance-tag text-outline">Hosakote General Hospital</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm">Standing Emergency Protocol</span>
+<span class="font-provenance-tag text-provenance-tag text-secondary">Perpetual Clinical Guardrail</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">3 In Stock</span>
+<span class="font-provenance-tag text-provenance-tag text-outline">(Provided in ASHA Kit)</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<span class="font-provenance-tag text-provenance-tag text-secondary font-mono bg-surface-container px-space-xs py-1 rounded">
+                  #medreq-9080-prn
+                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Footnote on Table -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<span class="font-provenance-tag text-provenance-tag text-on-surface-variant">
+          Security Hash: SHA256:d8a0f9b... Synced from Karnataka Health Registry Node #89.
+        </span>
+<button class="font-label-sm text-label-sm text-primary hover:underline font-semibold flex items-center gap-1" onclick="requestRefillImmediate()" type="button">
+<span class="material-symbols-outlined text-[16px]">sync_alt</span>
+          Verify Electronic Batch Number
+        </button>
+</div>
+</div>
+<!-- Modals and Dynamic Panels (Embedded interactive overlays) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-space-md bg-inverse-surface/40 backdrop-blur-sm" id="refillModal">
+<div class="bg-surface-container-lowest max-w-lg w-full rounded-xl shadow-2xl p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[24px]">local_pharmacy</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Confirm Refill Requisition</h3>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="closeRefillModal()" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          You are requesting an authorized 30-day refill pack for:
+        </p>
+<div class="space-y-space-xs p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">• Amlodipine 5mg (30 Tablets)</span>
+<span class="font-provenance-tag text-provenance-tag text-secondary font-bold">Refill 1 of 2</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">• Metformin 500mg ER (30 Tablets)</span>
+<span class="font-provenance-tag text-provenance-tag text-secondary font-bold">Refill 1 of 2</span>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">person_pin_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">
+            Assigned Dispenser: <strong>Hosakote Rural Sub-Center #4</strong> via ASHA S. Devi.
+          </span>
+</div>
+<div class="flex items-center justify-end gap-space-xs pt-space-xs">
+<button class="px-space-md h-11 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" onclick="closeRefillModal()" type="button">
+            Cancel
+          </button>
+<button class="px-space-lg h-11 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:opacity-95 transition-opacity" onclick="submitRefillOrder()" type="button">
+            Transmit ABDM Order
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Active Sidebar highlight sync
+  document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('aside nav a');
+    navLinks.forEach(link => {
+      if (link.getAttribute('data-path') === 'medications') {
+        link.className = 'flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md bg-primary-container text-on-primary font-bold shadow-sm transition-all';
+      }
+    });
+  });
+
+  // ABDM Synchronization Micro-interaction
+  function triggerSync() {
+    const icon = document.getElementById('syncIcon');
+    const text = document.getElementById('syncText');
+    const btn = document.getElementById('syncAbdmBtn');
+    
+    icon.classList.add('animate-spin');
+    text.innerText = 'Syncing...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      icon.classList.remove('animate-spin');
+      text.innerText = 'ABDM Synced';
+      icon.innerText = 'done';
+      icon.classList.add('text-secondary');
+      setTimeout(() => {
+        text.innerText = 'Sync ABDM';
+        icon.innerText = 'sync';
+        icon.classList.remove('text-secondary');
+        btn.disabled = false;
+      }, 3000);
+    }, 1200);
+  }
+
+  // Dialect Voice Guidance
+  function playVoiceInstruction(lang) {
+    const feedback = document.getElementById('voiceFeedback');
+    const langSpan = document.getElementById('voiceLang');
+    feedback.classList.remove('hidden');
+    langSpan.innerText = `Speaking instructions in ${lang}: "Take 1 Metformin 500mg tablet with your evening meal..."`;
+    
+    setTimeout(() => {
+      feedback.classList.add('hidden');
+    }, 4500);
+  }
+
+  // Dose Taken Confirmation
+  function confirmDoseTaken() {
+    const actionArea = document.getElementById('actionArea');
+    actionArea.innerHTML = `
+      <div class="p-space-xs px-space-md rounded-lg bg-surface-container-low text-secondary font-label-md text-label-md flex items-center gap-space-xs font-bold">
+        <span class="material-symbols-outlined text-[20px]">check_circle</span>
+        <span>Evening Dose Logged (Self-Confirmed at ${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})})</span>
+      </div>
+    `;
+  }
+
+  // Dose Snooze
+  function snoozeDose(minutes) {
+    const snoozeNotice = document.getElementById('snoozeNotice');
+    snoozeNotice.classList.remove('hidden');
+    snoozeNotice.innerText = `Dose alert postponed by ${minutes} minutes.`;
+  }
+
+  // Refill Modal
+  function openRefillModal() {
+    document.getElementById('refillModal').classList.remove('hidden');
+  }
+
+  function closeRefillModal() {
+    document.getElementById('refillModal').classList.add('hidden');
+  }
+
+  function submitRefillOrder() {
+    closeRefillModal();
+    const toast = document.getElementById('refillConfirmToast');
+    if (toast) {
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 5000);
+    }
+  }
+
+  function requestRefillImmediate() {
+    openRefillModal();
+  }
+
+  function callAshaWorker() {
+    alert("Calling Assigned ASHA Worker S. Devi (ID: #ASHA-BLR-042) via Telephony Bridge...");
+  }
+</script></main></div></body></html>

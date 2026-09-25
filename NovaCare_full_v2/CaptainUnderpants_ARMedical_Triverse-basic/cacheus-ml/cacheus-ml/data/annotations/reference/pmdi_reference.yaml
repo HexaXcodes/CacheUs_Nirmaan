@@ -1,0 +1,52 @@
+video: data/raw/inhaler/reference/pmdi_reference.mp4
+
+workflow: pmdi_without_spacer
+
+steps:
+  - id: 1
+    name: remove_cap
+    start: 0
+    end: 20
+    status: correct
+
+  - id: 2
+    name: shake_inhaler
+    start: 20
+    end: 60
+    status: correct
+
+  - id: 3
+    name: exhale_away
+    start: 60
+    end: 80
+    status: correct
+
+  - id: 4
+    name: position_mouthpiece
+    start: 80
+    end: 100
+    status: correct
+
+  - id: 5
+    name: begin_slow_inhalation
+    start: 100
+    end: 120
+    status: correct
+
+  - id: 6
+    name: actuate_during_inhalation
+    start: 120
+    end: 140
+    status: correct
+
+  - id: 7
+    name: continue_inhalation
+    start: 140
+    end: 160
+    status: correct
+
+  - id: 8
+    name: breath_hold
+    start: 160
+    end: 175.88
+    status: correct

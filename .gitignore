@@ -1,0 +1,53 @@
+# Python
+.venv/
+**/.venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+.pytest_cache/
+**/.pytest*
+.pytest-*/
+
+# Secrets
+.env
+**/.env
+.env.local
+*.key
+*.pem
+
+# Node
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+
+# Local databases/logs
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# IDE / OS
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Large/local datasets
+ppg_dataset/
+review-frames/
+
+# ML/cache outputs
+*.pt
+*.pth
+*.onnx
+*.joblib
+*.pkl
+
+# Temporary/cache
+cache/
+.cache/
+tmp/
+temp/
+
+.git_old_backup/
+**/.git_old_backup/

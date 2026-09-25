@@ -1,0 +1,12 @@
+# Runtime for ppg_service + backend_ml_package.
+# scikit-learn is pinned to the version the saved .joblib models were pickled with (1.6.1).
+# numpy>=2 is required: backend_ml_package uses np.trapezoid.
+numpy>=2.0
+scipy
+scikit-learn==1.6.1
+joblib
+fastapi==0.115.6
+uvicorn==0.34.0
+# tests only
+pytest
+httpx

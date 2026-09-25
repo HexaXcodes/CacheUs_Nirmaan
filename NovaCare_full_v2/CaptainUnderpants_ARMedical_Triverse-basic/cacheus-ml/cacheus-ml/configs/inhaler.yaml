@@ -1,0 +1,31 @@
+workflow: pmdi_without_spacer
+
+steps:
+  - id: 1
+    name: remove_cap
+
+  - id: 2
+    name: shake_inhaler
+
+  - id: 3
+    name: exhale_away
+
+  - id: 4
+    name: position_mouthpiece
+
+  - id: 5
+    name: begin_slow_inhalation
+
+  - id: 6
+    name: actuate_during_inhalation
+
+  - id: 7
+    name: continue_inhalation
+
+  - id: 8
+    name: breath_hold
+
+statuses:
+  - correct
+  - incorrect
+  - uncertain

@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"surface-container-highest":"#dee2f0","secondary":"#3b5e97","surface-container-lowest":"#ffffff","secondary-container":"#9dbffe","tertiary-container":"#0f69dc","on-tertiary-container":"#edf0ff","secondary-fixed":"#d6e3ff","on-primary-fixed":"#00174b","primary":"#004ac6","outline-variant":"#c3c6d7","surface-variant":"#dee2f0","primary-fixed":"#dbe1ff","secondary-fixed-dim":"#aac7ff","on-tertiary-fixed":"#001a42","tertiary-fixed":"#d8e2ff","inverse-surface":"#2b303b","outline":"#737686","error-container":"#ffdad6","on-secondary-fixed":"#001b3e","primary-fixed-dim":"#b4c5ff","on-secondary":"#ffffff","on-surface":"#171c26","on-primary":"#ffffff","inverse-on-surface":"#ecf0ff","on-primary-fixed-variant":"#003ea8","surface-container-high":"#e4e8f6","on-surface-variant":"#434655","surface-container-low":"#f1f3ff","surface-dim":"#d6dae8","error":"#ba1a1a","on-error-container":"#93000a","background":"#f9f9ff","tertiary-fixed-dim":"#adc6ff","on-secondary-container":"#274d84","surface-container":"#e9edfc","on-primary-container":"#eeefff","on-error":"#ffffff","on-secondary-fixed-variant":"#20467e","on-tertiary":"#ffffff","primary-container":"#2563eb","on-background":"#171c26","surface-bright":"#f9f9ff","tertiary":"#0051b1","surface-tint":"#0053db","inverse-primary":"#b4c5ff","on-tertiary-fixed-variant":"#004395","surface":"#f9f9ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-2xl":"3rem","gutter-mobile":"1rem","space-xl":"2rem","space-xs":"0.5rem","space-sm":"0.75rem","gutter":"1.5rem","margin-mobile":"1rem","space-lg":"1.5rem","space-md":"1rem","margin":"2rem","space-xxs":"0.25rem"},"fontFamily":{"display-vital":["Inter"],"body-md":["Inter"],"headline-md":["Inter"],"label-sm":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"display-vital-mobile":["Inter"],"label-md":["Inter"],"headline-lg-mobile":["Inter"],"headline-sm":["Inter"],"headline-lg":["Inter"],"provenance-tag":["Inter"]},"fontSize":{"display-vital":["3.5rem",{"lineHeight":"3.75rem","letterSpacing":"-0.025em","fontWeight":"700"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"600"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"display-vital-mobile":["2.5rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"headline-lg":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.02em","fontWeight":"700"}],"provenance-tag":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.04em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm"><img alt="Brand logo. - Primary color: #2563eb
+- Font: inter
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XIg5Aojol0LvkmUv74pOqfjeQir0qYeaGBlXg0TGzfuWu98YSxBigQjbZYb0NNPNQmrQ-8muhdRmZMz42rJhRG0R3ZyAjjRVMCE06TXz-hwSp5gUJApdbYBlncMJvPlrQuU_UG7Gg30DNgp9MXKRAtzQ1NdIKTv7zjhoyeW-sOvVN9Oppdz79fKq0lvAINL_ny0llLTdyLo1pPAsvNLU1VLSDQAVum_120TiLPuhqNa0BJXJU6Eeh3-Sg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">NovaCare</span><span class="font-provenance-tag text-provenance-tag text-on-surface-variant uppercase tracking-wider mt-1 bg-surface-container-low px-space-xs py-0.5 rounded">Patient Portal</span></div></div><div class="px-space-md mt-space-md"><nav class="flex flex-col gap-space-xxs" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Overview</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="health-check" href="#"><span class="material-symbols-outlined text-[20px]">ecg_heart</span><span>Health Check</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="history-and-trends" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span>History &amp; Trends</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="medications" href="#"><span class="material-symbols-outlined text-[20px]">prescriptions</span><span>Medications</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="profile-and-settings" href="#"><span class="material-symbols-outlined text-[20px]">person</span><span>Profile &amp; Settings</span></a></nav></div></div><div class="p-space-md bg-surface-container-low mx-space-md mb-space-md rounded-xl flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">Emergency Help</span><span class="material-symbols-outlined text-[18px] text-error">emergency</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Immediate assistance or urgent clinical triage.</p><a class="mt-space-xxs inline-flex items-center justify-center py-space-xs px-space-sm bg-surface-container-lowest font-label-sm text-label-sm text-error rounded-lg hover:bg-surface-container-highest transition-colors font-semibold" href="tel:108">Call Helpline 108</a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center bg-surface-container-low rounded-lg p-space-xxs"><button class="px-space-xs py-space-xxs text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm rounded hover:bg-surface-container-highest transition-colors" title="Decrease text size" type="button">A-</button><div class="h-3 w-px bg-outline-variant mx-space-xxs"></div><button class="px-space-xs py-space-xxs text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm rounded hover:bg-surface-container-highest transition-colors font-bold" title="Increase text size" type="button">A+</button><div class="h-3 w-px bg-outline-variant mx-space-xxs"></div><button class="px-space-xs py-space-xxs text-on-surface-variant hover:text-on-surface flex items-center rounded hover:bg-surface-container-highest transition-colors" title="High Contrast Mode" type="button"><span class="material-symbols-outlined text-[16px]">contrast</span></button></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center bg-surface-container-low rounded-lg px-space-xs py-space-xxs"><span class="material-symbols-outlined text-[18px] text-on-surface-variant mr-space-xxs">translate</span><select class="bg-transparent font-label-sm text-label-sm text-on-surface font-medium focus:outline-none cursor-pointer pr-space-xs"><option value="en">English</option><option value="hi">हिन्दी</option><option value="te">తెలుగు</option></select></div><button class="flex items-center gap-space-xxs px-space-sm py-space-xs rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" title="Voice Guidance" type="button"><span class="material-symbols-outlined text-[18px] text-primary">volume_up</span><span class="hidden sm:inline font-medium">Voice Guide</span></button><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-sm pl-space-xxs"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface leading-tight">Ramesh Kumar</span><span class="font-provenance-tag text-provenance-tag text-on-surface-variant">ID: #NC-8902</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Xf3edTESmmIq0QXo3NFtUVnsTd7a1128EGDFTO9J_PAaFpGXCWCa88D6x6btMRPuKdr__hnt9Yhm19qUfi29YBjr3Bn4jLMyd9ZOFJIUk8iyP8-Dch2enW9m7q5TTdKw3CxbvUkEEVUvLQecw2zo93TszzVJN2v1oeO5AIrL4231ivXyRpx_Ddirpb1atBtLKLwLHlfkKutDSsJCuanNP8o8GJqDMaB7NMHAlUVYq7TGVMUhsnYkcdn7w"/><button class="p-space-xxs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" title="Role switch or sign out" type="button"><span class="material-symbols-outlined text-[20px]">more_vert</span></button></div></div></header><main class="w-full pt-16 bg-background min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Active Sidebar Nav Sync (Client Hook) -->
+<script>
+    (function () {
+      const navLinks = document.querySelectorAll('aside nav a[data-path]');
+      navLinks.forEach((link) => {
+        if (link.getAttribute('data-path') === 'history-and-trends') {
+          link.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-low', 'hover:text-on-surface');
+          link.classList.add('bg-primary-container', 'text-on-primary', 'font-bold', 'rounded-lg', 'shadow-sm');
+        } else {
+          link.classList.remove('bg-primary-container', 'text-on-primary', 'font-bold', 'shadow-sm');
+          link.classList.add('text-on-surface-variant', 'hover:bg-surface-container-low', 'hover:text-on-surface');
+        }
+      });
+    })();
+  </script>
+<!-- Clinical Safety & Integrity Banner -->
+<div class="mb-space-lg rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]">verified_user</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Longitudinal Clinical History &amp; Validated Trends</h2>
+<span class="font-provenance-tag text-provenance-tag uppercase bg-surface-container-high text-primary px-space-xs py-0.5 rounded tracking-wide">FHIR R4 Aligned</span>
+<span class="font-provenance-tag text-provenance-tag uppercase bg-surface-container-low text-secondary px-space-xs py-0.5 rounded tracking-wide">ABDM Health Locker</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xxs">
+          Commercial devices provide reference readings. NovaCare strictly isolates certified non-invasive cuff telemetry from algorithmic sensor estimations.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 self-end md:self-center">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px] text-primary">sync</span>
+        Live Cache: Verified
+      </span>
+<button class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-surface-container-high hover:bg-surface-container-highest text-on-surface px-space-sm py-1.5 rounded-lg transition-colors" title="Audit Log Info" type="button">
+<span class="material-symbols-outlined text-[16px]">info</span>
+        Protocol v2.4
+      </button>
+</div>
+</div>
+<!-- Primary Modality Switcher & Toolbar Bar -->
+<div class="flex flex-col gap-space-md mb-space-lg">
+<!-- Tabs Row -->
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md">
+<!-- Modality Tabs -->
+<div class="flex items-center gap-space-xs bg-surface-container-low p-1.5 rounded-xl w-full lg:w-auto overflow-x-auto">
+<!-- BP Tab (Active) -->
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-lowest text-primary shadow-sm font-label-md text-label-md whitespace-nowrap" type="button">
+<span class="material-symbols-outlined text-[18px]">vital_signs</span>
+<span>Blood Pressure (Reference Cuff)</span>
+<span class="ml-1 w-2 h-2 rounded-full bg-primary"></span>
+</button>
+<!-- Glucose Tab -->
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md whitespace-nowrap transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">bloodtype</span>
+<span>Blood Glucose (Glucometer)</span>
+</button>
+<!-- Experimental PPG Tab -->
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md whitespace-nowrap transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">science</span>
+<span>Experimental PPG Module</span>
+<span class="font-provenance-tag text-provenance-tag bg-surface-container-high text-on-surface-variant px-1.5 py-0.5 rounded font-semibold">Sandbox</span>
+</button>
+</div>
+<!-- Quick Action Controls -->
+<div class="flex items-center gap-space-xs w-full lg:w-auto justify-between lg:justify-end">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 bg-surface-container-lowest hover:bg-surface-container-low text-primary rounded-lg font-label-sm text-label-sm shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Export Telemetry (CSV)</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 bg-primary hover:bg-tertiary text-on-primary rounded-lg font-label-sm text-label-sm shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span>Clinician Summary PDF</span>
+</button>
+</div>
+</div>
+<!-- Secondary Filters & Time Scope Bar -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<!-- Time Ranges -->
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-sm text-label-sm text-on-surface-variant mr-1">Time Horizon:</span>
+<button class="px-space-sm py-1 rounded-md font-label-sm text-label-sm bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors" type="button">Last 7 Days</button>
+<button class="px-space-sm py-1 rounded-md font-label-sm text-label-sm bg-primary text-on-primary shadow-xs" type="button">Last 30 Days</button>
+<button class="px-space-sm py-1 rounded-md font-label-sm text-label-sm bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors" type="button">Last 90 Days</button>
+<button class="px-space-sm py-1 rounded-md font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:text-on-surface flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+<span>Custom Range</span>
+</button>
+</div>
+<!-- Provenance Segmentation Filter -->
+<div class="flex items-center gap-space-sm self-stretch md:self-auto justify-end">
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">Filter Origin:</span>
+<div class="relative inline-block w-full md:w-auto">
+<select class="w-full md:w-auto font-label-sm text-label-sm bg-surface-container-low text-on-surface rounded-lg px-space-sm py-1.5 focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer pr-space-lg">
+<option value="all">All Provenance (18 Verified)</option>
+<option value="asha">ASHA-Assisted Only (12)</option>
+<option value="self">Self-Logged Only (6)</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<!-- Metric Overview Bento Cards (30-Day Window) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Card 1: 30-Day Mean Reference BP -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-provenance-tag text-provenance-tag uppercase text-on-surface-variant">Standardized Mean</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">30-Day Mean BP</h3>
+</div>
+<span class="w-8 h-8 rounded-lg bg-surface-container-low text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">monitor_heart</span>
+</span>
+</div>
+<div class="my-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-vital text-display-vital text-primary leading-none">124<span class="text-on-surface-variant font-normal">/</span>81</span>
+<span class="font-label-md text-label-md text-on-surface-variant">mmHg</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Variance: ±4 Systolic / ±3 Diastolic</p>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-surface-container-low text-on-secondary-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+          AHA Normotensive Target
+        </span>
+</div>
+</div>
+<!-- Card 2: Validated Readings Volume -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-provenance-tag text-provenance-tag uppercase text-on-surface-variant">Verified Submissions</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Reference Logs</h3>
+</div>
+<span class="w-8 h-8 rounded-lg bg-surface-container-low text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">fact_check</span>
+</span>
+</div>
+<div class="my-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-vital text-display-vital text-on-surface leading-none">18</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Sessions</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">100% adherence to 5-min rest protocol</p>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-[15px]">trending_up</span>
+          Regular bi-weekly cadence
+        </span>
+</div>
+</div>
+<!-- Card 3: Resting Pulse Rate -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-provenance-tag text-provenance-tag uppercase text-on-surface-variant">Heart Rate (Pulse)</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Mean Resting HR</h3>
+</div>
+<span class="w-8 h-8 rounded-lg bg-surface-container-low text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">ecg</span>
+</span>
+</div>
+<div class="my-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-vital text-display-vital text-on-surface leading-none">73</span>
+<span class="font-label-md text-label-md text-on-surface-variant">bpm</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Observed Span: 68 – 78 bpm</p>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded">
+          Normal sinus rhythm indication
+        </span>
+</div>
+</div>
+<!-- Card 4: Provenance Breakdown -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-provenance-tag text-provenance-tag uppercase text-on-surface-variant">Device Provenance</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Source Integrity</h3>
+</div>
+<span class="w-8 h-8 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">attribution</span>
+</span>
+</div>
+<div class="my-space-md space-y-2">
+<div class="flex items-center justify-between text-body-sm">
+<span class="inline-flex items-center gap-1.5 text-on-surface font-medium">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+            ASHA-Assisted:
+          </span>
+<span class="font-bold text-on-surface">12 (67%)</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 67%"></div>
+<div class="bg-secondary h-full" style="width: 33%"></div>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="inline-flex items-center gap-1.5 text-on-surface font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+            Patient Self-Logged:
+          </span>
+<span class="font-bold text-on-surface">6 (33%)</span>
+</div>
+</div>
+<p class="font-provenance-tag text-provenance-tag text-on-surface-variant pt-space-xs">
+        ASHA Kit: S. Devi (Field #04) • Omron HEM-7120
+      </p>
+</div>
+</div>
+<!-- Main Chart Section: Longitudinal Reference Cuff Scatter Plot -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm mb-space-lg">
+<!-- Chart Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-on-surface">Longitudinal Reference Cuff Trend (Last 30 Days)</h3>
+<span class="inline-flex items-center gap-1 font-provenance-tag text-provenance-tag bg-surface-container-low text-primary px-2 py-0.5 rounded font-semibold uppercase">
+            Clinical Reference Tier
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Discrete verified measurements with standard error bounds. No speculative continuous smoothing between unmeasured dates.
+        </p>
+</div>
+<!-- Legend -->
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary inline-block"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Systolic (mmHg)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary inline-block"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Diastolic (mmHg)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-4 h-2 rounded bg-surface-container-high inline-block"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">AHA Target Zone</span>
+</div>
+</div>
+</div>
+<!-- Inline SVG Longitudinal Scatter Trend Visualization -->
+<div class="relative w-full overflow-x-auto">
+<div class="min-w-[760px] relative">
+<svg class="w-full h-80 overflow-visible select-none" viewbox="0 0 880 340" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Target band subtle background gradient -->
+<lineargradient id="targetBandGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#2563eb" stop-opacity="0.08"></stop>
+<stop offset="100%" stop-color="#2563eb" stop-opacity="0.02"></stop>
+</lineargradient>
+<!-- Diastolic Target band subtle background gradient -->
+<lineargradient id="targetBandGradDia" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#3b5e97" stop-opacity="0.08"></stop>
+<stop offset="100%" stop-color="#3b5e97" stop-opacity="0.02"></stop>
+</lineargradient>
+</defs>
+<!-- Horizontal Grid Lines (Y-Axis) -->
+<!-- 160 mmHg -->
+<line stroke="#dee2f0" stroke-dasharray="4 4" stroke-width="1" x1="60" x2="840" y1="30" y2="30"></line>
+<text fill="#737686" font-family="Inter" font-size="11" text-anchor="end" x="50" y="34">160</text>
+<!-- 140 mmHg -->
+<line stroke="#dee2f0" stroke-dasharray="4 4" stroke-width="1" x1="60" x2="840" y1="75" y2="75"></line>
+<text fill="#737686" font-family="Inter" font-size="11" text-anchor="end" x="50" y="79">140</text>
+<!-- Systolic Target Band: 120-130 mmHg (y: 97 to 120) -->
+<rect fill="url(#targetBandGrad)" height="24" rx="4" width="780" x="60" y="98"></rect>
+<text fill="#004ac6" font-family="Inter" font-size="10" font-weight="600" text-anchor="end" x="830" y="113">Sys Normotensive (120-130)</text>
+<!-- 120 mmHg -->
+<line stroke="#c3c6d7" stroke-width="1" x1="60" x2="840" y1="120" y2="120"></line>
+<text fill="#737686" font-family="Inter" font-size="11" text-anchor="end" x="50" y="124">120</text>
+<!-- 100 mmHg -->
+<line stroke="#dee2f0" stroke-dasharray="4 4" stroke-width="1" x1="60" x2="840" y1="165" y2="165"></line>
+<text fill="#737686" font-family="Inter" font-size="11" text-anchor="end" x="50" y="169">100</text>
+<!-- Diastolic Target Band: 75-85 mmHg (y: 198 to 222) -->
+<rect fill="url(#targetBandGradDia)" height="24" rx="4" width="780" x="60" y="198"></rect>
+<text fill="#3b5e97" font-family="Inter" font-size="10" font-weight="600" text-anchor="end" x="830" y="213">Dia Target (75-85)</text>
+<!-- 80 mmHg -->
+<line stroke="#c3c6d7" stroke-width="1" x1="60" x2="840" y1="210" y2="210"></line>
+<text fill="#737686" font-family="Inter" font-size="11" text-anchor="end" x="50" y="214">80</text>
+<!-- 60 mmHg -->
+<line stroke="#dee2f0" stroke-dasharray="4 4" stroke-width="1" x1="60" x2="840" y1="255" y2="255"></line>
+<text fill="#737686" font-family="Inter" font-size="11" text-anchor="end" x="50" y="259">60</text>
+<!-- X-Axis Baseline -->
+<line stroke="#c3c6d7" stroke-width="1.5" x1="60" x2="840" y1="285" y2="285"></line>
+<!-- X-Axis Date Markers & Vertical Guides -->
+<!-- Oct 10 (x=100) -->
+<line stroke="#f1f3ff" stroke-width="1" x1="100" x2="100" y1="30" y2="285"></line>
+<text fill="#737686" font-family="Inter" font-size="11" text-anchor="middle" x="100" y="304">Oct 16</text>
+<!-- Oct 14 (x=200) -->
+<line stroke="#f1f3ff" stroke-width="1" x1="200" x2="200" y1="30" y2="285"></line>
+<text fill="#737686" font-family="Inter" font-size="11" text-anchor="middle" x="200" y="304">Oct 20</text>
+<!-- Oct 20 (x=300) -->
+<line stroke="#f1f3ff" stroke-width="1" x1="300" x2="300" y1="30" y2="285"></line>
+<text fill="#737686" font-family="Inter" font-size="11" text-anchor="middle" x="300" y="304">Oct 24</text>
+<!-- Oct 26 (x=400) -->
+<line stroke="#f1f3ff" stroke-width="1" x1="400" x2="400" y1="30" y2="285"></line>
+<text fill="#737686" font-family="Inter" font-size="11" text-anchor="middle" x="400" y="304">Oct 28</text>
+<!-- Oct 31 (x=500) -->
+<line stroke="#f1f3ff" stroke-width="1" x1="500" x2="500" y1="30" y2="285"></line>
+<text fill="#737686" font-family="Inter" font-size="11" text-anchor="middle" x="500" y="304">Nov 02</text>
+<!-- Nov 05 (x=600) -->
+<line stroke="#f1f3ff" stroke-width="1" x1="600" x2="600" y1="30" y2="285"></line>
+<text fill="#737686" font-family="Inter" font-size="11" text-anchor="middle" x="600" y="304">Nov 06</text>
+<!-- Nov 10 (x=700) -->
+<line stroke="#f1f3ff" stroke-width="1" x1="700" x2="700" y1="30" y2="285"></line>
+<text fill="#737686" font-family="Inter" font-size="11" text-anchor="middle" x="700" y="304">Nov 10</text>
+<!-- Today Nov 14 (x=790) -->
+<line stroke="#004ac6" stroke-dasharray="3 3" stroke-width="1.5" x1="790" x2="790" y1="30" y2="285"></line>
+<text fill="#004ac6" font-family="Inter" font-size="11" font-weight="700" text-anchor="middle" x="790" y="304">Today</text>
+<!-- Discrete Verified Points (Coupled Vertical Stems connecting Systolic & Diastolic readings) -->
+<!-- Reading 1: Oct 16 (126 / 82) -->
+<line stroke="#c3c6d7" stroke-dasharray="2 2" stroke-width="1.5" x1="100" x2="100" y1="106" y2="206"></line>
+<circle cx="100" cy="106" fill="#004ac6" r="5"></circle>
+<circle cx="100" cy="206" fill="#3b5e97" r="5"></circle>
+<!-- Reading 2: Oct 20 (128 / 84) -->
+<line stroke="#c3c6d7" stroke-dasharray="2 2" stroke-width="1.5" x1="200" x2="200" y1="102" y2="201"></line>
+<circle cx="200" cy="102" fill="#004ac6" r="5"></circle>
+<circle cx="200" cy="201" fill="#3b5e97" r="5"></circle>
+<!-- Reading 3: Oct 24 (122 / 80) -->
+<line stroke="#c3c6d7" stroke-dasharray="2 2" stroke-width="1.5" x1="300" x2="300" y1="115" y2="210"></line>
+<circle cx="300" cy="115" fill="#004ac6" r="5"></circle>
+<circle cx="300" cy="210" fill="#3b5e97" r="5"></circle>
+<!-- Reading 4: Oct 28 (125 / 82) -->
+<line stroke="#c3c6d7" stroke-dasharray="2 2" stroke-width="1.5" x1="400" x2="400" y1="109" y2="205"></line>
+<circle cx="400" cy="109" fill="#004ac6" r="5"></circle>
+<circle cx="400" cy="205" fill="#3b5e97" r="5"></circle>
+<!-- Reading 5: Nov 02 (123 / 79) -->
+<line stroke="#c3c6d7" stroke-dasharray="2 2" stroke-width="1.5" x1="500" x2="500" y1="113" y2="212"></line>
+<circle cx="500" cy="113" fill="#004ac6" r="5"></circle>
+<circle cx="500" cy="212" fill="#3b5e97" r="5"></circle>
+<!-- Reading 6: Nov 06 (127 / 83) -->
+<line stroke="#c3c6d7" stroke-dasharray="2 2" stroke-width="1.5" x1="600" x2="600" y1="104" y2="203"></line>
+<circle cx="600" cy="104" fill="#004ac6" r="5"></circle>
+<circle cx="600" cy="203" fill="#3b5e97" r="5"></circle>
+<!-- Reading 7: Nov 10 (124 / 81) -->
+<line stroke="#c3c6d7" stroke-dasharray="2 2" stroke-width="1.5" x1="700" x2="700" y1="111" y2="207"></line>
+<circle cx="700" cy="111" fill="#004ac6" r="5"></circle>
+<circle cx="700" cy="207" fill="#3b5e97" r="5"></circle>
+<!-- Reading 8: Today Nov 14 (122 / 80) Highlighted active measurement -->
+<line stroke="#004ac6" stroke-width="2" x1="790" x2="790" y1="115" y2="210"></line>
+<!-- Diastolic Point with halo -->
+<circle cx="790" cy="210" fill="#3b5e97" fill-opacity="0.2" r="8"></circle>
+<circle cx="790" cy="210" fill="#3b5e97" r="5.5" stroke="#ffffff" stroke-width="2"></circle>
+<!-- Systolic Point with halo -->
+<circle cx="790" cy="115" fill="#004ac6" fill-opacity="0.2" r="8"></circle>
+<circle cx="790" cy="115" fill="#004ac6" r="6" stroke="#ffffff" stroke-width="2"></circle>
+<!-- Interactive Tooltip Callout Box for Today -->
+<g transform="translate(560, 40)">
+<rect fill="#ffffff" filter="drop-shadow(0px 4px 10px rgba(0,0,0,0.08))" height="92" rx="8" stroke="#dee2f0" stroke-width="1" width="220" x="0" y="0"></rect>
+<polygon fill="#ffffff" points="220,50 230,55 220,60"></polygon>
+<circle cx="14" cy="18" fill="#004ac6" r="4"></circle>
+<text fill="#171c26" font-family="Inter" font-size="11" font-weight="700" x="24" y="21">Today • 08:30 AM</text>
+<text fill="#004ac6" font-family="Inter" font-size="14" font-weight="700" x="14" y="42">122 / 80 <tspan fill="#737686" font-size="10" font-weight="400">mmHg</tspan></text>
+<text fill="#3b5e97" font-family="Inter" font-size="12" font-weight="600" x="130" y="42">HR: 72 <tspan fill="#737686" font-size="10" font-weight="400">bpm</tspan></text>
+<text fill="#434655" font-family="Inter" font-size="10" x="14" y="62">ASHA Field Kit #04 (S. Devi)</text>
+<text fill="#737686" font-family="Inter" font-size="9.5" x="14" y="78">Omron HEM-7120 • Right Arm (Heart Level)</text>
+</g>
+</svg>
+</div>
+</div>
+<!-- Chart Footnote & Data Integrity Clarification -->
+<div class="mt-space-sm pt-space-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-xs bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">info</span>
+<span>AHA/ACC 2017 Protocol: Measurements recorded following mandatory 5-minute seated rest in silent conditions.</span>
+</div>
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:underline inline-flex items-center gap-1" href="#telemetry-table">
+<span>Inspect All Raw Readings</span>
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</a>
+</div>
+</div>
+<!-- Two-Column Section: Isolated Research Sandbox Preview & Audit Details -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-lg">
+<!-- Left Column: Strictly Isolated Experimental PPG Research Module (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between gap-space-md mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">biotech</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Experimental BP Estimates (Research Sandbox)</h3>
+<span class="font-provenance-tag text-provenance-tag uppercase text-on-surface-variant">PulseNet-1D Optical Model • Non-Clinical</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 font-provenance-tag text-provenance-tag uppercase bg-surface-container-high text-on-surface px-2.5 py-1 rounded font-bold tracking-wider">
+            Strictly Separated
+          </span>
+</div>
+<!-- Warning Disclaimer Box -->
+<div class="bg-surface-container-low p-space-sm rounded-lg mb-space-md flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5 shrink-0">privacy_tip</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Experimental estimates are calculated via smartphone optical photoplethysmography (PPG). Strictly non-diagnostic. Never used for medication adjustments or aggregated into verified clinical records.
+          </p>
+</div>
+<!-- Research Trials Comparison Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<th class="p-space-xs pl-space-sm rounded-l">Research Trial</th>
+<th class="p-space-xs">Optical PPG Estimate</th>
+<th class="p-space-xs">Paired Cuff Reference</th>
+<th class="p-space-xs">Delta (Δ)</th>
+<th class="p-space-xs pr-space-sm rounded-r">Sensor Integrity</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high text-on-surface">
+<!-- Trial 41 -->
+<tr>
+<td class="p-space-xs pl-space-sm font-semibold text-primary">Trial #41 <span class="font-provenance-tag text-provenance-tag font-normal text-on-surface-variant block">Today 08:32 AM</span></td>
+<td class="p-space-xs">119 / 78 <span class="text-on-surface-variant text-[11px]">mmHg</span></td>
+<td class="p-space-xs font-medium">122 / 80 <span class="text-on-surface-variant text-[11px]">mmHg</span></td>
+<td class="p-space-xs text-primary font-medium">-3 / -2 mmHg</td>
+<td class="p-space-xs pr-space-sm">
+<span class="font-provenance-tag text-provenance-tag bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded font-semibold">Good SNR (0.91)</span>
+</td>
+</tr>
+<!-- Trial 38 -->
+<tr>
+<td class="p-space-xs pl-space-sm font-semibold text-primary">Trial #38 <span class="font-provenance-tag text-provenance-tag font-normal text-on-surface-variant block">Nov 10 09:14 AM</span></td>
+<td class="p-space-xs">118 / 76 <span class="text-on-surface-variant text-[11px]">mmHg</span></td>
+<td class="p-space-xs font-medium">124 / 81 <span class="text-on-surface-variant text-[11px]">mmHg</span></td>
+<td class="p-space-xs text-secondary font-medium">-6 / -5 mmHg</td>
+<td class="p-space-xs pr-space-sm">
+<span class="font-provenance-tag text-provenance-tag bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded font-semibold">Good SNR (0.88)</span>
+</td>
+</tr>
+<!-- Trial 32 -->
+<tr>
+<td class="p-space-xs pl-space-sm font-semibold text-on-surface-variant">Trial #32 <span class="font-provenance-tag text-provenance-tag font-normal text-on-surface-variant block">Nov 06 08:45 AM</span></td>
+<td class="p-space-xs text-error font-medium">Rejected Signal</td>
+<td class="p-space-xs font-medium">127 / 83 <span class="text-on-surface-variant text-[11px]">mmHg</span></td>
+<td class="p-space-xs text-on-surface-variant">—</td>
+<td class="p-space-xs pr-space-sm">
+<span class="font-provenance-tag text-provenance-tag bg-error-container text-on-error-container px-1.5 py-0.5 rounded font-semibold">Motion Artifact</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Sandbox Footer Action -->
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-provenance-tag text-provenance-tag text-on-surface-variant">IRB Study ID: NOVA-PPG-2024-B</span>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline flex items-center gap-1" type="button">
+<span>Open Full Research Sandbox</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Right Column: Measurement Detail & Audit Sheet (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between mb-space-sm">
+<div>
+<span class="font-provenance-tag text-provenance-tag uppercase text-primary font-bold">Selected Record Audit Detail</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Record #REC-99210-BP</h3>
+</div>
+<span class="w-8 h-8 rounded-lg bg-surface-container-low text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</span>
+</div>
+<!-- Record Metadata Grid -->
+<div class="bg-surface-container-low p-space-sm rounded-lg mb-space-md space-y-2 font-body-sm text-body-sm">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Timestamp:</span>
+<span class="font-semibold text-on-surface">14 Nov 2024 • 08:30:14 IST</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Verified Vital:</span>
+<span class="font-bold text-primary">122 / 80 mmHg (Pulse: 72 bpm)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Observer / Field Agent:</span>
+<span class="font-medium text-on-surface">Sunita Devi (ASHA #ID-772)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Device Serial:</span>
+<span class="font-mono text-[12px] text-on-surface">Omron HEM-7120 [SN: 88192-DEL]</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Cuff Calibration:</span>
+<span class="text-on-surface font-medium">Valid until Dec 2025 (ISO 81060-2)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Posture / Protocol:</span>
+<span class="text-on-surface">Seated • Back supported • Right Arm</span>
+</div>
+</div>
+<!-- Raw FHIR Payload Indicator -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">FHIR R4 Observation Structure:</span>
+<span class="font-provenance-tag text-provenance-tag text-primary font-mono">LOINC 85354-9</span>
+</div>
+<div class="bg-inverse-surface text-inverse-on-surface p-space-xs rounded-md font-mono text-[11px] leading-relaxed overflow-x-auto">
+            { "resourceType": "Observation", "status": "final", "code": { "coding": [{"code": "85354-9", "display": "Blood pressure panel"}] }, "component": [ {"code": "8480-6", "valueQuantity": {"value": 122, "unit": "mmHg"}}, {"code": "8462-4", "valueQuantity": {"value": 80, "unit": "mmHg"}} ] }
+          </div>
+</div>
+</div>
+<!-- Verification Seal -->
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Cryptographically Signed by ASHA Kit</span>
+</div>
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded-md font-label-sm text-label-sm transition-colors" type="button">
+          Full JSON
+        </button>
+</div>
+</div>
+</div>
+<!-- Detailed Historical Telemetry Log Table -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm mb-space-lg" id="telemetry-table">
+<!-- Header Controls -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Historical Telemetry Log</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Chronological stream of verified records stored under patient ID #NC-8902.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Page 1 of 4</span>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wide">
+<th class="py-space-sm px-space-md rounded-l">Date &amp; Timestamp</th>
+<th class="py-space-sm px-space-md">Modality &amp; Reading</th>
+<th class="py-space-sm px-space-md">Circumstance / Posture</th>
+<th class="py-space-sm px-space-md">Device &amp; Provenance</th>
+<th class="py-space-sm px-space-md">Integrity Status</th>
+<th class="py-space-sm px-space-md text-right rounded-r">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high text-on-surface">
+<!-- Row 1: Today Nov 14 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="font-semibold text-on-surface">Today, Nov 14, 2024</div>
+<div class="font-provenance-tag text-provenance-tag text-on-surface-variant">08:30 AM IST</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-bold text-primary text-headline-sm">122 / 80 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">mmHg</span></div>
+<div class="font-provenance-tag text-provenance-tag text-on-surface-variant">Resting Pulse: 72 bpm</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">chair</span>
+                Seated, 5-min quiet rest
+              </span>
+<div class="font-provenance-tag text-provenance-tag text-on-surface-variant">Right arm • Standard cuff size</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-medium text-on-surface">ASHA Field Kit #04</span>
+</div>
+<div class="font-provenance-tag text-provenance-tag text-on-surface-variant">S. Devi (Omron HEM-7120)</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-surface-container-low text-primary px-2.5 py-1 rounded-full font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+                ABDM Synced
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-sm text-label-sm transition-colors font-medium" type="button">
+                Audit View
+              </button>
+</td>
+</tr>
+<!-- Row 2: Nov 10 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="font-semibold text-on-surface">Sun, Nov 10, 2024</div>
+<div class="font-provenance-tag text-provenance-tag text-on-surface-variant">09:15 AM IST</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-bold text-primary text-headline-sm">124 / 81 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">mmHg</span></div>
+<div class="font-provenance-tag text-provenance-tag text-on-surface-variant">Resting Pulse: 74 bpm</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">chair</span>
+                Seated, morning intake
+              </span>
+<div class="font-provenance-tag text-provenance-tag text-on-surface-variant">Right arm • At heart elevation</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-medium text-on-surface">Patient Self-Logged</span>
+</div>
+<div class="font-provenance-tag text-provenance-tag text-on-surface-variant">Omron HEM-7120 Bluetooth</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-surface-container-low text-primary px-2.5 py-1 rounded-full font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+                ABDM Synced
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-sm text-label-sm transition-colors font-medium" type="button">
+                Audit View
+              </button>
+</td>
+</tr>
+<!-- Row 3: Nov 06 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="font-semibold text-on-surface">Wed, Nov 06, 2024</div>
+<div class="font-provenance-tag text-provenance-tag text-on-surface-variant">08:45 AM IST</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-bold text-primary text-headline-sm">127 / 83 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">mmHg</span></div>
+<div class="font-provenance-tag text-provenance-tag text-on-surface-variant">Resting Pulse: 76 bpm</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">chair</span>
+                Seated, 5-min rest
+              </span>
+<div class="font-provenance-tag text-provenance-tag text-on-surface-variant">Right arm • Verified cuff snugness</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-medium text-on-surface">ASHA Field Kit #04</span>
+</div>
+<div class="font-provenance-tag text-provenance-tag text-on-surface-variant">S. Devi (Omron HEM-7120)</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-surface-container-low text-primary px-2.5 py-1 rounded-full font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+                ABDM Synced
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-sm text-label-sm transition-colors font-medium" type="button">
+                Audit View
+              </button>
+</td>
+</tr>
+<!-- Row 4: Nov 02 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="font-semibold text-on-surface">Sat, Nov 02, 2024</div>
+<div class="font-provenance-tag text-provenance-tag text-on-surface-variant">09:00 AM IST</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-bold text-primary text-headline-sm">123 / 79 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">mmHg</span></div>
+<div class="font-provenance-tag text-provenance-tag text-on-surface-variant">Resting Pulse: 71 bpm</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">chair</span>
+                Seated • Post-morning walk (rested 15m)
+              </span>
+<div class="font-provenance-tag text-provenance-tag text-on-surface-variant">Left arm • Self-applied</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-medium text-on-surface">Patient Self-Logged</span>
+</div>
+<div class="font-provenance-tag text-provenance-tag text-on-surface-variant">Omron HEM-7120 Bluetooth</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-surface-container-low text-primary px-2.5 py-1 rounded-full font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+                ABDM Synced
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-sm text-label-sm transition-colors font-medium" type="button">
+                Audit View
+              </button>
+</td>
+</tr>
+<!-- Row 5: Oct 28 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="font-semibold text-on-surface">Mon, Oct 28, 2024</div>
+<div class="font-provenance-tag text-provenance-tag text-on-surface-variant">08:20 AM IST</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-bold text-primary text-headline-sm">125 / 82 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">mmHg</span></div>
+<div class="font-provenance-tag text-provenance-tag text-on-surface-variant">Resting Pulse: 73 bpm</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">chair</span>
+                Seated, standard protocol
+              </span>
+<div class="font-provenance-tag text-provenance-tag text-on-surface-variant">Right arm • Baseline intake</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-medium text-on-surface">ASHA Field Kit #04</span>
+</div>
+<div class="font-provenance-tag text-provenance-tag text-on-surface-variant">S. Devi (Omron HEM-7120)</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-surface-container-low text-primary px-2.5 py-1 rounded-full font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+                ABDM Synced
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-sm text-label-sm transition-colors font-medium" type="button">
+                Audit View
+              </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination Footer -->
+<div class="mt-space-md pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+        Showing records <strong class="text-on-surface font-semibold">1 – 5</strong> of <strong class="text-on-surface font-semibold">18</strong> verified sessions
+      </span>
+<div class="flex items-center gap-space-xxs">
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+<span>Previous</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold flex items-center justify-center" type="button">1</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center transition-colors" type="button">2</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center transition-colors" type="button">3</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center transition-colors" type="button">4</button>
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-low text-on-surface hover:text-primary font-label-sm text-label-sm transition-colors flex items-center gap-1" type="button">
+<span>Next</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Clinician Consultation Guidance Footer Card -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-low text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">support_agent</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Scheduled Doctor Teleconsultation</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Your longitudinal records will be summarized for Dr. A. Sharma (Cardiology) on Nov 18.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="px-space-md py-2 bg-surface-container-low hover:bg-surface-container-high text-on-surface rounded-lg font-label-sm text-label-sm transition-colors" type="button">
+        Manage Appointment
+      </button>
+<button class="px-space-md py-2 bg-primary hover:bg-tertiary text-on-primary rounded-lg font-label-sm text-label-sm shadow-sm transition-colors" type="button">
+        Add Note for Doctor
+      </button>
+</div>
+</div>
+</div></main></div></body></html>

@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html, body, #root {
+    height: 100%;
+  }
+
+  body {
+    @apply font-body text-ink antialiased;
+    background-color: #F4F1EA;
+    /* Subtle grid texture — the "brutalist" backbone of the look */
+    background-image:
+      linear-gradient(rgba(10,15,20,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(10,15,20,0.06) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-position: -1px -1px;
+    overscroll-behavior-y: none;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-display tracking-tight;
+  }
+
+  /* Native form controls — keep them visible on iOS */
+  input, textarea, select, button {
+    @apply font-body;
+  }
+
+  /* Disable iOS Safari blue highlight on tap */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  /* The signature Glass Brutalism card */
+  .card-glass {
+    @apply bg-white/70 backdrop-blur-md border-2 border-ink rounded-2xl shadow-brutal;
+  }
+
+  .card-glass-sm {
+    @apply bg-white/70 backdrop-blur-md border-2 border-ink rounded-xl shadow-brutal-sm;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white font-display font-semibold border-2 border-ink rounded-xl shadow-brutal-sm transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-brutal active:translate-x-[1px] active:translate-y-[1px] active:shadow-none disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/70 backdrop-blur-md text-ink font-display font-semibold border-2 border-ink rounded-xl shadow-brutal-sm transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-brutal active:translate-x-[1px] active:translate-y-[1px] active:shadow-none;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-urgent text-white font-display font-bold border-2 border-ink rounded-xl shadow-brutal-sm transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-brutal active:translate-x-[1px] active:translate-y-[1px] active:shadow-none;
+  }
+
+  /* Inputs */
+  .input-field {
+    @apply w-full px-4 py-3 bg-white/80 border-2 border-ink rounded-xl font-body text-ink placeholder:text-ink/40 focus:outline-none focus:ring-4 focus:ring-primary/30 transition;
+  }
+
+  /* Pills/chips */
+  .chip {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 bg-accent/40 border border-ink rounded-full text-xs font-mono uppercase tracking-wider;
+  }
+
+  /* Section labels */
+  .label-display {
+    @apply font-mono text-xs uppercase tracking-[0.2em] text-ink/60;
+  }
+}
+
+@layer utilities {
+  /* Diagonal stripe pattern for "warning" backgrounds — brutalist accent */
+  .stripe-warning {
+    background-image: repeating-linear-gradient(
+      45deg,
+      #FFD93D,
+      #FFD93D 12px,
+      #0A0F14 12px,
+      #0A0F14 24px
+    );
+  }
+
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .ar-live-scene {
+    pointer-events: none;
+  }
+
+  /* The WebGL canvas must sit ABOVE the AR.js video (z=1) so 3D objects
+     are visible. The canvas background is transparent so the video shows
+     through wherever there are no 3D objects. */
+  .ar-live-scene canvas {
+    background: transparent !important;
+    pointer-events: none;
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 3 !important;
+  }
+
+  .arjs-video,
+  #arjs-video {
+    display: block !important;
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    object-fit: cover !important;
+    z-index: 1 !important;
+  }
+}

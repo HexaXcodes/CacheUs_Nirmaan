@@ -1,0 +1,297 @@
+:root {
+  --bg:        #050814;
+  --bg-2:      #0A0F1E;
+  --surface:   #0F162B;
+  --surface-2: #131C36;
+  --line:      #1F2A50;
+  --line-2:    #2C3A6E;
+  --cyan:      #22D3EE;
+  --cyan-bright:#00E5FF;
+  --blue:      #2563EB;
+  --blue-bright:#4C8BFF;
+  --amber:     #FCD34D;
+  --red:       #F43F5E;
+  --green:     #10F0A0;
+  --ink:       #E6F0FF;
+  --ink-2:     #93A3C6;
+  --ink-3:     #5A6A92;
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body {
+  margin: 0; padding: 0;
+  background: #02050F;
+  font-family: 'Space Grotesk', -apple-system, system-ui, sans-serif;
+  color: var(--ink);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background:
+    radial-gradient(ellipse 600px 400px at 20% 10%, rgba(34,211,238,0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 500px 400px at 90% 90%, rgba(37,99,235,0.10) 0%, transparent 60%),
+    #02050F;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(34,211,238,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34,211,238,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+}
+#root { width: 100%; display: flex; justify-content: center; position: relative; z-index: 1; }
+
+.nc-screen::-webkit-scrollbar { width: 0; height: 0; }
+.nc-screen { scrollbar-width: none; }
+
+/* Mono */
+.mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+
+/* Animations */
+@keyframes nc-slide-up { from { transform: translateY(24px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes nc-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes nc-blink { 0%, 60% { opacity: 1; } 70%, 100% { opacity: 0.25; } }
+@keyframes nc-blink-strong { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } }
+@keyframes nc-scanline { 0% { transform: translateY(-100%); } 100% { transform: translateY(800%); } }
+@keyframes nc-ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+@keyframes nc-mic { 0%, 100% { transform: scaleY(0.35); } 50% { transform: scaleY(1); } }
+@keyframes nc-rot { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes nc-glow { 0%, 100% { box-shadow: 0 0 12px rgba(34,211,238,0.4), inset 0 0 0 1px rgba(34,211,238,0.6); } 50% { box-shadow: 0 0 24px rgba(34,211,238,0.8), inset 0 0 0 1px rgba(34,211,238,1); } }
+
+/* Start Screening — layered brutalist CTA */
+@keyframes nc-btn-pulse {
+  0%, 100% {
+    box-shadow:
+      6px 6px 0 0 #2563EB,
+      12px 12px 0 0 #050814,
+      0 0 24px rgba(34,211,238,0.45),
+      0 0 0 0 rgba(34,211,238,0.6);
+  }
+  50% {
+    box-shadow:
+      6px 6px 0 0 #2563EB,
+      12px 12px 0 0 #050814,
+      0 0 36px rgba(34,211,238,0.75),
+      0 0 0 8px rgba(34,211,238,0.0);
+  }
+}
+@keyframes nc-btn-ring {
+  0%   { opacity: 0.6; transform: scale(1); }
+  100% { opacity: 0;   transform: scale(1.6); }
+}
+@keyframes nc-btn-sheen {
+  0%   { transform: translateX(-120%) skewX(-20deg); }
+  60%  { transform: translateX(220%)  skewX(-20deg); }
+  100% { transform: translateX(220%)  skewX(-20deg); }
+}
+@keyframes nc-arrow-bob {
+  0%, 100% { transform: translateX(0); }
+  50%      { transform: translateX(4px); }
+}
+
+.nc-cta {
+  position: relative;
+  isolation: isolate;
+  cursor: pointer;
+  transition: transform .25s cubic-bezier(.2,.8,.2,1);
+  animation: nc-btn-pulse 2.4s ease-in-out infinite;
+}
+.nc-cta:hover {
+  transform: translate(-3px, -3px) scale(1.015);
+  animation-play-state: paused;
+  box-shadow:
+    9px 9px 0 0 #2563EB,
+    16px 16px 0 0 #050814,
+    0 0 48px rgba(34,211,238,0.95),
+    0 0 0 0 rgba(34,211,238,0) !important;
+}
+.nc-cta:active {
+  transform: translate(2px, 2px) scale(0.99);
+  box-shadow:
+    2px 2px 0 0 #2563EB,
+    4px 4px 0 0 #050814,
+    0 0 20px rgba(34,211,238,0.6) !important;
+}
+.nc-cta::before {
+  /* sheen sweep */
+  content: '';
+  position: absolute; top: 0; bottom: 0; left: 0;
+  width: 30%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.55), transparent);
+  transform: translateX(-120%) skewX(-20deg);
+  pointer-events: none;
+  z-index: 2;
+}
+.nc-cta:hover::before {
+  animation: nc-btn-sheen 0.9s ease-in-out;
+}
+.nc-cta-ring {
+  position: absolute; inset: -2px;
+  border: 1.5px solid #22D3EE;
+  pointer-events: none;
+  z-index: -1;
+  animation: nc-btn-ring 2.4s ease-out infinite;
+}
+.nc-cta-arrow {
+  display: inline-flex;
+  animation: nc-arrow-bob 1.8s ease-in-out infinite;
+}
+.nc-cta:hover .nc-cta-arrow { animation: none; transform: translateX(6px); transition: transform .25s; }
+
+/* ─── Micro-interactions ─────────────────────────────── */
+
+/* nc-tile: cards that lift + glow on hover (feature/telemetry/etc.) */
+@keyframes nc-tile-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34,211,238,0.0); }
+  50%      { box-shadow: 0 0 24px 0 rgba(34,211,238,0.35); }
+}
+.nc-tile {
+  transition: transform .25s cubic-bezier(.2,.8,.2,1),
+              border-color .25s,
+              box-shadow .25s cubic-bezier(.2,.8,.2,1);
+  will-change: transform;
+}
+.nc-tile:hover {
+  transform: translateY(-3px);
+  border-color: var(--cyan) !important;
+  box-shadow:
+    0 8px 24px -4px rgba(34,211,238,0.25),
+    0 0 0 1px var(--cyan);
+}
+
+/* nc-icon-btn: small square icon controls */
+.nc-icon-btn {
+  transition: border-color .2s, color .2s, box-shadow .25s, transform .15s;
+}
+.nc-icon-btn:hover {
+  border-color: var(--cyan) !important;
+  color: var(--cyan-bright) !important;
+  box-shadow: 0 0 12px rgba(34,211,238,0.4), inset 0 0 0 1px var(--cyan);
+}
+
+/* nc-row: list rows with chevron + subtle slide-in cyan accent */
+.nc-row {
+  position: relative;
+  transition: background .2s, transform .25s, border-color .2s;
+  overflow: hidden;
+}
+.nc-row::before {
+  content: '';
+  position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+  background: var(--cyan);
+  transform: translateX(-3px);
+  transition: transform .25s cubic-bezier(.2,.8,.2,1);
+  pointer-events: none;
+}
+.nc-row:hover {
+  background: rgba(34,211,238,0.05);
+  border-color: var(--cyan) !important;
+}
+.nc-row:hover::before { transform: translateX(0); }
+.nc-row .nc-row-chev {
+  transition: transform .25s cubic-bezier(.2,.8,.2,1), color .2s;
+}
+.nc-row:hover .nc-row-chev {
+  transform: translateX(4px);
+  color: var(--cyan);
+}
+
+/* nc-scan-host: choice cards with a horizontal scanning sweep on hover */
+@keyframes nc-scan-sweep {
+  0%   { transform: translateX(-100%); opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+.nc-scan-host {
+  position: relative;
+  overflow: hidden;
+  transition: border-color .2s, background .2s;
+}
+.nc-scan-host::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(34,211,238,0.18) 50%, transparent 100%);
+  transform: translateX(-100%);
+  pointer-events: none;
+  opacity: 0;
+}
+.nc-scan-host:hover::after {
+  animation: nc-scan-sweep 1.2s ease-in-out;
+}
+
+/* nc-link: subtle underline reveal on text links */
+.nc-link {
+  position: relative;
+  transition: color .2s;
+}
+.nc-link::after {
+  content: '';
+  position: absolute; left: 0; right: 0; bottom: -2px; height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s cubic-bezier(.2,.8,.2,1);
+}
+.nc-link:hover::after { transform: scaleX(1); }
+
+/* ─── Live counter flash ─────────────────────────────── */
+@keyframes nc-counter-flash {
+  0%   { color: var(--cyan-bright); text-shadow: 0 0 16px var(--cyan), 0 0 4px var(--cyan); }
+  100% { color: #fff;                text-shadow: 0 0 8px rgba(34,211,238,0.45); }
+}
+.nc-counter { color: #fff; text-shadow: 0 0 8px rgba(34,211,238,0.45); transition: color .25s; }
+.nc-counter.flash { animation: nc-counter-flash 1.2s ease-out; }
+
+/* ─── Karnataka radar pulse ──────────────────────────── */
+@keyframes nc-radar {
+  0%   { r: 0; opacity: 0.9; stroke-width: 2; }
+  100% { r: 60; opacity: 0; stroke-width: 0.5; }
+}
+.nc-radar-ring { animation: nc-radar 2.4s ease-out infinite; transform-origin: center; }
+.nc-radar-ring.r2 { animation-delay: 0.8s; }
+.nc-radar-ring.r3 { animation-delay: 1.6s; }
+
+/* ─── Subtle glass on tiles (daylight-safe — borders carry the contrast) ─── */
+.nc-glass {
+  background: rgba(15, 22, 43, 0.65) !important;
+  backdrop-filter: blur(4px) saturate(140%);
+  -webkit-backdrop-filter: blur(4px) saturate(140%);
+  border: 1px solid rgba(44, 58, 110, 0.85);
+}
+.nc-glass.nc-tile:hover {
+  background: rgba(15, 22, 43, 0.85) !important;
+  border-color: var(--cyan) !important;
+}
+
+/* Role cards — float on hover */
+.nc-role-card {
+  box-shadow: 4px 4px 0 0 var(--accent);
+  transition: transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s cubic-bezier(.2,.8,.2,1);
+}
+.nc-role-card:hover {
+  transform: translate(-3px, -6px);
+  box-shadow:
+    8px 10px 0 0 var(--accent),
+    0 12px 32px -4px color-mix(in oklab, var(--accent) 60%, transparent),
+    0 0 0 1px var(--accent);
+}
+.nc-role-card .nc-role-arrow {
+  transition: transform .25s cubic-bezier(.2,.8,.2,1);
+}
+.nc-role-card:hover .nc-role-arrow {
+  transform: translateX(4px);
+}
+.nc-role-card:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 0 var(--accent);
+}
+
+/* Transitions */
+button { transition: background .15s, transform .15s, color .15s, border-color .15s; }
+button:active { transform: translate(1px, 1px); }

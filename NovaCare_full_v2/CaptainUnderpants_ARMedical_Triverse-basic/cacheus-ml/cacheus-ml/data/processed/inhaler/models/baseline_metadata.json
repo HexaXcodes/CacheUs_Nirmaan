@@ -1,0 +1,25 @@
+{
+  "model": "logistic_regression_baseline",
+  "input_shape": [
+    32,
+    20,
+    126
+  ],
+  "flattened_shape": [
+    32,
+    2520
+  ],
+  "num_samples": 32,
+  "num_classes": 8,
+  "validation_accuracy": 0.625,
+  "classes": [
+    "remove_cap",
+    "shake_inhaler",
+    "exhale_away",
+    "position_mouthpiece",
+    "begin_slow_inhalation",
+    "actuate_during_inhalation",
+    "continue_inhalation",
+    "breath_hold"
+  ]
+}

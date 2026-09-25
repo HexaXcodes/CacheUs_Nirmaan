@@ -1,0 +1,37 @@
+
+Backend/.env
+AI-Services-MultiLang/.env
+**/.venv/
+**/node_modules/
+**/__pycache__/
+**/.pytest_cache/
+**/.pytest-nirmaan-*/
+frontend/dist/
+
+# Local configuration and credentials (keep safe setup examples)
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+
+# Generated dependencies, builds, runtime data and editor settings
+node_modules/
+venv/
+dist/
+build/
+*.py[cod]
+*.egg-info/
+*.log
+*.db
+*.db-*
+*.sqlite*
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

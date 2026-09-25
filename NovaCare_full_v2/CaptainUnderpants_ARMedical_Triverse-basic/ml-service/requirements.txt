@@ -1,0 +1,10 @@
+# Trimmed inference-only dependencies — NOT the friend's full exploratory
+# environment (which also pulls in Jupyter, PyTorch, Ultralytics/YOLO,
+# MediaPipe, ~130 packages total for training/experimentation).
+# scikit-learn is pinned to match the version frame_baseline.pkl was
+# trained with, for safe unpickling.
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+opencv-python==4.10.0.84
+numpy==1.26.4
+scikit-learn==1.9.0

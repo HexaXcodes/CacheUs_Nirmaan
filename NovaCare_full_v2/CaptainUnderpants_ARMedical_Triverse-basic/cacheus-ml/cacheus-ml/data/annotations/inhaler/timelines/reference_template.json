@@ -1,0 +1,63 @@
+{
+  "video_id": "pmdi_reference",
+  "workflow": "pmdi_without_spacer",
+  "source_type": "reference_educational",
+  "segments": [
+    {
+      "step_id": 1,
+      "step_name": "remove_cap",
+      "start_seconds": null,
+      "end_seconds": null,
+      "status": "uncertain"
+    },
+    {
+      "step_id": 2,
+      "step_name": "shake_inhaler",
+      "start_seconds": null,
+      "end_seconds": null,
+      "status": "uncertain"
+    },
+    {
+      "step_id": 3,
+      "step_name": "exhale_away",
+      "start_seconds": null,
+      "end_seconds": null,
+      "status": "uncertain"
+    },
+    {
+      "step_id": 4,
+      "step_name": "position_mouthpiece",
+      "start_seconds": null,
+      "end_seconds": null,
+      "status": "uncertain"
+    },
+    {
+      "step_id": 5,
+      "step_name": "begin_slow_inhalation",
+      "start_seconds": null,
+      "end_seconds": null,
+      "status": "uncertain"
+    },
+    {
+      "step_id": 6,
+      "step_name": "actuate_during_inhalation",
+      "start_seconds": null,
+      "end_seconds": null,
+      "status": "uncertain"
+    },
+    {
+      "step_id": 7,
+      "step_name": "continue_inhalation",
+      "start_seconds": null,
+      "end_seconds": null,
+      "status": "uncertain"
+    },
+    {
+      "step_id": 8,
+      "step_name": "breath_hold",
+      "start_seconds": null,
+      "end_seconds": null,
+      "status": "uncertain"
+    }
+  ]
+}

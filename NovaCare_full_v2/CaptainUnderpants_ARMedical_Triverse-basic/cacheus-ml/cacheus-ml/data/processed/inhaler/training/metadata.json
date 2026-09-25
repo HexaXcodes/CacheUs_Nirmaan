@@ -1,0 +1,245 @@
+{
+  "num_samples": 32,
+  "shape": [
+    32,
+    20,
+    126
+  ],
+  "num_classes": 8,
+  "classes": [
+    "remove_cap",
+    "shake_inhaler",
+    "exhale_away",
+    "position_mouthpiece",
+    "begin_slow_inhalation",
+    "actuate_during_inhalation",
+    "continue_inhalation",
+    "breath_hold"
+  ],
+  "metadata": [
+    {
+      "sequence": "sequence_0015",
+      "step_id": 1,
+      "step_name": "remove_cap",
+      "start_seconds": 12.0,
+      "end_seconds": 12.76
+    },
+    {
+      "sequence": "sequence_0016",
+      "step_id": 1,
+      "step_name": "remove_cap",
+      "start_seconds": 12.8,
+      "end_seconds": 13.56
+    },
+    {
+      "sequence": "sequence_0017",
+      "step_id": 1,
+      "step_name": "remove_cap",
+      "start_seconds": 13.6,
+      "end_seconds": 14.36
+    },
+    {
+      "sequence": "sequence_0018",
+      "step_id": 1,
+      "step_name": "remove_cap",
+      "start_seconds": 14.4,
+      "end_seconds": 15.16
+    },
+    {
+      "sequence": "sequence_0081",
+      "step_id": 2,
+      "step_name": "shake_inhaler",
+      "start_seconds": 64.8,
+      "end_seconds": 65.56
+    },
+    {
+      "sequence": "sequence_0082",
+      "step_id": 2,
+      "step_name": "shake_inhaler",
+      "start_seconds": 65.6,
+      "end_seconds": 66.36
+    },
+    {
+      "sequence": "sequence_0083",
+      "step_id": 2,
+      "step_name": "shake_inhaler",
+      "start_seconds": 66.4,
+      "end_seconds": 67.16
+    },
+    {
+      "sequence": "sequence_0105",
+      "step_id": 3,
+      "step_name": "exhale_away",
+      "start_seconds": 84.0,
+      "end_seconds": 84.76
+    },
+    {
+      "sequence": "sequence_0106",
+      "step_id": 3,
+      "step_name": "exhale_away",
+      "start_seconds": 84.8,
+      "end_seconds": 85.56
+    },
+    {
+      "sequence": "sequence_0107",
+      "step_id": 3,
+      "step_name": "exhale_away",
+      "start_seconds": 85.6,
+      "end_seconds": 86.36
+    },
+    {
+      "sequence": "sequence_0108",
+      "step_id": 3,
+      "step_name": "exhale_away",
+      "start_seconds": 86.4,
+      "end_seconds": 87.16
+    },
+    {
+      "sequence": "sequence_0110",
+      "step_id": 4,
+      "step_name": "position_mouthpiece",
+      "start_seconds": 88.0,
+      "end_seconds": 88.76
+    },
+    {
+      "sequence": "sequence_0111",
+      "step_id": 4,
+      "step_name": "position_mouthpiece",
+      "start_seconds": 88.8,
+      "end_seconds": 89.56
+    },
+    {
+      "sequence": "sequence_0112",
+      "step_id": 4,
+      "step_name": "position_mouthpiece",
+      "start_seconds": 89.6,
+      "end_seconds": 90.36
+    },
+    {
+      "sequence": "sequence_0113",
+      "step_id": 5,
+      "step_name": "begin_slow_inhalation",
+      "start_seconds": 90.4,
+      "end_seconds": 91.16
+    },
+    {
+      "sequence": "sequence_0114",
+      "step_id": 5,
+      "step_name": "begin_slow_inhalation",
+      "start_seconds": 91.2,
+      "end_seconds": 91.96
+    },
+    {
+      "sequence": "sequence_0115",
+      "step_id": 5,
+      "step_name": "begin_slow_inhalation",
+      "start_seconds": 92.0,
+      "end_seconds": 92.76
+    },
+    {
+      "sequence": "sequence_0116",
+      "step_id": 5,
+      "step_name": "begin_slow_inhalation",
+      "start_seconds": 92.8,
+      "end_seconds": 93.56
+    },
+    {
+      "sequence": "sequence_0117",
+      "step_id": 6,
+      "step_name": "actuate_during_inhalation",
+      "start_seconds": 93.6,
+      "end_seconds": 94.36
+    },
+    {
+      "sequence": "sequence_0118",
+      "step_id": 6,
+      "step_name": "actuate_during_inhalation",
+      "start_seconds": 94.4,
+      "end_seconds": 95.16
+    },
+    {
+      "sequence": "sequence_0119",
+      "step_id": 6,
+      "step_name": "actuate_during_inhalation",
+      "start_seconds": 95.2,
+      "end_seconds": 95.96
+    },
+    {
+      "sequence": "sequence_0120",
+      "step_id": 7,
+      "step_name": "continue_inhalation",
+      "start_seconds": 96.0,
+      "end_seconds": 96.76
+    },
+    {
+      "sequence": "sequence_0121",
+      "step_id": 7,
+      "step_name": "continue_inhalation",
+      "start_seconds": 96.8,
+      "end_seconds": 97.56
+    },
+    {
+      "sequence": "sequence_0122",
+      "step_id": 7,
+      "step_name": "continue_inhalation",
+      "start_seconds": 97.6,
+      "end_seconds": 98.36
+    },
+    {
+      "sequence": "sequence_0123",
+      "step_id": 7,
+      "step_name": "continue_inhalation",
+      "start_seconds": 98.4,
+      "end_seconds": 99.16
+    },
+    {
+      "sequence": "sequence_0124",
+      "step_id": 7,
+      "step_name": "continue_inhalation",
+      "start_seconds": 99.2,
+      "end_seconds": 99.96
+    },
+    {
+      "sequence": "sequence_0125",
+      "step_id": 8,
+      "step_name": "breath_hold",
+      "start_seconds": 100.0,
+      "end_seconds": 100.76
+    },
+    {
+      "sequence": "sequence_0126",
+      "step_id": 8,
+      "step_name": "breath_hold",
+      "start_seconds": 100.8,
+      "end_seconds": 101.56
+    },
+    {
+      "sequence": "sequence_0127",
+      "step_id": 8,
+      "step_name": "breath_hold",
+      "start_seconds": 101.6,
+      "end_seconds": 102.36
+    },
+    {
+      "sequence": "sequence_0128",
+      "step_id": 8,
+      "step_name": "breath_hold",
+      "start_seconds": 102.4,
+      "end_seconds": 103.16
+    },
+    {
+      "sequence": "sequence_0129",
+      "step_id": 8,
+      "step_name": "breath_hold",
+      "start_seconds": 103.2,
+      "end_seconds": 103.96
+    },
+    {
+      "sequence": "sequence_0130",
+      "step_id": 8,
+      "step_name": "breath_hold",
+      "start_seconds": 104.0,
+      "end_seconds": 104.76
+    }
+  ]
+}

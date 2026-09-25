@@ -1,0 +1,181 @@
+{
+  "num_samples": 32,
+  "shape": [
+    32,
+    20,
+    1024
+  ],
+  "num_classes": 8,
+  "classes": [
+    "remove_cap",
+    "shake_inhaler",
+    "exhale_away",
+    "position_mouthpiece",
+    "begin_slow_inhalation",
+    "actuate_during_inhalation",
+    "continue_inhalation",
+    "breath_hold"
+  ],
+  "metadata": [
+    {
+      "sequence": "sequence_0015",
+      "step_name": "remove_cap",
+      "step_id": 1
+    },
+    {
+      "sequence": "sequence_0016",
+      "step_name": "remove_cap",
+      "step_id": 1
+    },
+    {
+      "sequence": "sequence_0017",
+      "step_name": "remove_cap",
+      "step_id": 1
+    },
+    {
+      "sequence": "sequence_0018",
+      "step_name": "remove_cap",
+      "step_id": 1
+    },
+    {
+      "sequence": "sequence_0081",
+      "step_name": "shake_inhaler",
+      "step_id": 2
+    },
+    {
+      "sequence": "sequence_0082",
+      "step_name": "shake_inhaler",
+      "step_id": 2
+    },
+    {
+      "sequence": "sequence_0083",
+      "step_name": "shake_inhaler",
+      "step_id": 2
+    },
+    {
+      "sequence": "sequence_0105",
+      "step_name": "exhale_away",
+      "step_id": 3
+    },
+    {
+      "sequence": "sequence_0106",
+      "step_name": "exhale_away",
+      "step_id": 3
+    },
+    {
+      "sequence": "sequence_0107",
+      "step_name": "exhale_away",
+      "step_id": 3
+    },
+    {
+      "sequence": "sequence_0108",
+      "step_name": "exhale_away",
+      "step_id": 3
+    },
+    {
+      "sequence": "sequence_0110",
+      "step_name": "position_mouthpiece",
+      "step_id": 4
+    },
+    {
+      "sequence": "sequence_0111",
+      "step_name": "position_mouthpiece",
+      "step_id": 4
+    },
+    {
+      "sequence": "sequence_0112",
+      "step_name": "position_mouthpiece",
+      "step_id": 4
+    },
+    {
+      "sequence": "sequence_0113",
+      "step_name": "begin_slow_inhalation",
+      "step_id": 5
+    },
+    {
+      "sequence": "sequence_0114",
+      "step_name": "begin_slow_inhalation",
+      "step_id": 5
+    },
+    {
+      "sequence": "sequence_0115",
+      "step_name": "begin_slow_inhalation",
+      "step_id": 5
+    },
+    {
+      "sequence": "sequence_0116",
+      "step_name": "begin_slow_inhalation",
+      "step_id": 5
+    },
+    {
+      "sequence": "sequence_0117",
+      "step_name": "actuate_during_inhalation",
+      "step_id": 6
+    },
+    {
+      "sequence": "sequence_0118",
+      "step_name": "actuate_during_inhalation",
+      "step_id": 6
+    },
+    {
+      "sequence": "sequence_0119",
+      "step_name": "actuate_during_inhalation",
+      "step_id": 6
+    },
+    {
+      "sequence": "sequence_0120",
+      "step_name": "continue_inhalation",
+      "step_id": 7
+    },
+    {
+      "sequence": "sequence_0121",
+      "step_name": "continue_inhalation",
+      "step_id": 7
+    },
+    {
+      "sequence": "sequence_0122",
+      "step_name": "continue_inhalation",
+      "step_id": 7
+    },
+    {
+      "sequence": "sequence_0123",
+      "step_name": "continue_inhalation",
+      "step_id": 7
+    },
+    {
+      "sequence": "sequence_0124",
+      "step_name": "continue_inhalation",
+      "step_id": 7
+    },
+    {
+      "sequence": "sequence_0125",
+      "step_name": "breath_hold",
+      "step_id": 8
+    },
+    {
+      "sequence": "sequence_0126",
+      "step_name": "breath_hold",
+      "step_id": 8
+    },
+    {
+      "sequence": "sequence_0127",
+      "step_name": "breath_hold",
+      "step_id": 8
+    },
+    {
+      "sequence": "sequence_0128",
+      "step_name": "breath_hold",
+      "step_id": 8
+    },
+    {
+      "sequence": "sequence_0129",
+      "step_name": "breath_hold",
+      "step_id": 8
+    },
+    {
+      "sequence": "sequence_0130",
+      "step_name": "breath_hold",
+      "step_id": 8
+    }
+  ]
+}

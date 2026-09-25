@@ -1,0 +1,9 @@
+import {useState} from 'react'
+import {submitIdrs} from '../../../api/sessions'
+const fields=[['age_score','Age',[[0,'Under 35'],[20,'35–49'],[30,'50 or older']]],['waist_score','Waist circumference',[[0,'Female <80 cm / male <90 cm'],[10,'Female 80–<90 cm / male 90–<100 cm'],[20,'Female ≥90 cm / male ≥100 cm']]],['activity_score','Physical activity',[[0,'Vigorous exercise / strenuous work'],[10,'Moderate'],[20,'Mild'],[30,'Sedentary']]],['family_history_score','Parents with diabetes',[[0,'Neither'],[10,'One parent'],[20,'Both parents']]]]
+export default function Step2IDRS({sessionId,onNext}){
+ const [scores,setScores]=useState({}),[busy,setBusy]=useState(false),[error,setError]=useState('')
+ const complete=fields.every(([k])=>scores[k]!==undefined),total=Object.values(scores).reduce((s,v)=>s+v,0)
+ async function save(){if(!complete)return;setBusy(true);setError('');try{await submitIdrs(sessionId,{...scores,idrs_total:total});onNext({idrsTotal:total})}catch(e){setError(e.response?.data?.error||'Unable to save IDRS')}finally{setBusy(false)}}
+ return <section className="nc-stack"><h2>MDRF–Indian Diabetes Risk Score</h2><p>Diabetes screening score, not a diagnosis or hypertension score. Confirm all four inputs; unknown values are not zero.</p>{fields.map(([key,label,options])=><label key={key}>{label}<select value={scores[key]??''} disabled={busy} onChange={e=>setScores(s=>({...s,[key]:Number(e.target.value)}))}><option value="" disabled>Select confirmed value</option>{options.map(([v,l])=><option key={v} value={v}>{l}</option>)}</select></label>)}{complete&&<p>{total}/100 points · {total>=60?'High':total>=30?'Moderate':'Low'} IDRS screening category</p>}{error&&<p role="alert">{error}</p>}<button className="nc-primary" disabled={!complete||busy} onClick={save}>Save IDRS →</button><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10438401/" target="_blank" rel="noreferrer">Published scoring reference</a></section>
+}

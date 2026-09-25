@@ -1,0 +1,1 @@
+export default function Button({children,variant='primary',size='md',loading=false,className='',disabled,...props}){return <button {...props} disabled={loading||disabled} aria-busy={loading} className={['nc-button','nc-button-'+variant,'nc-button-'+size,className].join(' ')}>{loading&&<span className="nc-spinner" aria-hidden="true"/>}{children}</button>}

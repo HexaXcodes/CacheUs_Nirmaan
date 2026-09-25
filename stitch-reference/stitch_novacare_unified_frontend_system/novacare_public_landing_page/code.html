@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary-container":"#2563eb","on-tertiary-fixed-variant":"#004395","outline-variant":"#c3c6d7","on-error-container":"#93000a","surface-container":"#e9edfc","on-surface":"#171c26","on-primary-fixed":"#00174b","on-primary":"#ffffff","on-tertiary-container":"#edf0ff","surface-variant":"#dee2f0","tertiary":"#0051b1","tertiary-fixed-dim":"#adc6ff","on-error":"#ffffff","surface-bright":"#f9f9ff","surface":"#f9f9ff","on-secondary":"#ffffff","background":"#f9f9ff","surface-container-high":"#e4e8f6","primary-fixed-dim":"#b4c5ff","surface-dim":"#d6dae8","surface-tint":"#0053db","inverse-on-surface":"#ecf0ff","on-surface-variant":"#434655","outline":"#737686","on-secondary-fixed":"#001b3e","on-secondary-container":"#274d84","primary":"#004ac6","primary-fixed":"#dbe1ff","surface-container-low":"#f1f3ff","on-tertiary-fixed":"#001a42","secondary-container":"#9dbffe","secondary-fixed-dim":"#aac7ff","on-secondary-fixed-variant":"#20467e","tertiary-container":"#0f69dc","inverse-surface":"#2b303b","error-container":"#ffdad6","secondary":"#3b5e97","on-primary-fixed-variant":"#003ea8","tertiary-fixed":"#d8e2ff","surface-container-lowest":"#ffffff","on-tertiary":"#ffffff","inverse-primary":"#b4c5ff","on-primary-container":"#eeefff","on-background":"#171c26","secondary-fixed":"#d6e3ff","error":"#ba1a1a","surface-container-highest":"#dee2f0"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-md":"1rem","space-2xl":"3rem","space-sm":"0.75rem","gutter-mobile":"1rem","margin-mobile":"1rem","space-xxs":"0.25rem","space-xl":"2rem","space-lg":"1.5rem","margin":"2rem","gutter":"1.5rem","space-xs":"0.5rem"},"fontFamily":{"headline-lg":["Inter"],"headline-md":["Inter"],"display-vital":["Inter"],"body-sm":["Inter"],"body-md":["Inter"],"headline-sm":["Inter"],"label-sm":["Inter"],"provenance-tag":["Inter"],"headline-lg-mobile":["Inter"],"label-md":["Inter"],"display-vital-mobile":["Inter"],"body-lg":["Inter"]},"fontSize":{"headline-lg":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"600"}],"display-vital":["3.5rem",{"lineHeight":"3.75rem","letterSpacing":"-0.025em","fontWeight":"700"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"label-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"600"}],"provenance-tag":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.04em","fontWeight":"700"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.01em","fontWeight":"600"}],"label-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}],"display-vital-mobile":["2.5rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(20,36,59,0.04)]"><div class="h-20 max-w-7xl mx-auto px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-sm shrink-0"><img alt="NovaCare Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WU5BKKG-HuKwLR5_sl_gVcsCZP0rRYYCmRBzEf70KH9e_Q8dWSenyA7N8IRCNJnIBvnP__pUkem5hPL3he_GRMSofJ2n3IgXoXqEVTVfr44epQaftcjIGwwI8HnXzYvhoO5O000lsDsuXjOJJo4ujuxVL2rFrGxxoZ-KJSuqAi5HT9keEtlB7M62KoZHWQH1jJeG-SuTv2qFN84W-0kQ6VtzGTxzpeyfHbgztEIsK7ck-GBO2DQJEFhVqP"/><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">NovaCare</span></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-surface-container text-primary font-semibold rounded-lg"><a aria-current="page" class="px-space-sm py-space-xs transition-colors bg-surface-container text-primary font-semibold rounded-lg" data-path="how-it-works" href="#">How it works</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors" data-path="for-patients" href="#">For Patients</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors" data-path="for-asha-workers" href="#">For ASHA Workers</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors" data-path="for-doctors" href="#">For Doctors</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors" data-path="health-checks" href="#">Health Checks</a></nav><div class="flex items-center gap-space-sm shrink-0"><div class="hidden md:flex items-center bg-surface-container-lowest px-space-xs py-1 rounded-lg shadow-[0_1px_3px_rgba(20,36,59,0.04)]"><span class="material-symbols-outlined text-outline text-lg mr-1">language</span><select aria-label="Select Language" class="bg-transparent font-label-sm text-label-sm text-on-surface-variant focus:outline-none cursor-pointer pr-1"><option value="en">English</option><option value="hi">हिन्दी</option><option value="te">తెలుగు</option></select></div><button class="hidden sm:flex items-center gap-1.5 px-space-sm py-1.5 rounded-full bg-surface-container-low text-tertiary hover:bg-surface-container hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-base">mic</span><span class="font-label-sm text-label-sm">Voice Assist</span></button><a class="hidden lg:inline-flex items-center justify-center px-space-md py-2 min-h-[40px] rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-on-primary-fixed-variant transition-colors shadow-[0_1px_3px_rgba(20,36,59,0.08)]" data-path="login" href="#">Role Switcher / Login</a><div class="flex items-center gap-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_3px_rgba(20,36,59,0.1)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFZTeMXIL5QRVdhuqx_OdYln3KA1_9UqeDGNfVyS6X4AkqMqpBZ4PrVtIlVFyz94kiP0U75qbFrGi29AjrnFJba09s2fygKMp-UytNVarOl7swmQ8JdJVHQWssNJlehHcjwrufTWlqcqpxW0dDp7P3wKwOOfldzNAnqrzpW9En118eu5y7Q-UdXKqz_0xgrKdffSO1DZMZXyXPV7CDiUBVyZH8gbBO-q3M06bMoB2ZL2R7OjKFnzRV1g"/><button class="xl:hidden p-1.5 text-on-surface-variant hover:text-on-surface focus:outline-none" type="button"><span class="material-symbols-outlined">menu</span></button></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Disclaimer Notice Ribbon -->
+<section class="w-full bg-surface-container-low py-space-xs px-margin">
+<div class="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-tertiary text-base">verified_user</span>
+<span>Commercial devices provide reference readings. NovaCare helps guide and record them accurately.</span>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+          Non-Diagnostic Awareness System
+        </span>
+<span class="hidden md:inline text-outline-variant">|</span>
+<span class="hidden md:inline">Standardized Telemetry</span>
+</div>
+</div>
+</section>
+<!-- Hero Section with Live Clinical Reading Preview -->
+<section class="relative w-full overflow-hidden bg-gradient-to-b from-surface to-surface-container-low/40 pt-space-xl pb-space-2xl px-margin">
+<!-- Ambient subtle background depth -->
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-48 -right-24 w-80 h-80 bg-secondary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center relative">
+<!-- Left Narrative Column -->
+<div class="lg:col-span-6 flex flex-col items-start">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-sm text-primary">clinical_notes</span>
+<span>Validated Measurement Workflows</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight mb-space-sm">
+          Understand your readings. <br class="hidden sm:inline"/>
+<span class="text-primary">Take the next step.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-space-lg max-w-xl">
+          Guided blood-pressure and glucose checks, clear records, and longitudinal health trends in one unified, calm space.
+        </p>
+<!-- CTA Buttons -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm w-full sm:w-auto mb-space-lg">
+<a class="inline-flex items-center justify-center px-space-lg py-space-sm min-h-[48px] rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-on-primary-fixed-variant transition-all shadow-md active:scale-95" data-path="get-started" href="#">
+<span>Get started</span>
+<span class="material-symbols-outlined ml-2 text-lg">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center px-space-lg py-space-sm min-h-[48px] rounded-lg bg-surface-container-lowest text-tertiary font-label-md text-label-md hover:bg-surface-container transition-all shadow-sm" href="#how-it-works">
+<span>See how it works</span>
+<span class="material-symbols-outlined ml-2 text-lg">play_circle</span>
+</a>
+</div>
+<!-- Trust & Device Verification Footnote -->
+<div class="flex items-center gap-space-md pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>Omron & Accu-Chek Compatible</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-base">shield_with_heart</span>
+<span>Zero Synthetic Diagnostics</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Card Preview -->
+<div class="lg:col-span-6 w-full mt-space-md lg:mt-0">
+<div class="relative w-full rounded-xl bg-surface-container-lowest p-space-lg shadow-xl">
+<!-- Card Header / Provenance Pill Bar -->
+<div class="flex items-center justify-between pb-space-sm mb-space-md bg-surface-container-low/60 -mx-space-lg -mt-space-lg px-space-lg pt-space-md rounded-t-xl">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Live Patient Registry Preview</span>
+</div>
+<span class="font-provenance-tag text-provenance-tag px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant uppercase">Patient #NC-8902</span>
+</div>
+<!-- Dual Telemetry Visual Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md mb-space-md">
+<!-- Blood Pressure Card -->
+<div class="bg-surface-container-low rounded-lg p-space-md relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Blood Pressure</span>
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-container-highest text-secondary font-provenance-tag text-provenance-tag font-bold">
+<span class="material-symbols-outlined text-xs">verified</span> Ref. Cuff
+                </span>
+</div>
+<div class="flex items-baseline gap-1 my-space-xs">
+<span class="font-display-vital text-display-vital text-on-surface tracking-tight font-bold">122/80</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">mmHg</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span class="truncate">Omron HEM-7120</span>
+<span class="text-outline font-body-sm text-body-sm">Today, 08:30 AM</span>
+</div>
+<!-- Mini BP Sparkline -->
+<div class="mt-space-xs h-8 w-full flex items-end gap-1">
+<div class="w-1/6 bg-secondary-container rounded-t h-4" title="Mon"></div>
+<div class="w-1/6 bg-secondary-container rounded-t h-5" title="Tue"></div>
+<div class="w-1/6 bg-secondary-container rounded-t h-5" title="Wed"></div>
+<div class="w-1/6 bg-secondary-container rounded-t h-6" title="Thu"></div>
+<div class="w-1/6 bg-secondary-container rounded-t h-5" title="Fri"></div>
+<div class="w-1/6 bg-primary rounded-t h-6" title="Today (Optimal)"></div>
+</div>
+</div>
+<!-- Blood Glucose Card -->
+<div class="bg-surface-container-low rounded-lg p-space-md relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Blood Glucose</span>
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-container-highest text-secondary font-provenance-tag text-provenance-tag font-bold">
+<span class="material-symbols-outlined text-xs">medication</span> Fasting
+                </span>
+</div>
+<div class="flex items-baseline gap-1 my-space-xs">
+<span class="font-display-vital text-display-vital text-on-surface tracking-tight font-bold">98</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">mg/dL</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span class="truncate">Accu-Chek Active</span>
+<span class="text-outline font-body-sm text-body-sm">Today, 07:15 AM</span>
+</div>
+<!-- Mini Glucose Indicator Bar -->
+<div class="mt-space-xs h-8 w-full flex items-center">
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden relative">
+<div class="bg-primary h-full rounded-full" style="width: 48%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Status Indicator Footer inside Card -->
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">info</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Within Reference Target Range</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Consistent with your designated physiological baseline.</p>
+</div>
+</div>
+<span class="px-space-xs py-1 rounded bg-surface-container-lowest font-label-sm text-label-sm text-tertiary font-semibold shrink-0">Export Log</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Image Break: Clinical Fieldwork in Action -->
+<section class="w-full max-w-7xl mx-auto px-margin my-space-xl">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="md:col-span-2 relative rounded-xl overflow-hidden shadow-lg h-72">
+<img class="w-full h-full object-cover" data-alt="A smiling rural healthcare worker demonstrating a modern arm blood pressure cuff to an attentive senior patient in a brightly lit clean clinic room with soft natural daylight, deep royal blue accents and calm tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlDiWNDixHNaQHSItf8NXFpO-8fGogjWupsUBGEEbslOlhax-o2y4XHOdldYudocE259IrKOMt66AVLI4Yh_gMaobrxdLnblWXxrayANsMrYTQgKaq7-bH3WwFeLC-gIWQxf9a0CzobkPa3izVQj83QEwby1rMo0m_XdC1x7YTvc2RffT5yDTlEvJuvjA9nYU0V09pjzlk2OBYW7pQfDFCRJGjmoYAI1vshQ0f5ybxVAIRwabRGMafyg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/20 to-transparent flex flex-col justify-end p-space-lg text-inverse-on-surface">
+<span class="font-provenance-tag text-provenance-tag text-tertiary-fixed font-bold uppercase tracking-wider mb-1">Community Health Initiative</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-inverse-on-surface">Assisted Readings for Every Household</h3>
+<p class="font-body-sm text-body-sm text-inverse-on-surface/80 mt-1 max-w-lg">ASHA workers utilize streamlined interfaces that cut manual recording errors and clarify step-by-step cuff inflation instructions.</p>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden shadow-lg h-72 bg-surface-container-high flex flex-col justify-between p-space-lg">
+<div>
+<span class="material-symbols-outlined text-primary text-3xl mb-space-xs">monitor_heart</span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Calm, Clear Interface</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Engineered with high contrast and legible typography to reduce anxiety during reading intake.</p>
+</div>
+<div class="pt-space-md">
+<div class="flex items-center gap-space-xs text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-base">support_agent</span>
+<span>Multilingual voice prompts active</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Focus Areas: Blood Pressure & Blood Glucose Awareness -->
+<section class="w-full py-space-2xl bg-surface-container-low px-margin">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-space-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Two Core Streams</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mt-space-xxs mb-space-xs">Precision Awareness for Chronic Vitals</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Standardized monitoring protocols for cardiovascular and metabolic tracking without algorithmic guesswork.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Stream 1: Blood Pressure Awareness -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+</div>
+<span class="px-space-sm py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">Cardiovascular Health</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-space-xs">Blood Pressure Awareness</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+              Structured posture prep, pre-inflation resting countdowns, and source logging for automated or manual reference cuffs.
+            </p>
+<div class="space-y-space-sm mb-space-lg">
+<div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">check_box</span>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface font-semibold">Reference Cuff Guidance</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Validated check prompts ensure 5-minute seated rest, arm heart-level alignment, and dual-reading averaging.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-tertiary text-xl mt-0.5">science</span>
+<div>
+<div class="flex items-center gap-space-xs">
+<h5 class="font-label-md text-label-md text-on-surface font-semibold">Experimental PPG Research Module</h5>
+<span class="font-provenance-tag text-provenance-tag px-1.5 py-0.5 rounded bg-surface-container-highest text-outline font-bold">Research Only</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Distinct sandbox evaluating optical pulse plethysmography sensor trends. Strict separation prevents confusion with clinical cuff logs.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Standardized to AHA protocols</span>
+<a class="font-label-md text-label-md text-primary font-semibold hover:underline inline-flex items-center" href="#">
+              Explore BP guide <span class="material-symbols-outlined text-sm ml-1">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Stream 2: Blood Glucose Awareness -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">water_drop</span>
+</div>
+<span class="px-space-sm py-1 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm font-semibold">Metabolic Health</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-space-xs">Blood Glucose Awareness</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+              Structured recording for commercial glucometers that accounts for meal timing, strip expiration validation, and insulin context.
+            </p>
+<div class="space-y-space-sm mb-space-lg">
+<div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">timer</span>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface font-semibold">Meal-Context Classification</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Instant labeling for Fasting (8hr+), 2-Hour Post-Prandial, or Bedtime readings to ensure clean doctor review.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">rule</span>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface font-semibold">Step-by-Step Strip Guidance</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Clear reminders for hand washing, avoiding alcohol wipes on fingertip samples, and lancet depth calibration.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Compatible with Accu-Chek, OneTouch</span>
+<a class="font-label-md text-label-md text-primary font-semibold hover:underline inline-flex items-center" href="#">
+              Explore Glucose guide <span class="material-symbols-outlined text-sm ml-1">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works: 3-Step Guided Protocol -->
+<section class="w-full py-space-2xl px-margin bg-surface" id="how-it-works">
+<div class="max-w-7xl mx-auto">
+<div class="mb-space-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Standard Operating Procedure</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mt-space-xxs">How NovaCare Works</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">Every vital is recorded with provenance context, ensuring physicians and patients share an identical understanding.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter relative">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-10 h-10 rounded-full bg-primary text-on-primary font-bold flex items-center justify-center font-label-md text-label-md">01</span>
+<span class="material-symbols-outlined text-tertiary">pan_tool</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">Follow step-by-step guidance</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Walk through clear preparation checklists: sit with back supported, rest quietly for 5 minutes, or calibrate your glucometer strip code.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg pb-space-md rounded-b-xl">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Reduces intake error rates</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-10 h-10 rounded-full bg-primary text-on-primary font-bold flex items-center justify-center font-label-md text-label-md">02</span>
+<span class="material-symbols-outlined text-tertiary">fact_check</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">Record your verified reading</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Input values with explicit units (<code class="text-xs bg-surface-container px-1 py-0.5 rounded text-on-surface">mmHg</code> or <code class="text-xs bg-surface-container px-1 py-0.5 rounded text-on-surface">mg/dL</code>). NovaCare records device brand, model, and timestamp.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg pb-space-md rounded-b-xl">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Provenance tagging locked</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-10 h-10 rounded-full bg-primary text-on-primary font-bold flex items-center justify-center font-label-md text-label-md">03</span>
+<span class="material-symbols-outlined text-tertiary">monitoring</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">Review trends and share</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Generate structured, printer-ready or mobile-friendly reports for clinical consultations, without algorithmic noise or alarms.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg pb-space-md rounded-b-xl">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Doctor & ASHA compatible</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Connected Roles Architecture -->
+<section class="w-full py-space-2xl bg-surface-container px-margin">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-space-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Collaborative Care Network</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mt-space-xxs mb-space-xs">Designed for Three Connected Roles</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Tailored interfaces that deliver exactly what each participant needs, from daily home tracking to acute clinical assessment.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Patient Persona -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-2xl">person</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">For Patients</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Simplified daily tracking without clinical jargon or anxiety-inducing alert sounds.</p>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant flex-grow mb-space-md">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-sm">done</span>
+<span>Low-stress self-monitoring screens</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-sm">done</span>
+<span>Chronological record diary</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-sm">done</span>
+<span>Medication and check-in reminders</span>
+</li>
+</ul>
+<a class="w-full py-space-xs px-space-sm rounded-lg bg-surface-container-low text-primary font-label-md text-label-md font-semibold text-center hover:bg-surface-container transition-colors" data-path="for-patients" href="#">
+            Patient Portal Details
+          </a>
+</div>
+<!-- ASHA Worker Persona -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-2xl">group_work</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">For ASHA Workers</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">High-efficiency mobile tools built for dynamic field screenings and offline-ready patient lookup.</p>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant flex-grow mb-space-md">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-sm">done</span>
+<span>Rapid community member search</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-sm">done</span>
+<span>Assisted intake with voice cues</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-sm">done</span>
+<span>Batch synchronization capability</span>
+</li>
+</ul>
+<a class="w-full py-space-xs px-space-sm rounded-lg bg-surface-container-low text-primary font-label-md text-label-md font-semibold text-center hover:bg-surface-container transition-colors" data-path="for-asha-workers" href="#">
+            ASHA Worker Portal Details
+          </a>
+</div>
+<!-- Doctor Persona -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-2xl">stethoscope</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">For Doctors</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Dense telemetry views highlighting provenance integrity, longitudinal curves, and clinical flags.</p>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant flex-grow mb-space-md">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-sm">done</span>
+<span>Strict verified reference separation</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-sm">done</span>
+<span>Dense 30-day vital trend curves</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-sm">done</span>
+<span>Isolated experimental PPG telemetry</span>
+</li>
+</ul>
+<a class="w-full py-space-xs px-space-sm rounded-lg bg-surface-container-low text-primary font-label-md text-label-md font-semibold text-center hover:bg-surface-container transition-colors" data-path="for-doctors" href="#">
+            Physician Telemetry Details
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Accessibility & Inclusion Showcase -->
+<section class="w-full py-space-2xl px-margin bg-surface">
+<div class="max-w-7xl mx-auto bg-surface-container-lowest rounded-xl p-space-xl shadow-md">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-7">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Universal Design</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mt-space-xxs mb-space-sm">Accessible Across Literacies and Dialects</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+            Health management shouldn't depend on technological fluency. NovaCare combines large high-contrast typography, clear pictorial illustrations, and natural spoken prompts.
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<div class="p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-xs text-primary mb-1">
+<span class="material-symbols-outlined">translate</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Multilingual</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Full localized support in English, हिन्दी, and తెలుగు with regional dialects.</p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-xs text-primary mb-1">
+<span class="material-symbols-outlined">volume_up</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Voice Prompts</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Step-by-step audio instructions guide each measurement without reading text.</p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-xs text-primary mb-1">
+<span class="material-symbols-outlined">visibility</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Clear Layout</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">WCAG AAA contrast ratings and min. 48px touch targets for trembling hands.</p>
+</div>
+</div>
+</div>
+<!-- Visual representation of multilingual interface -->
+<div class="lg:col-span-5 flex justify-center">
+<div class="w-full max-w-sm rounded-xl bg-surface-container p-space-md shadow-inner space-y-space-sm">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-xs">EN</span>
+<span class="font-label-md text-label-md text-on-surface font-medium">Rest for 5 minutes</span>
+</div>
+<button class="p-1 rounded-full hover:bg-surface-container text-tertiary" title="Listen Audio">
+<span class="material-symbols-outlined text-lg">volume_up</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-xs">HI</span>
+<span class="font-label-md text-label-md text-on-surface font-medium">५ मिनट के लिए आराम करें</span>
+</div>
+<button class="p-1 rounded-full hover:bg-surface-container text-tertiary" title="Listen Audio">
+<span class="material-symbols-outlined text-lg">volume_up</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-xs">TE</span>
+<span class="font-label-md text-label-md text-on-surface font-medium">5 నిమిషాలు ప్రశాంతంగా కూర్చోండి</span>
+</div>
+<button class="p-1 rounded-full hover:bg-surface-container text-tertiary" title="Listen Audio">
+<span class="material-symbols-outlined text-lg">volume_up</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final Call to Action -->
+<section class="w-full py-space-2xl px-margin bg-surface-container-lowest">
+<div class="max-w-5xl mx-auto rounded-xl bg-primary text-on-primary p-space-xl sm:p-space-2xl text-center shadow-lg relative overflow-hidden">
+<!-- Decorative faint circle -->
+<div class="absolute -right-16 -top-16 w-64 h-64 bg-white/10 rounded-full blur-xl pointer-events-none"></div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed font-bold">Zero Setup Friction</span>
+<h2 class="font-headline-lg text-headline-lg text-on-primary font-bold mt-space-xxs mb-space-sm">
+        Start recording vitals with confidence today
+      </h2>
+<p class="font-body-md text-body-md text-on-primary-container max-w-xl mx-auto mb-space-lg">
+        Join individuals, rural health champions, and primary care physicians advancing responsible chronic disease awareness.
+      </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-space-sm">
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-space-xl py-space-sm min-h-[48px] rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md font-bold hover:bg-surface-container-high transition-colors shadow-md" data-path="get-started" href="#">
+          Open NovaCare Web App
+        </a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-space-lg py-space-sm min-h-[48px] rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-on-primary-fixed-variant transition-colors" data-path="how-it-works" href="#">
+          View Protocol Specs
+        </a>
+</div>
+</div>
+</section>
+<!-- Ethical & Clinical Positioning Declaration -->
+<section class="w-full py-space-md px-margin bg-surface-container-low">
+<div class="max-w-7xl mx-auto flex items-start gap-space-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-outline text-xl mt-0.5 shrink-0">info</span>
+<div class="font-body-sm text-body-sm">
+<strong class="text-on-surface">Clinical Disclaimer & Positioning:</strong> 
+        NovaCare is a health-awareness, structured guidance, and chronological recording tool. It is not an automated medical diagnostic device, does not prescribe pharmaceuticals, and does not replace the professional judgment of a licensed medical practitioner. Any reading flagged outside reference parameters should be discussed with a qualified healthcare provider.
+      </div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_6px_rgba(20,36,59,0.03)] mt-space-2xl"><div class="max-w-7xl mx-auto px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-space-lg"><div class="md:col-span-1"><div class="flex items-center gap-space-xs mb-space-sm"><img alt="NovaCare Logo" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WU5BKKG-HuKwLR5_sl_gVcsCZP0rRYYCmRBzEf70KH9e_Q8dWSenyA7N8IRCNJnIBvnP__pUkem5hPL3he_GRMSofJ2n3IgXoXqEVTVfr44epQaftcjIGwwI8HnXzYvhoO5O000lsDsuXjOJJo4ujuxVL2rFrGxxoZ-KJSuqAi5HT9keEtlB7M62KoZHWQH1jJeG-SuTv2qFN84W-0kQ6VtzGTxzpeyfHbgztEIsK7ck-GBO2DQJEFhVqP"/><span class="font-headline-sm text-headline-sm text-primary font-bold">NovaCare</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Calm, verified, and accessible vitals monitoring empowering patients, field ASHA workers, and physicians across clinical communities.</p></div><div><h4 class="font-label-md text-label-md text-on-surface font-bold uppercase tracking-wider mb-space-sm">Portals</h4><ul class="space-y-space-xs font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-primary transition-colors"><a data-path="for-patients" href="#">Patient Health Track</a></li><li class="text-on-surface-variant hover:text-primary transition-colors"><a data-path="for-asha-workers" href="#">ASHA Field Ops</a></li><li class="text-on-surface-variant hover:text-primary transition-colors"><a data-path="for-doctors" href="#">Physician Telemetry</a></li></ul></div><div><h4 class="font-label-md text-label-md text-on-surface font-bold uppercase tracking-wider mb-space-sm">Clinical Quality</h4><ul class="space-y-space-xs font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-primary transition-colors"><a data-path="health-checks" href="#">Guided Vitals Screen</a></li><li class="text-on-surface-variant hover:text-primary transition-colors"><a data-path="how-it-works" href="#">Provenance & Safety</a></li><li class="text-on-surface-variant hover:text-primary transition-colors"><span>Telemetry Standards</span></li></ul></div><div><h4 class="font-label-md text-label-md text-on-surface font-bold uppercase tracking-wider mb-space-sm">Support & Help</h4><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-xs">Available in regional languages with continuous voice guidance assistance.</p><div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm"><span class="material-symbols-outlined text-base">verified_user</span><span>Medical-Grade Clarity</span></div></div></div><div class="pt-space-md border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-label-sm text-label-sm"><div>© 2024 NovaCare Health Awareness. Designed for verified multi-role care.</div><div class="flex gap-space-md"><span>Privacy Safeguards</span><span>Clinical Protocol</span><span>Accessibility</span></div></div></div></footer></body></html>

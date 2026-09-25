@@ -1,0 +1,44 @@
+# ==========================================
+# NovaCare Project Git Ignore Definition
+# ==========================================
+
+# --- Virtual Environments ---
+venv/
+.venv/
+env/
+ENV/
+
+# --- Python Bytecode & Caches ---
+**/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# --- Voice Triage Specific Artifacts ---
+# Ignore all user-provided WAV files, but keep tracking the folder via .gitkeep
+AI/sample_audio/*.wav
+
+# Ignore dynamically trained fallback machine learning binary models & normalizers
+AI/models/fallback_rf.pkl
+AI/models/scaler.pkl
+
+# --- Environment & Credentials ---
+.env
+.env.local
+
+# --- Logs ---
+*.log
+logs/
+
+# --- IDE and Editor Configurations ---
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# --- OS-specific Files ---
+.DS_Store
+Thumbs.db

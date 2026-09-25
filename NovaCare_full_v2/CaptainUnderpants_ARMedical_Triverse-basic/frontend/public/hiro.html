@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Hiro Marker — NovaCare</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: monospace;
+      padding: 12px;
+    }
+    img {
+      display: block;
+      width: min(92vw, 92vh);
+      height: min(92vw, 92vh);
+      image-rendering: pixelated;
+    }
+    p {
+      margin-top: 14px;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #888;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Official artoolkit Hiro marker from AR.js repository -->
+  <img
+    src="https://raw.githubusercontent.com/AR-js-org/AR.js/master/data/images/HIRO.jpg"
+    alt="Hiro AR Marker"
+    onerror="this.style.display='none'; document.getElementById('fallback').style.display='block';"
+  />
+
+  <!-- Offline fallback: re-draw the pattern from the artoolkit spec -->
+  <svg id="fallback" style="display:none; width:min(92vw,92vh); height:min(92vw,92vh);"
+       viewBox="0 0 175 175" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+    <rect width="175" height="175" fill="white"/>
+    <rect x="0"   y="0"   width="175" height="25" fill="black"/>
+    <rect x="0"   y="150" width="175" height="25" fill="black"/>
+    <rect x="0"   y="0"   width="25"  height="175" fill="black"/>
+    <rect x="150" y="0"   width="25"  height="175" fill="black"/>
+    <!-- inner 5×5 pattern cells (each 25×25), origin at x=25 y=25 -->
+    <!-- Hiro artoolkit pattern (1=black): -->
+    <!-- row0: 0 1 0 1 0  -->
+    <!-- row1: 1 0 0 0 1  -->
+    <!-- row2: 0 0 1 0 0  -->
+    <!-- row3: 1 0 0 0 1  -->
+    <!-- row4: 0 1 0 1 0  -->
+    <rect x="50"  y="25"  width="25" height="25" fill="black"/>
+    <rect x="100" y="25"  width="25" height="25" fill="black"/>
+    <rect x="25"  y="50"  width="25" height="25" fill="black"/>
+    <rect x="125" y="50"  width="25" height="25" fill="black"/>
+    <rect x="75"  y="75"  width="25" height="25" fill="black"/>
+    <rect x="25"  y="100" width="25" height="25" fill="black"/>
+    <rect x="125" y="100" width="25" height="25" fill="black"/>
+    <rect x="50"  y="125" width="25" height="25" fill="black"/>
+    <rect x="100" y="125" width="25" height="25" fill="black"/>
+  </svg>
+
+  <p>Hold this up to the webcam · NovaCare AR</p>
+</body>
+</html>

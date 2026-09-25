@@ -1,0 +1,10 @@
+sampling_rate: 16000
+noise_floor_duration: 0.5
+silence_energy_threshold: 0.005 # Frame energy threshold for silence trimming
+f0_min: 50.0
+f0_max: 500.0
+jitter_threshold: 0.02
+shimmer_threshold: 0.05
+hnr_threshold: 15.0
+pause_ratio_threshold: 0.25
+speaking_rate_threshold: 3.0

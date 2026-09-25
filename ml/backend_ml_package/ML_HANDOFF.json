@@ -1,0 +1,33 @@
+{
+  "experiment": "Experiment 2",
+  "status": "validated",
+  "input": "PPG waveform",
+  "sampling_rate_hz": 125,
+  "preprocessing": {
+    "nan_inf_handling": "interpolation",
+    "bandpass_hz": [
+      0.5,
+      8.0
+    ],
+    "butterworth_order": 4,
+    "operation_order": [
+      "bandpass",
+      "subtract_mean",
+      "z_score"
+    ]
+  },
+  "peak_detection": {
+    "method": "scipy.signal.find_peaks",
+    "minimum_hr_bpm": 20,
+    "maximum_hr_bpm": 200,
+    "prominence_factor": 0.3
+  },
+  "number_of_features": 23,
+  "feature_order_file": "feature_order.json",
+  "models": {
+    "sbp": "linear_regression_sbp.joblib",
+    "dbp": "linear_regression_dbp.joblib"
+  },
+  "bp_status": "experimental",
+  "cnn_scope": "Experiment 1 only; not used for Experiment 2"
+}

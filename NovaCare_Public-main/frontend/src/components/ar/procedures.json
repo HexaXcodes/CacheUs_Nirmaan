@@ -1,0 +1,165 @@
+{
+  "bp_measurement": {
+    "name": "Blood Pressure Measurement",
+    "steps": [
+      {
+        "id": "rest_prep",
+        "title": "Rest before measuring",
+        "instruction": {
+          "en": "Sit quietly and rest for 5 minutes before starting. Avoid caffeine, exercise, or smoking beforehand.",
+          "hi": "शुरू करने से पहले 5 मिनट शांति से बैठें। इससे पहले कैफीन, व्यायाम या धूम्रपान से बचें।",
+          "kn": "ಪ್ರಾರಂಭಿಸುವ ಮೊದಲು 5 ನಿಮಿಷ ಶಾಂತವಾಗಿ ಕುಳಿತುಕೊಳ್ಳಿ. ಮೊದಲು ಕೆಫೀನ್, ವ್ಯಾಯಾಮ ಅಥವಾ ಧೂಮಪಾನ ತಪ್ಪಿಸಿ."
+        }
+      },
+      {
+        "id": "seated_position",
+        "title": "Correct seated position",
+        "instruction": {
+          "en": "Sit upright in a chair with your back supported.",
+          "hi": "पीठ को सहारा देते हुए कुर्सी पर सीधे बैठें।",
+          "kn": "ಬೆನ್ನಿಗೆ ಆಧಾರ ಇರುವಂತೆ ಕುರ್ಚಿಯಲ್ಲಿ ನೇರವಾಗಿ ಕುಳಿತುಕೊಳ್ಳಿ."
+        }
+      },
+      {
+        "id": "feet_position",
+        "title": "Feet flat, legs uncrossed",
+        "instruction": {
+          "en": "Keep both feet flat on the floor. Do not cross your legs.",
+          "hi": "दोनों पैर फर्श पर सपाट रखें। पैर क्रॉस न करें।",
+          "kn": "ಎರಡೂ ಪಾದಗಳನ್ನು ನೆಲದ ಮೇಲೆ ಸಮತಟ್ಟಾಗಿ ಇರಿಸಿ. ಕಾಲುಗಳನ್ನು ದಾಟಿಸಬೇಡಿ."
+        }
+      },
+      {
+        "id": "arm_position",
+        "title": "Arm position",
+        "instruction": {
+          "en": "Rest your bare arm on a table so the cuff will sit at roughly heart height.",
+          "hi": "अपनी नंगी बांह को मेज़ पर रखें ताकि कफ हृदय की ऊंचाई पर हो।",
+          "kn": "ಕಫ್ ಹೃದಯದ ಎತ್ತರದಲ್ಲಿ ಇರುವಂತೆ ಬರಿ ಕೈಯನ್ನು ಮೇಜಿನ ಮೇಲೆ ಇರಿಸಿ."
+        }
+      },
+      {
+        "id": "cuff_position",
+        "title": "Cuff position",
+        "instruction": {
+          "en": "Place the cuff snugly on your bare upper arm, about one inch above the elbow crease.",
+          "hi": "कफ को नंगी ऊपरी बांह पर, कोहनी की सिलवट से लगभग एक इंच ऊपर, कसकर लगाएं।",
+          "kn": "ಕಫ್ ಅನ್ನು ಬರಿ ಮೇಲ್ತೋಳಿನ ಮೇಲೆ, ಮೊಣಕೈ ಮಡಿಕೆಗಿಂತ ಸುಮಾರು ಒಂದು ಇಂಚು ಮೇಲೆ, ಬಿಗಿಯಾಗಿ ಜೋಡಿಸಿ."
+        }
+      },
+      {
+        "id": "stay_still",
+        "title": "Remain still and silent",
+        "instruction": {
+          "en": "Stay still, keep your legs uncrossed, and avoid talking during the measurement.",
+          "hi": "स्थिर रहें, पैर क्रॉस न करें और माप के दौरान बात न करें।",
+          "kn": "ಸ್ಥಿರವಾಗಿರಿ, ಕಾಲುಗಳನ್ನು ದಾಟಿಸಬೇಡಿ ಮತ್ತು ಮಾಪನದ ಸಮಯದಲ್ಲಿ ಮಾತನಾಡಬೇಡಿ."
+        }
+      },
+      {
+        "id": "start_measurement",
+        "title": "Start measurement",
+        "instruction": {
+          "en": "Press start on your BP monitor and keep your arm relaxed.",
+          "hi": "अपने बीपी मॉनिटर पर स्टार्ट दबाएं और बांह को शिथिल रखें।",
+          "kn": "ನಿಮ್ಮ ಬಿಪಿ ಮಾನಿಟರ್‌ನಲ್ಲಿ ಸ್ಟಾರ್ಟ್ ಒತ್ತಿ ಮತ್ತು ತೋಳನ್ನು ಸಡಿಲವಾಗಿ ಇರಿಸಿ."
+        }
+      },
+      {
+        "id": "complete_measurement",
+        "title": "Complete measurement",
+        "instruction": {
+          "en": "Wait for the cuff to fully deflate and the reading to appear.",
+          "hi": "कफ के पूरी तरह ढीले होने और रीडिंग आने की प्रतीक्षा करें।",
+          "kn": "ಕಫ್ ಸಂಪೂರ್ಣ ಇಳಿಯುವವರೆಗೆ ಮತ್ತು ರೀಡಿಂಗ್ ಕಾಣಿಸುವವರೆಗೆ ಕಾಯಿರಿ."
+        }
+      },
+      {
+        "id": "record_reading",
+        "title": "Record the reading",
+        "instruction": {
+          "en": "Note down the systolic/diastolic values and pulse shown on the monitor.",
+          "hi": "मॉनिटर पर दिखाए गए सिस्टोलिक/डायस्टोलिक मान और पल्स नोट करें।",
+          "kn": "ಮಾನಿಟರ್‌ನಲ್ಲಿ ತೋರಿಸಿದ ಸಿಸ್ಟೋಲಿಕ್/ಡಯಾಸ್ಟೋಲಿಕ್ ಮೌಲ್ಯಗಳು ಮತ್ತು ಪಲ್ಸ್ ದಾಖಲಿಸಿ."
+        }
+      }
+    ]
+  },
+  "glucose_measurement": {
+    "name": "Glucose Measurement",
+    "steps": [
+      {
+        "id": "prepare_glucometer",
+        "title": "Prepare glucometer",
+        "instruction": {
+          "en": "Wash and dry your hands, then turn on the glucometer.",
+          "hi": "हाथ धोकर सुखाएं, फिर ग्लूकोमीटर चालू करें।",
+          "kn": "ಕೈಗಳನ್ನು ತೊಳೆದು ಒಣಗಿಸಿ, ನಂತರ ಗ್ಲುಕೋಮೀಟರ್ ಆನ್ ಮಾಡಿ."
+        }
+      },
+      {
+        "id": "insert_strip",
+        "title": "Insert test strip",
+        "instruction": {
+          "en": "Insert a new test strip into the glucometer until it clicks or the screen confirms it's ready.",
+          "hi": "नई टेस्ट स्ट्रिप को ग्लूकोमीटर में तब तक डालें जब तक क्लिक न हो या स्क्रीन तैयार न दिखाए।",
+          "kn": "ಕ್ಲಿಕ್ ಆಗುವವರೆಗೆ ಅಥವಾ ಸ್ಕ್ರೀನ್ ಸಿದ್ಧ ಎಂದು ಖಚಿತಪಡಿಸುವವರೆಗೆ ಹೊಸ ಟೆಸ್ಟ್ ಸ್ಟ್ರಿಪ್ ಅನ್ನು ಗ್ಲುಕೋಮೀಟರ್‌ಗೆ ಸೇರಿಸಿ."
+        }
+      },
+      {
+        "id": "prepare_lancet",
+        "title": "Prepare lancing device",
+        "instruction": {
+          "en": "Load a fresh lancet into the lancing device and set the depth as advised.",
+          "hi": "लैंसिंग डिवाइस में नया लैंसेट लगाएं और सलाह अनुसार गहराई सेट करें।",
+          "kn": "ಲ್ಯಾನ್ಸಿಂಗ್ ಸಾಧನದಲ್ಲಿ ಹೊಸ ಲ್ಯಾನ್ಸೆಟ್ ಅಳವಡಿಸಿ ಸಲಹೆ ಪ್ರಕಾರ ಆಳ ಸೆಟ್ ಮಾಡಿ."
+        }
+      },
+      {
+        "id": "obtain_sample",
+        "title": "Obtain sample",
+        "instruction": {
+          "en": "Prick the side of a clean fingertip and gently massage to form a small drop of blood.",
+          "hi": "साफ उंगली की नोक के किनारे को चुभोएं और धीरे से मालिश कर एक छोटी बूंद बनाएं।",
+          "kn": "ಸ್ವಚ್ಛ ಬೆರಳಿನ ತುದಿಯ ಬದಿಯನ್ನು ಚುಚ್ಚಿ, ಸಣ್ಣ ರಕ್ತದ ಹನಿ ಬರುವಂತೆ ನಿಧಾನವಾಗಿ ಒತ್ತಿ."
+        }
+      },
+      {
+        "id": "apply_sample",
+        "title": "Apply sample to strip",
+        "instruction": {
+          "en": "Touch the edge of the test strip to the drop of blood until the glucometer confirms enough sample.",
+          "hi": "टेस्ट स्ट्रिप के किनारे को रक्त की बूंद से तब तक छुएं जब तक ग्लूकोमीटर पर्याप्त सैंपल की पुष्टि न करे।",
+          "kn": "ಗ್ಲುಕೋಮೀಟರ್ ಸಾಕಷ್ಟು ಮಾದರಿ ಎಂದು ಖಚಿತಪಡಿಸುವವರೆಗೆ ಟೆಸ್ಟ್ ಸ್ಟ್ರಿಪ್‌ನ ಅಂಚನ್ನು ರಕ್ತದ ಹನಿಗೆ ಸ್ಪರ್ಶಿಸಿ."
+        }
+      },
+      {
+        "id": "wait_reading",
+        "title": "Wait for reading",
+        "instruction": {
+          "en": "Hold still and wait for the countdown to finish.",
+          "hi": "स्थिर रहें और उलटी गिनती पूरी होने तक प्रतीक्षा करें।",
+          "kn": "ಸ್ಥಿರವಾಗಿರಿ ಮತ್ತು ಕೌಂಟ್‌ಡೌನ್ ಮುಗಿಯುವವರೆಗೆ ಕಾಯಿರಿ."
+        }
+      },
+      {
+        "id": "complete_measurement",
+        "title": "Complete measurement",
+        "instruction": {
+          "en": "Remove the used strip and dispose of the lancet safely in a sharps container.",
+          "hi": "इस्तेमाल की गई स्ट्रिप हटाएं और लैंसेट को शार्प्स कंटेनर में सुरक्षित रूप से फेंकें।",
+          "kn": "ಬಳಸಿದ ಸ್ಟ್ರಿಪ್ ತೆಗೆದು ಲ್ಯಾನ್ಸೆಟ್ ಅನ್ನು ಶಾರ್ಪ್ಸ್ ಕಂಟೇನರ್‌ಗೆ ಸುರಕ್ಷಿತವಾಗಿ ಹಾಕಿ."
+        }
+      },
+      {
+        "id": "log_result",
+        "title": "Log the result",
+        "instruction": {
+          "en": "Record the reading shown on the glucometer screen.",
+          "hi": "ग्लूकोमीटर स्क्रीन पर दिखाई गई रीडिंग दर्ज करें।",
+          "kn": "ಗ್ಲುಕೋಮೀಟರ್ ಪರದೆಯಲ್ಲಿ ತೋರಿಸಿದ ರೀಡಿಂಗ್ ದಾಖಲಿಸಿ."
+        }
+      }
+    ]
+  }
+}

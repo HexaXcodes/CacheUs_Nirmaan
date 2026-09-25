@@ -1,0 +1,1387 @@
+{
+  "video_id": "pmdi_reference",
+  "workflow": "pmdi_without_spacer",
+  "fps": 25.0,
+  "frames_per_sequence": 20,
+  "num_sequences": 174,
+  "sequences": [
+    {
+      "sequence": "sequence_0000",
+      "start_seconds": 0.0,
+      "end_seconds": 0.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0001",
+      "start_seconds": 0.8,
+      "end_seconds": 1.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0002",
+      "start_seconds": 1.6,
+      "end_seconds": 2.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0003",
+      "start_seconds": 2.4,
+      "end_seconds": 3.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0004",
+      "start_seconds": 3.2,
+      "end_seconds": 3.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0005",
+      "start_seconds": 4.0,
+      "end_seconds": 4.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0006",
+      "start_seconds": 4.8,
+      "end_seconds": 5.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0007",
+      "start_seconds": 5.6,
+      "end_seconds": 6.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0008",
+      "start_seconds": 6.4,
+      "end_seconds": 7.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0009",
+      "start_seconds": 7.2,
+      "end_seconds": 7.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0010",
+      "start_seconds": 8.0,
+      "end_seconds": 8.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0011",
+      "start_seconds": 8.8,
+      "end_seconds": 9.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0012",
+      "start_seconds": 9.6,
+      "end_seconds": 10.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0013",
+      "start_seconds": 10.4,
+      "end_seconds": 11.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0014",
+      "start_seconds": 11.2,
+      "end_seconds": 11.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0015",
+      "start_seconds": 12.0,
+      "end_seconds": 12.76,
+      "num_frames": 20,
+      "label": {
+        "step_id": 1,
+        "step_name": "remove_cap",
+        "status": "correct",
+        "overlap_seconds": 0.26
+      }
+    },
+    {
+      "sequence": "sequence_0016",
+      "start_seconds": 12.8,
+      "end_seconds": 13.56,
+      "num_frames": 20,
+      "label": {
+        "step_id": 1,
+        "step_name": "remove_cap",
+        "status": "correct",
+        "overlap_seconds": 0.76
+      }
+    },
+    {
+      "sequence": "sequence_0017",
+      "start_seconds": 13.6,
+      "end_seconds": 14.36,
+      "num_frames": 20,
+      "label": {
+        "step_id": 1,
+        "step_name": "remove_cap",
+        "status": "correct",
+        "overlap_seconds": 0.76
+      }
+    },
+    {
+      "sequence": "sequence_0018",
+      "start_seconds": 14.4,
+      "end_seconds": 15.16,
+      "num_frames": 20,
+      "label": {
+        "step_id": 1,
+        "step_name": "remove_cap",
+        "status": "correct",
+        "overlap_seconds": 0.6
+      }
+    },
+    {
+      "sequence": "sequence_0019",
+      "start_seconds": 15.2,
+      "end_seconds": 15.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0020",
+      "start_seconds": 16.0,
+      "end_seconds": 16.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0021",
+      "start_seconds": 16.8,
+      "end_seconds": 17.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0022",
+      "start_seconds": 17.6,
+      "end_seconds": 18.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0023",
+      "start_seconds": 18.4,
+      "end_seconds": 19.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0024",
+      "start_seconds": 19.2,
+      "end_seconds": 19.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0025",
+      "start_seconds": 20.0,
+      "end_seconds": 20.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0026",
+      "start_seconds": 20.8,
+      "end_seconds": 21.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0027",
+      "start_seconds": 21.6,
+      "end_seconds": 22.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0028",
+      "start_seconds": 22.4,
+      "end_seconds": 23.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0029",
+      "start_seconds": 23.2,
+      "end_seconds": 23.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0030",
+      "start_seconds": 24.0,
+      "end_seconds": 24.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0031",
+      "start_seconds": 24.8,
+      "end_seconds": 25.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0032",
+      "start_seconds": 25.6,
+      "end_seconds": 26.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0033",
+      "start_seconds": 26.4,
+      "end_seconds": 27.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0034",
+      "start_seconds": 27.2,
+      "end_seconds": 27.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0035",
+      "start_seconds": 28.0,
+      "end_seconds": 28.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0036",
+      "start_seconds": 28.8,
+      "end_seconds": 29.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0037",
+      "start_seconds": 29.6,
+      "end_seconds": 30.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0038",
+      "start_seconds": 30.4,
+      "end_seconds": 31.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0039",
+      "start_seconds": 31.2,
+      "end_seconds": 31.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0040",
+      "start_seconds": 32.0,
+      "end_seconds": 32.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0041",
+      "start_seconds": 32.8,
+      "end_seconds": 33.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0042",
+      "start_seconds": 33.6,
+      "end_seconds": 34.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0043",
+      "start_seconds": 34.4,
+      "end_seconds": 35.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0044",
+      "start_seconds": 35.2,
+      "end_seconds": 35.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0045",
+      "start_seconds": 36.0,
+      "end_seconds": 36.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0046",
+      "start_seconds": 36.8,
+      "end_seconds": 37.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0047",
+      "start_seconds": 37.6,
+      "end_seconds": 38.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0048",
+      "start_seconds": 38.4,
+      "end_seconds": 39.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0049",
+      "start_seconds": 39.2,
+      "end_seconds": 39.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0050",
+      "start_seconds": 40.0,
+      "end_seconds": 40.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0051",
+      "start_seconds": 40.8,
+      "end_seconds": 41.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0052",
+      "start_seconds": 41.6,
+      "end_seconds": 42.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0053",
+      "start_seconds": 42.4,
+      "end_seconds": 43.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0054",
+      "start_seconds": 43.2,
+      "end_seconds": 43.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0055",
+      "start_seconds": 44.0,
+      "end_seconds": 44.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0056",
+      "start_seconds": 44.8,
+      "end_seconds": 45.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0057",
+      "start_seconds": 45.6,
+      "end_seconds": 46.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0058",
+      "start_seconds": 46.4,
+      "end_seconds": 47.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0059",
+      "start_seconds": 47.2,
+      "end_seconds": 47.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0060",
+      "start_seconds": 48.0,
+      "end_seconds": 48.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0061",
+      "start_seconds": 48.8,
+      "end_seconds": 49.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0062",
+      "start_seconds": 49.6,
+      "end_seconds": 50.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0063",
+      "start_seconds": 50.4,
+      "end_seconds": 51.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0064",
+      "start_seconds": 51.2,
+      "end_seconds": 51.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0065",
+      "start_seconds": 52.0,
+      "end_seconds": 52.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0066",
+      "start_seconds": 52.8,
+      "end_seconds": 53.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0067",
+      "start_seconds": 53.6,
+      "end_seconds": 54.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0068",
+      "start_seconds": 54.4,
+      "end_seconds": 55.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0069",
+      "start_seconds": 55.2,
+      "end_seconds": 55.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0070",
+      "start_seconds": 56.0,
+      "end_seconds": 56.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0071",
+      "start_seconds": 56.8,
+      "end_seconds": 57.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0072",
+      "start_seconds": 57.6,
+      "end_seconds": 58.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0073",
+      "start_seconds": 58.4,
+      "end_seconds": 59.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0074",
+      "start_seconds": 59.2,
+      "end_seconds": 59.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0075",
+      "start_seconds": 60.0,
+      "end_seconds": 60.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0076",
+      "start_seconds": 60.8,
+      "end_seconds": 61.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0077",
+      "start_seconds": 61.6,
+      "end_seconds": 62.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0078",
+      "start_seconds": 62.4,
+      "end_seconds": 63.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0079",
+      "start_seconds": 63.2,
+      "end_seconds": 63.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0080",
+      "start_seconds": 64.0,
+      "end_seconds": 64.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0081",
+      "start_seconds": 64.8,
+      "end_seconds": 65.56,
+      "num_frames": 20,
+      "label": {
+        "step_id": 2,
+        "step_name": "shake_inhaler",
+        "status": "correct",
+        "overlap_seconds": 0.56
+      }
+    },
+    {
+      "sequence": "sequence_0082",
+      "start_seconds": 65.6,
+      "end_seconds": 66.36,
+      "num_frames": 20,
+      "label": {
+        "step_id": 2,
+        "step_name": "shake_inhaler",
+        "status": "correct",
+        "overlap_seconds": 0.76
+      }
+    },
+    {
+      "sequence": "sequence_0083",
+      "start_seconds": 66.4,
+      "end_seconds": 67.16,
+      "num_frames": 20,
+      "label": {
+        "step_id": 2,
+        "step_name": "shake_inhaler",
+        "status": "correct",
+        "overlap_seconds": 0.6
+      }
+    },
+    {
+      "sequence": "sequence_0084",
+      "start_seconds": 67.2,
+      "end_seconds": 67.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0085",
+      "start_seconds": 68.0,
+      "end_seconds": 68.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0086",
+      "start_seconds": 68.8,
+      "end_seconds": 69.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0087",
+      "start_seconds": 69.6,
+      "end_seconds": 70.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0088",
+      "start_seconds": 70.4,
+      "end_seconds": 71.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0089",
+      "start_seconds": 71.2,
+      "end_seconds": 71.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0090",
+      "start_seconds": 72.0,
+      "end_seconds": 72.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0091",
+      "start_seconds": 72.8,
+      "end_seconds": 73.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0092",
+      "start_seconds": 73.6,
+      "end_seconds": 74.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0093",
+      "start_seconds": 74.4,
+      "end_seconds": 75.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0094",
+      "start_seconds": 75.2,
+      "end_seconds": 75.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0095",
+      "start_seconds": 76.0,
+      "end_seconds": 76.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0096",
+      "start_seconds": 76.8,
+      "end_seconds": 77.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0097",
+      "start_seconds": 77.6,
+      "end_seconds": 78.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0098",
+      "start_seconds": 78.4,
+      "end_seconds": 79.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0099",
+      "start_seconds": 79.2,
+      "end_seconds": 79.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0100",
+      "start_seconds": 80.0,
+      "end_seconds": 80.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0101",
+      "start_seconds": 80.8,
+      "end_seconds": 81.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0102",
+      "start_seconds": 81.6,
+      "end_seconds": 82.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0103",
+      "start_seconds": 82.4,
+      "end_seconds": 83.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0104",
+      "start_seconds": 83.2,
+      "end_seconds": 83.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0105",
+      "start_seconds": 84.0,
+      "end_seconds": 84.76,
+      "num_frames": 20,
+      "label": {
+        "step_id": 3,
+        "step_name": "exhale_away",
+        "status": "correct",
+        "overlap_seconds": 0.26
+      }
+    },
+    {
+      "sequence": "sequence_0106",
+      "start_seconds": 84.8,
+      "end_seconds": 85.56,
+      "num_frames": 20,
+      "label": {
+        "step_id": 3,
+        "step_name": "exhale_away",
+        "status": "correct",
+        "overlap_seconds": 0.76
+      }
+    },
+    {
+      "sequence": "sequence_0107",
+      "start_seconds": 85.6,
+      "end_seconds": 86.36,
+      "num_frames": 20,
+      "label": {
+        "step_id": 3,
+        "step_name": "exhale_away",
+        "status": "correct",
+        "overlap_seconds": 0.76
+      }
+    },
+    {
+      "sequence": "sequence_0108",
+      "start_seconds": 86.4,
+      "end_seconds": 87.16,
+      "num_frames": 20,
+      "label": {
+        "step_id": 3,
+        "step_name": "exhale_away",
+        "status": "correct",
+        "overlap_seconds": 0.1
+      }
+    },
+    {
+      "sequence": "sequence_0109",
+      "start_seconds": 87.2,
+      "end_seconds": 87.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0110",
+      "start_seconds": 88.0,
+      "end_seconds": 88.76,
+      "num_frames": 20,
+      "label": {
+        "step_id": 4,
+        "step_name": "position_mouthpiece",
+        "status": "correct",
+        "overlap_seconds": 0.76
+      }
+    },
+    {
+      "sequence": "sequence_0111",
+      "start_seconds": 88.8,
+      "end_seconds": 89.56,
+      "num_frames": 20,
+      "label": {
+        "step_id": 4,
+        "step_name": "position_mouthpiece",
+        "status": "correct",
+        "overlap_seconds": 0.76
+      }
+    },
+    {
+      "sequence": "sequence_0112",
+      "start_seconds": 89.6,
+      "end_seconds": 90.36,
+      "num_frames": 20,
+      "label": {
+        "step_id": 4,
+        "step_name": "position_mouthpiece",
+        "status": "correct",
+        "overlap_seconds": 0.4
+      }
+    },
+    {
+      "sequence": "sequence_0113",
+      "start_seconds": 90.4,
+      "end_seconds": 91.16,
+      "num_frames": 20,
+      "label": {
+        "step_id": 5,
+        "step_name": "begin_slow_inhalation",
+        "status": "correct",
+        "overlap_seconds": 0.66
+      }
+    },
+    {
+      "sequence": "sequence_0114",
+      "start_seconds": 91.2,
+      "end_seconds": 91.96,
+      "num_frames": 20,
+      "label": {
+        "step_id": 5,
+        "step_name": "begin_slow_inhalation",
+        "status": "correct",
+        "overlap_seconds": 0.76
+      }
+    },
+    {
+      "sequence": "sequence_0115",
+      "start_seconds": 92.0,
+      "end_seconds": 92.76,
+      "num_frames": 20,
+      "label": {
+        "step_id": 5,
+        "step_name": "begin_slow_inhalation",
+        "status": "correct",
+        "overlap_seconds": 0.76
+      }
+    },
+    {
+      "sequence": "sequence_0116",
+      "start_seconds": 92.8,
+      "end_seconds": 93.56,
+      "num_frames": 20,
+      "label": {
+        "step_id": 5,
+        "step_name": "begin_slow_inhalation",
+        "status": "correct",
+        "overlap_seconds": 0.7
+      }
+    },
+    {
+      "sequence": "sequence_0117",
+      "start_seconds": 93.6,
+      "end_seconds": 94.36,
+      "num_frames": 20,
+      "label": {
+        "step_id": 6,
+        "step_name": "actuate_during_inhalation",
+        "status": "correct",
+        "overlap_seconds": 0.36
+      }
+    },
+    {
+      "sequence": "sequence_0118",
+      "start_seconds": 94.4,
+      "end_seconds": 95.16,
+      "num_frames": 20,
+      "label": {
+        "step_id": 6,
+        "step_name": "actuate_during_inhalation",
+        "status": "correct",
+        "overlap_seconds": 0.76
+      }
+    },
+    {
+      "sequence": "sequence_0119",
+      "start_seconds": 95.2,
+      "end_seconds": 95.96,
+      "num_frames": 20,
+      "label": {
+        "step_id": 6,
+        "step_name": "actuate_during_inhalation",
+        "status": "correct",
+        "overlap_seconds": 0.3
+      }
+    },
+    {
+      "sequence": "sequence_0120",
+      "start_seconds": 96.0,
+      "end_seconds": 96.76,
+      "num_frames": 20,
+      "label": {
+        "step_id": 7,
+        "step_name": "continue_inhalation",
+        "status": "correct",
+        "overlap_seconds": 0.76
+      }
+    },
+    {
+      "sequence": "sequence_0121",
+      "start_seconds": 96.8,
+      "end_seconds": 97.56,
+      "num_frames": 20,
+      "label": {
+        "step_id": 7,
+        "step_name": "continue_inhalation",
+        "status": "correct",
+        "overlap_seconds": 0.76
+      }
+    },
+    {
+      "sequence": "sequence_0122",
+      "start_seconds": 97.6,
+      "end_seconds": 98.36,
+      "num_frames": 20,
+      "label": {
+        "step_id": 7,
+        "step_name": "continue_inhalation",
+        "status": "correct",
+        "overlap_seconds": 0.76
+      }
+    },
+    {
+      "sequence": "sequence_0123",
+      "start_seconds": 98.4,
+      "end_seconds": 99.16,
+      "num_frames": 20,
+      "label": {
+        "step_id": 7,
+        "step_name": "continue_inhalation",
+        "status": "correct",
+        "overlap_seconds": 0.76
+      }
+    },
+    {
+      "sequence": "sequence_0124",
+      "start_seconds": 99.2,
+      "end_seconds": 99.96,
+      "num_frames": 20,
+      "label": {
+        "step_id": 7,
+        "step_name": "continue_inhalation",
+        "status": "correct",
+        "overlap_seconds": 0.3
+      }
+    },
+    {
+      "sequence": "sequence_0125",
+      "start_seconds": 100.0,
+      "end_seconds": 100.76,
+      "num_frames": 20,
+      "label": {
+        "step_id": 8,
+        "step_name": "breath_hold",
+        "status": "correct",
+        "overlap_seconds": 0.26
+      }
+    },
+    {
+      "sequence": "sequence_0126",
+      "start_seconds": 100.8,
+      "end_seconds": 101.56,
+      "num_frames": 20,
+      "label": {
+        "step_id": 8,
+        "step_name": "breath_hold",
+        "status": "correct",
+        "overlap_seconds": 0.76
+      }
+    },
+    {
+      "sequence": "sequence_0127",
+      "start_seconds": 101.6,
+      "end_seconds": 102.36,
+      "num_frames": 20,
+      "label": {
+        "step_id": 8,
+        "step_name": "breath_hold",
+        "status": "correct",
+        "overlap_seconds": 0.76
+      }
+    },
+    {
+      "sequence": "sequence_0128",
+      "start_seconds": 102.4,
+      "end_seconds": 103.16,
+      "num_frames": 20,
+      "label": {
+        "step_id": 8,
+        "step_name": "breath_hold",
+        "status": "correct",
+        "overlap_seconds": 0.76
+      }
+    },
+    {
+      "sequence": "sequence_0129",
+      "start_seconds": 103.2,
+      "end_seconds": 103.96,
+      "num_frames": 20,
+      "label": {
+        "step_id": 8,
+        "step_name": "breath_hold",
+        "status": "correct",
+        "overlap_seconds": 0.76
+      }
+    },
+    {
+      "sequence": "sequence_0130",
+      "start_seconds": 104.0,
+      "end_seconds": 104.76,
+      "num_frames": 20,
+      "label": {
+        "step_id": 8,
+        "step_name": "breath_hold",
+        "status": "correct",
+        "overlap_seconds": 0.5
+      }
+    },
+    {
+      "sequence": "sequence_0131",
+      "start_seconds": 104.8,
+      "end_seconds": 105.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0132",
+      "start_seconds": 105.6,
+      "end_seconds": 106.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0133",
+      "start_seconds": 106.4,
+      "end_seconds": 107.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0134",
+      "start_seconds": 107.2,
+      "end_seconds": 107.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0135",
+      "start_seconds": 108.0,
+      "end_seconds": 108.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0136",
+      "start_seconds": 108.8,
+      "end_seconds": 109.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0137",
+      "start_seconds": 109.6,
+      "end_seconds": 110.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0138",
+      "start_seconds": 110.4,
+      "end_seconds": 111.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0139",
+      "start_seconds": 111.2,
+      "end_seconds": 111.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0140",
+      "start_seconds": 112.0,
+      "end_seconds": 112.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0141",
+      "start_seconds": 112.8,
+      "end_seconds": 113.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0142",
+      "start_seconds": 113.6,
+      "end_seconds": 114.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0143",
+      "start_seconds": 114.4,
+      "end_seconds": 115.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0144",
+      "start_seconds": 115.2,
+      "end_seconds": 115.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0145",
+      "start_seconds": 116.0,
+      "end_seconds": 116.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0146",
+      "start_seconds": 116.8,
+      "end_seconds": 117.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0147",
+      "start_seconds": 117.6,
+      "end_seconds": 118.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0148",
+      "start_seconds": 118.4,
+      "end_seconds": 119.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0149",
+      "start_seconds": 119.2,
+      "end_seconds": 119.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0150",
+      "start_seconds": 120.0,
+      "end_seconds": 120.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0151",
+      "start_seconds": 120.8,
+      "end_seconds": 121.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0152",
+      "start_seconds": 121.6,
+      "end_seconds": 122.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0153",
+      "start_seconds": 122.4,
+      "end_seconds": 123.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0154",
+      "start_seconds": 123.2,
+      "end_seconds": 123.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0155",
+      "start_seconds": 124.0,
+      "end_seconds": 124.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0156",
+      "start_seconds": 124.8,
+      "end_seconds": 125.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0157",
+      "start_seconds": 125.6,
+      "end_seconds": 126.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0158",
+      "start_seconds": 126.4,
+      "end_seconds": 127.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0159",
+      "start_seconds": 127.2,
+      "end_seconds": 127.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0160",
+      "start_seconds": 128.0,
+      "end_seconds": 128.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0161",
+      "start_seconds": 128.8,
+      "end_seconds": 129.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0162",
+      "start_seconds": 129.6,
+      "end_seconds": 130.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0163",
+      "start_seconds": 130.4,
+      "end_seconds": 131.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0164",
+      "start_seconds": 131.2,
+      "end_seconds": 131.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0165",
+      "start_seconds": 132.0,
+      "end_seconds": 132.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0166",
+      "start_seconds": 132.8,
+      "end_seconds": 133.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0167",
+      "start_seconds": 133.6,
+      "end_seconds": 134.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0168",
+      "start_seconds": 134.4,
+      "end_seconds": 135.16,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0169",
+      "start_seconds": 135.2,
+      "end_seconds": 135.96,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0170",
+      "start_seconds": 136.0,
+      "end_seconds": 136.76,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0171",
+      "start_seconds": 136.8,
+      "end_seconds": 137.56,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0172",
+      "start_seconds": 137.6,
+      "end_seconds": 138.36,
+      "num_frames": 20,
+      "label": null
+    },
+    {
+      "sequence": "sequence_0173",
+      "start_seconds": 138.4,
+      "end_seconds": 139.16,
+      "num_frames": 20,
+      "label": null
+    }
+  ]
+}

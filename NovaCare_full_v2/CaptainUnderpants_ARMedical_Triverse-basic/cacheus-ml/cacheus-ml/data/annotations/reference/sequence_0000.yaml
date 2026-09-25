@@ -1,0 +1,45 @@
+video_id: reference_sequence_0000
+source_type: educational_reference
+
+workflow: pmdi_without_spacer
+
+segments:
+  - start_frame: 0
+    end_frame: 20
+    step: remove_cap
+    status: correct
+
+  - start_frame: 21
+    end_frame: 40
+    step: shake_inhaler
+    status: correct
+
+  - start_frame: 41
+    end_frame: 60
+    step: exhale_away
+    status: correct
+
+  - start_frame: 61
+    end_frame: 80
+    step: position_mouthpiece
+    status: correct
+
+  - start_frame: 81
+    end_frame: 100
+    step: begin_slow_inhalation
+    status: correct
+
+  - start_frame: 101
+    end_frame: 120
+    step: actuate_during_inhalation
+    status: correct
+
+  - start_frame: 121
+    end_frame: 140
+    step: continue_inhalation
+    status: correct
+
+  - start_frame: 141
+    end_frame: 170
+    step: breath_hold
+    status: correct

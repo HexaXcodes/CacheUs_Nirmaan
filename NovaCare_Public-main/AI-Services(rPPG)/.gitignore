@@ -1,0 +1,19 @@
+﻿# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Pytest
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# Packaged zip
+rppg_ai_service.zip
+
+# IDE
+.vscode/
+.idea/
