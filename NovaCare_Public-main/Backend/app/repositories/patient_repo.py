@@ -30,8 +30,18 @@ def _oid(patient_id: str) -> Optional[ObjectId]:
 
 def _to_raw_doc(patient: SqlPatient) -> Dict[str, Any]:
     return {
-        "_id": ObjectId(patient.cloud_id) if (patient.cloud_id and len(patient.cloud_id) == 24) else patient.local_id,
+        # `local_id` is the canonical patient identifier throughout this
+        # codebase (SqlScreening.patient_local_id, sync_worker entity keys,
+        # measurements.authorize()'s canonical id, etc). Keep `_id` (and thus
+        # the `id` field returned by serialize_patient) pinned to it so a
+        # freshly-created patient and the same patient looked up/updated
+        # after a background sync (which populates `cloud_id`) always report
+        # the same `id`. `cloud_id` is still exposed separately below for
+        # callers that need to recognize a patient by a pre-existing token
+        # that captured the Mongo-side id before this field was stabilized.
+        "_id": patient.local_id,
         "local_id": patient.local_id,
+        "cloud_id": patient.cloud_id,
         "is_deleted": patient.is_deleted,
         "abha_id": patient.abha_id,
         "phone_hash": patient.phone_hash,

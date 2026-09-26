@@ -4,6 +4,7 @@ import { useAuth } from '../../context/AuthContext'
 import { saveMeasurement, measurementHistory, measurementTrends } from '../../api/measurements'
 import Button from '../../components/ui/Button'
 import TrendChart from '../../components/TrendChart'
+import UnoPpgReplay from '../../components/ppg/UnoPpgReplay'
 
 const fixturesEnabled = import.meta.env.DEV && import.meta.env.VITE_PPG_FIXTURES === 'true'
 
@@ -39,16 +40,11 @@ export function Reading({ row }) { const t=useCopy()
           </span>
           <p className="text-[10px] text-hud-ink3 font-mono mt-0.5">
             {new Date(row.recorded_at).toLocaleString()} · {{manual_reference:'Reference device',dataset_simulator:'Simulator',physical_sensor:'Physical sensor'}[row.metadata?.source] || row.metadata?.source} · {row.metadata?.device_id}
+            {isSimulated && <span data-testid="demo-replay-tag" title={t('Demo replay — not live patient data.')} className="ml-2 inline-block rounded-full border border-hud-line/70 px-2 py-px text-[9px] font-bold uppercase tracking-wider text-hud-ink3">{t('Demo replay')}</span>}
           </p>
         </div>
         {a && <StatusBadge status={row.status} />}
       </div>
-
-      {isSimulated && (
-        <p className="mt-2 text-[10px] font-mono font-bold uppercase tracking-wider text-tier-amber bg-tier-amber/10 border border-tier-amber/30 px-2 py-1 inline-block">
-          {t('Simulated data')}{row.mock ? ' — mock UI result' : ''} · {row.metadata?.description}
-        </p>
-      )}
 
       {row.kind === 'bp_reference' && (
         <p className="mt-3 font-mono text-lg font-black text-hud-ink">{row.systolic}/{row.diastolic} <span className="text-xs text-hud-ink3 font-normal">mmHg</span></p>
@@ -68,7 +64,17 @@ export function Reading({ row }) { const t=useCopy()
             </p>
           )}
           {row.status !== 'rejected' && a.heart_rate_bpm != null && (
-            <p className="text-hud-ink">{t('Heart rate')}: <span className="font-black">{a.heart_rate_bpm}</span> bpm</p>
+            <>
+              <p className="text-hud-ink">{t('Heart rate')}: <span className="font-black">{a.heart_rate_bpm}</span> bpm</p>
+              {!isSimulated && (
+                <p className="nc-caption text-hud-ink3">
+                  {t("Result depends on the patient's age, rest/activity state, symptoms, and measurement conditions — this single reading should not be read as a normal/abnormal verdict on its own.")}
+                </p>
+              )}
+            </>
+          )}
+          {row.status === 'rejected' && (
+            <p className="text-hud-ink3">{t('Unavailable / retry needed')}</p>
           )}
           {row.status !== 'rejected' && a.experimental_bp ? (
             <p className="text-tier-amber bg-tier-amber/10 border border-tier-amber/30 px-2 py-1.5 font-bold uppercase tracking-wide">
@@ -78,7 +84,7 @@ export function Reading({ row }) { const t=useCopy()
             <p className="text-hud-ink3">{t('BP estimation unavailable.')}</p>
           )}
           <p className="nc-caption">{t('Experimental · Use a cuff for reference BP.')}</p>
-          <details className="nc-more"><summary>{t('Analysis details')}</summary><p>{a.model} · {a.model_version}</p></details>
+          <details className="nc-more"><summary>{t('Analysis details')}</summary><p>{a.model} · {a.model_version}</p>{isSimulated && <p data-testid="demo-replay-details">{t('Simulated data')}{row.mock ? ' — mock UI result' : ''} · {row.metadata?.description}{row.kind === 'ppg' && row.metadata?.source === 'dataset_simulator' && <><br />{t('Dataset replay: this heart rate is from a prerecorded signal, not this patient.')}</>}</p>}</details>
         </div>
       )}
     </div>
@@ -99,6 +105,7 @@ export default function Measurements({initialKind='bp/reference', view='history'
   const [trends, setTrends] = useState({ series: [] })
   const [offset, setOffset] = useState(0)
   const [filter, setFilter] = useState('all')
+  function onReplayResult(row) { setResult(row); setOffset(0); if (onSaved) onSaved(row); else refresh(0) }
   const visible = row => filter === 'all' || row.kind === filter
   const [loading, setLoading] = useState(false)
   async function refresh(page = offset) {
@@ -212,7 +219,16 @@ export default function Measurements({initialKind='bp/reference', view='history'
 
           {kind === 'bp/ppg' && (
             <div className="space-y-3">
-              <details className="nc-more"><summary>Research limitations</summary><p>Public-dataset models may not generalize to MAX30102. Validation and calibration are still required.</p></details>
+              <details className="nc-more"><summary>Research limitations</summary><p>Public-dataset models may not generalize to any specific sensor. Validation and calibration are still required.</p></details>
+              <div>
+                <span className={labelClass}>Arduino Uno finger-trigger dataset replay</span>
+                <p className="nc-caption mb-2">
+                  The Uno (yellow LED + LDR) only detects finger placement — it does not measure a real
+                  PPG signal or heart rate. Inserting your finger triggers a timed replay of a prerecorded
+                  dataset segment, which is what the ML service actually analyzes.
+                </p>
+                <UnoPpgReplay patientId={patientId} screeningId={screeningId} onResult={onReplayResult} disabled={busy} />
+              </div>
               {fixturesEnabled && (
                 <label className="block">
                   <span className={labelClass}>Development fixture</span>

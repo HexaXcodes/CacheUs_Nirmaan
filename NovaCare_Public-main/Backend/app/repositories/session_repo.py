@@ -260,16 +260,21 @@ async def list_for_patient(
     db: AsyncIOMotorDatabase, patient_id: str
 ) -> List[Dict[str, Any]]:
     local_patient_id = patient_id
+    cloud_patient_id = None
     try:
         sessionmaker = get_sql_sessionmaker()
         async with sessionmaker() as session:
-            stmt = select(SqlPatient.local_id).where(
+            stmt = select(SqlPatient.local_id, SqlPatient.cloud_id).where(
                 (SqlPatient.local_id == patient_id) | (SqlPatient.cloud_id == patient_id)
             )
             res = await session.execute(stmt)
-            local_id_val = res.scalar()
-            if local_id_val:
-                local_patient_id = local_id_val
+            row = res.first()
+            if row:
+                local_id_val, cloud_id_val = row
+                if local_id_val:
+                    local_patient_id = local_id_val
+                if cloud_id_val:
+                    cloud_patient_id = cloud_id_val
     except Exception:
         logger.exception("SQLite read failed in list_for_patient patient lookup")
 
@@ -283,7 +288,18 @@ async def list_for_patient(
     except Exception:
         logger.exception("SQLite read failed in list_for_patient")
 
-    cursor = db.sessions.find({"patient_id": patient_id}).sort("created_at", -1)
+    # Mongo `sessions` documents are always keyed by the patient's cloud_id
+    # (see sync_worker._sync_screening), while the caller may be holding the
+    # patient's local_id (e.g. the id returned by a fresh registration, or by
+    # another device that hasn't seen the cloud mirror). Match on every
+    # identifier we know about for this patient so a synced session is never
+    # silently dropped just because the caller's id doesn't match Mongo's.
+    candidate_ids = {patient_id, local_patient_id}
+    if cloud_patient_id:
+        candidate_ids.add(cloud_patient_id)
+    candidate_ids.discard(None)
+
+    cursor = db.sessions.find({"patient_id": {"$in": list(candidate_ids)}}).sort("created_at", -1)
     mongo_screenings = await cursor.to_list(length=500)
 
     seen_ids = set()

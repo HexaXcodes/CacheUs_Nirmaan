@@ -45,7 +45,12 @@ async def create_patient(
     if existing is not None:
         if existing.get("village_code") != _principal["village_code"]:
             raise AppError("This patient belongs to another village. Contact your administrator for access.", status_code=403)
-        existing_id = str(existing.get("_id") or existing.get("local_id", ""))
+        # Prefer the canonical local_id (stable across SQLite/Mongo sync)
+        # over the raw Mongo _id, so re-registration/dedupe agrees with the
+        # id a fresh create_patient() call would have returned for the same
+        # person -- avoids the id drifting depending on whether this lookup
+        # was served from the local SQLite mirror or fell back to Mongo.
+        existing_id = str(existing.get("local_id") or existing.get("_id", ""))
         update_fields = {
             k: v for k, v in {
                 "name": body.name,

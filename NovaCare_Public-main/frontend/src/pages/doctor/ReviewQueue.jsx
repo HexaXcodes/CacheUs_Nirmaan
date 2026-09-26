@@ -6,6 +6,24 @@ import PortalShell from '../../components/layout/PortalShell'
 import client from '../../api/client'
 import {Reading} from '../patient/Measurements'
 import {QUESTIONS} from '../asha/screening/Step0Intake'
+import {buildReportedConcerns} from '../../lib/screeningConcerns'
+
+// Reported-concerns block: reads ONLY r.answers (the questionnaire), never
+// r.ppg/analysis — a replayed/measured heart rate must never change what
+// is flagged here. See lib/screeningConcerns.js for the sourced wording.
+function ReportedConcerns({answers}){
+ const t=useCopy()
+ const concerns=buildReportedConcerns(answers||{})
+ const flagged=concerns.filter(c=>c.reported)
+ return <div className="nc-stack">
+  <h3>{t('Reported concerns for clinical review')}</h3>
+  {flagged.length===0
+   ? <p className="nc-caption">{t('No concerning answers on this questionnaire.')}</p>
+   : <ul>{flagged.map(c=><li key={c.id}>{c.message}</li>)}</ul>}
+  <p className="nc-caption">{t('These are nonspecific screening prompts, not a diagnosis.')}</p>
+ </div>
+}
+
 export default function ReviewQueue(){
  const t=useCopy(),{lang}=useLang()
  const [rows,setRows]=useState([]),[offset,setOffset]=useState(0),[more,setMore]=useState(false),[busy,setBusy]=useState(true),[error,setError]=useState(''),[retry,setRetry]=useState(0)
@@ -23,9 +41,19 @@ export default function ReviewQueue(){
      <span className="nc-chip nc-chip-count">{r.priority.concern_count} {t('reported concerns')}</span>
      {r.ppg?<span className="nc-chip nc-chip-ppg-ready">{t('Finger PPG available')}</span>:<span className="nc-chip nc-chip-ppg-pending">{t('Finger PPG pending')}</span>}
     </div>
+    <ReportedConcerns answers={r.answers}/>
     <Link className="nc-primary" to={'/doctor/patients/'+encodeURIComponent(r.patient_id)}>{t('Review patient →')}</Link>
-    <details><summary>{t('Questionnaire answers')}</summary>{QUESTIONS.map((q,qi)=><p key={q.id}><strong>{QUESTION_COPY[lang]?.[qi]||q.label}</strong><br/>{OPTION_COPY[lang]?.[qi]?.[q.options.findIndex(o=>o.value===r.answers[q.id])]||q.options.find(o=>o.value===r.answers[q.id])?.label||'Not answered'}</p>)}</details>
-    {r.ppg&&<Reading row={r.ppg}/>}
+    <details><summary>{t('Questionnaire answers')}</summary>{QUESTIONS.map((q,qi)=>{
+      const answered=Object.prototype.hasOwnProperty.call(r.answers||{},q.id)
+      const optIndex=q.options.findIndex(o=>o.value===r.answers?.[q.id])
+      const answerText=answered&&optIndex>=0
+        ?(OPTION_COPY[lang]?.[qi]?.[optIndex]||q.options[optIndex].label)
+        :t('Not reported')
+      return <p key={q.id}><strong>{QUESTION_COPY[lang]?.[qi]||q.label}</strong><br/>{answerText}</p>
+    })}</details>
+    {r.ppg
+      ?<Reading row={r.ppg}/>
+      :<p className="nc-caption">{t('No measurement linked to this screening yet.')}</p>}
    </article>
   )}</div>}
   <div className="nc-actions"><button className="nc-secondary" disabled={busy||offset===0} onClick={()=>setOffset(n=>Math.max(0,n-30))}>{t('Previous')}</button><button className="nc-secondary" disabled={busy||!more} onClick={()=>setOffset(n=>n+30)}>{t('Next')}</button></div>

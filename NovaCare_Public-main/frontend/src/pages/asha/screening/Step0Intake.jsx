@@ -106,7 +106,7 @@ export const QUESTIONS = [
     category: 'prediabetes',
     options: [
       { value: 'no',  label: 'No',  color: 'green', score: 0 },
-      { value: 'yes', label: 'Yes', color: 'red',   score: 2, sub: 'Acanthosis nigricans — strong prediabetes indicator' },
+      { value: 'yes', label: 'Yes', color: 'red',   score: 2, sub: 'Self-reported skin change — possible sign of insulin resistance if confirmed on exam, not a diagnosis' },
     ],
   },
   {

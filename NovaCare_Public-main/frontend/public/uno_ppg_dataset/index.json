@@ -1,0 +1,122 @@
+[
+  {
+    "file": "bidmc_01_segment_1.json",
+    "label": "bidmc-subject-01 \u2014 bidmc 01 segment 1",
+    "duration_s": 10.0,
+    "sampling_rate_hz": 125,
+    "reference_hr_bpm": 91.3,
+    "source_dataset": "BIDMC PPG and Respiration Dataset v1.0.0"
+  },
+  {
+    "file": "bidmc_01_segment_2.json",
+    "label": "bidmc-subject-01 \u2014 bidmc 01 segment 2",
+    "duration_s": 10.0,
+    "sampling_rate_hz": 125,
+    "reference_hr_bpm": 91.3,
+    "source_dataset": "BIDMC PPG and Respiration Dataset v1.0.0"
+  },
+  {
+    "file": "bidmc_01_segment_3.json",
+    "label": "bidmc-subject-01 \u2014 bidmc 01 segment 3",
+    "duration_s": 10.0,
+    "sampling_rate_hz": 125,
+    "reference_hr_bpm": 91.3,
+    "source_dataset": "BIDMC PPG and Respiration Dataset v1.0.0"
+  },
+  {
+    "file": "bidmc_01_segment_4.json",
+    "label": "bidmc-subject-01 \u2014 bidmc 01 segment 4",
+    "duration_s": 10.0,
+    "sampling_rate_hz": 125,
+    "reference_hr_bpm": 91.3,
+    "source_dataset": "BIDMC PPG and Respiration Dataset v1.0.0"
+  },
+  {
+    "file": "bidmc_01_segment_5.json",
+    "label": "bidmc-subject-01 \u2014 bidmc 01 segment 5",
+    "duration_s": 10.0,
+    "sampling_rate_hz": 125,
+    "reference_hr_bpm": 91.3,
+    "source_dataset": "BIDMC PPG and Respiration Dataset v1.0.0"
+  },
+  {
+    "file": "bidmc_02_segment_1.json",
+    "label": "bidmc-subject-02 \u2014 bidmc 02 segment 1",
+    "duration_s": 10.0,
+    "sampling_rate_hz": 125,
+    "reference_hr_bpm": 91.1,
+    "source_dataset": "BIDMC PPG and Respiration Dataset v1.0.0"
+  },
+  {
+    "file": "bidmc_02_segment_2.json",
+    "label": "bidmc-subject-02 \u2014 bidmc 02 segment 2",
+    "duration_s": 10.0,
+    "sampling_rate_hz": 125,
+    "reference_hr_bpm": 91.1,
+    "source_dataset": "BIDMC PPG and Respiration Dataset v1.0.0"
+  },
+  {
+    "file": "bidmc_02_segment_3.json",
+    "label": "bidmc-subject-02 \u2014 bidmc 02 segment 3",
+    "duration_s": 10.0,
+    "sampling_rate_hz": 125,
+    "reference_hr_bpm": 91.1,
+    "source_dataset": "BIDMC PPG and Respiration Dataset v1.0.0"
+  },
+  {
+    "file": "bidmc_02_segment_4.json",
+    "label": "bidmc-subject-02 \u2014 bidmc 02 segment 4",
+    "duration_s": 10.0,
+    "sampling_rate_hz": 125,
+    "reference_hr_bpm": 91.1,
+    "source_dataset": "BIDMC PPG and Respiration Dataset v1.0.0"
+  },
+  {
+    "file": "bidmc_02_segment_5.json",
+    "label": "bidmc-subject-02 \u2014 bidmc 02 segment 5",
+    "duration_s": 10.0,
+    "sampling_rate_hz": 125,
+    "reference_hr_bpm": 91.1,
+    "source_dataset": "BIDMC PPG and Respiration Dataset v1.0.0"
+  },
+  {
+    "file": "bidmc_03_segment_1.json",
+    "label": "bidmc-subject-03 \u2014 bidmc 03 segment 1",
+    "duration_s": 10.0,
+    "sampling_rate_hz": 125,
+    "reference_hr_bpm": 76.6,
+    "source_dataset": "BIDMC PPG and Respiration Dataset v1.0.0"
+  },
+  {
+    "file": "bidmc_03_segment_2.json",
+    "label": "bidmc-subject-03 \u2014 bidmc 03 segment 2",
+    "duration_s": 10.0,
+    "sampling_rate_hz": 125,
+    "reference_hr_bpm": 76.6,
+    "source_dataset": "BIDMC PPG and Respiration Dataset v1.0.0"
+  },
+  {
+    "file": "bidmc_03_segment_3.json",
+    "label": "bidmc-subject-03 \u2014 bidmc 03 segment 3",
+    "duration_s": 10.0,
+    "sampling_rate_hz": 125,
+    "reference_hr_bpm": 76.6,
+    "source_dataset": "BIDMC PPG and Respiration Dataset v1.0.0"
+  },
+  {
+    "file": "bidmc_03_segment_4.json",
+    "label": "bidmc-subject-03 \u2014 bidmc 03 segment 4",
+    "duration_s": 10.0,
+    "sampling_rate_hz": 125,
+    "reference_hr_bpm": 76.6,
+    "source_dataset": "BIDMC PPG and Respiration Dataset v1.0.0"
+  },
+  {
+    "file": "bidmc_03_segment_5.json",
+    "label": "bidmc-subject-03 \u2014 bidmc 03 segment 5",
+    "duration_s": 10.0,
+    "sampling_rate_hz": 125,
+    "reference_hr_bpm": 76.6,
+    "source_dataset": "BIDMC PPG and Respiration Dataset v1.0.0"
+  }
+]

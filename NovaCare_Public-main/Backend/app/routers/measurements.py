@@ -20,7 +20,7 @@ async def authorize(db, patient_id, principal):
         raise AppError('Patient storage unavailable', 503) from exc
     if not patient or patient.get('is_deleted'):
         raise AppError('Patient not found', 404)
-    aliases = {str(patient.get('_id')), str(patient.get('local_id'))} - {'None', ''}
+    aliases = {str(patient.get('_id')), str(patient.get('local_id')), str(patient.get('cloud_id'))} - {'None', ''}
     role = principal.get('role')
     allowed = role == 'patient' and principal.get('patient_id') in aliases
     if role in ('asha', 'doctor'):

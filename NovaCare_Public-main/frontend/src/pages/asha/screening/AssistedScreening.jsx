@@ -2,7 +2,7 @@ import {useLang} from '../../../context/LanguageContext'
 import {useCopy,QUESTION_COPY,OPTION_COPY} from '../../../i18n/nirmaan'
 import {useState} from 'react'
 import {QUESTIONS} from './Step0Intake'
-import ARMeasurement from '../../patient/ARMeasurement'
+import FingerSensorDemo from './FingerSensorDemo'
 import client from '../../../api/client'
 
 export default function AssistedScreening({patientId,onExit}){
@@ -16,7 +16,7 @@ export default function AssistedScreening({patientId,onExit}){
   catch(e){setError(e.response?.data?.error||'Could not save answers. Please retry.')}
   finally{setBusy(false)}
  }
- if(intake)return <div className="nc-stack"><p className="nc-pill">{t('10 answers saved · Next: finger PPG')}</p><ARMeasurement initialKind="bp/ppg" patientIdOverride={patientId} screeningId={intake.id} lockKind onExit={onExit}/></div>
+ if(intake)return <div className="nc-stack"><p className="nc-pill">{t('10 answers saved · Next: finger PPG')}</p><FingerSensorDemo patientId={patientId} screeningId={intake.id} onExit={onExit}/></div>
  return <section className="nc-card nc-stack nc-screening-panel">
   <span className="nc-eyebrow">1 · {t('Questionnaire')} → 2 · {t('Finger PPG')}</span>
   <h2>{t('Health screening')}</h2>
